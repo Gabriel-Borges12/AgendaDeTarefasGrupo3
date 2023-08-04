@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.logo{
+    font-family: url(https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap),sans-serif;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .top-navbar{
+    background-color: #9822AB;
+
+  }
+
+  .bottom-navbar{
+    background-color: #B012CA;
+  }
+
+  .top-navbar, .bottom-navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .top-navbar a, .bottom-navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .top-navbar a:hover, .bottom-navbar a:hover {
+    background-color: white;
+    color: #9822AB;
+  }
+  
+  .top-navbar img {
+    max-width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 20px; /* Adiciona um espaço entre a logo e os links */
+  }
+  
