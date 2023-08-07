@@ -1,49 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
-.logo{
-    font-family: url(https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap),sans-serif;
-}
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .navbar {
+    padding: 0;
+    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-family: 'Inter', sans-serif;
+}
+
+.primeira-navbar, .segunda-navbar {
+    height: 80px;
     display: flex;
-    flex-direction: column;
-  }
-  .top-navbar{
+    align-items: center;
+    padding: 0 20px;
+}
+
+.primeira-navbar {
     background-color: #9822AB;
-
-  }
-
-  .bottom-navbar{
-    background-color: #B012CA;
-  }
-
-  .top-navbar, .bottom-navbar {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-  }
-  
-  .top-navbar a, .bottom-navbar a {
-    text-decoration: none;
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-  
-  .top-navbar a:hover, .bottom-navbar a:hover {
-    background-color: white;
-    color: #9822AB;
-  }
-  
-  .top-navbar img {
-    max-width: 100px; /* Ajuste o tamanho conforme necessário */
-    margin-right: 20px; /* Adiciona um espaço entre a logo e os links */
-  }
-  
+}
+
+.segunda-navbar {
+    background-color: #B012CA;
+    color: #fff;
+}
+
+.estrutura-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 55px;
+    margin-right: 10px;
+}
+
+.nome-empresa {
+    src: url(fonts/JosefinSans-Italic-VariableFont_wght.ttf);
+    font-family: 'Josefin Sans', sans-serif; /* Altera a fonte para 'Josefin Sans' */
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.nav-home {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 30px;
+    transition: color 0.3s;
+    direction: rtl;
+}
+
+.nav-calendario {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 30px;
+    transition: color 0.3s;
+    direction: rtl;
+}
+
+.segunda-navbar .nav-calendario .nav-home {
+    color: #ffffff;
+}
+
+.nav-calendario .nav-home:hover {
+    color: #ff0;
+}
+
+.seta-img {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.seta-link {
+    font-size: 1.2rem;
+    margin-right: auto;
+}
+
+.seta-link:hover {
+    color: #ff0;
+}
