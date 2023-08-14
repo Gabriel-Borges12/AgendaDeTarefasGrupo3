@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/calendario.jpg);
+    background-size: cover;
+
+}
+
+.primeira-navbar, .segunda-navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.primeira-navbar {
+    background-color: #9822AB;
+    color: #fff;
+}
+
+.segunda-navbar {
+    background-color: #B012CA;
+    color: #fff;
+}
+
+.estrutura-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 55px;
+    margin-right: 10px;
+}
+
+.nome-empresa {
+    src: url(fonts/JosefinSans-Italic-VariableFont_wght.ttf);
+    font-family: 'Josefin Sans', sans-serif; /* Altera a fonte para 'Josefin Sans' */
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.nav-home {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 30px;
+    transition: color 0.3s;
+    direction: rtl;
+    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-calendario {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 30px;
+    transition: color 0.3s;
+    direction: rtl;
+    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-family: 'Inter', sans-serif;
+}
+
+.segunda-navbar .nav-calendario .nav-home {
+    color: #ffffff;
+}
+
+.seta-img {
+    width: 40px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.seta-link {
+    font-size: 1.2rem;
+    margin-right: auto;
+}
+
+.container {
+    width: 1200px; 
+    margin: 240px auto;
+    height: 300px;
+}
+
+.container .box{
+    position: relative; width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: #B012CA;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
