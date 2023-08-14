@@ -1,5 +1,14 @@
+#logologin {
+    width: 180px;
+    margin-left: 200px;
+}
+
+#titulo {
+    color: white;
+}
+
 body {
-    background: linear-gradient(90deg, rgb(138, 7, 145) 0% 50%, rgb(228, 222, 222) 50% 100%);
+    background: linear-gradient(90deg, rgb(138, 7, 145) 0% 50%, rgb(241, 239, 239) 50% 100%);
     font-family: Arial, sans-serif;
     padding: 20px;
 }
@@ -19,23 +28,37 @@ input {
     background-color: #CD90FE;
     color: white;
 }
+
+
+
 button {
-    padding: 10px 20px;
-    background-color: #CD90FE;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+        cursor: pointer;
+        background:#CD90FE;
+        padding: 8px 5px;
+        color: #fff;
+        border: 1px solid #3274e7;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        outline: none;
+        width: 95%;
+        margin-top: 4px;
+        padding: 10px;
+        border:none;
+
 }
 
-.container {
-    width: 300px;
+button:hover{
+    background-color:#a25fda;
+}
+
+#logologin {
+    margin-left: 240px;
+}
+
+#titulo {
+    margin-left: 160px;
+    color: white;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    
 }
 
 #img-user {
@@ -63,4 +86,107 @@ button {
     height: 25px;
     position: absolute;
     margin: 7px;
+}
+
+/* .bi{
+    position: absolute;
+    margin-left: -190px;
+    margin-top: 5px;
+} */
+
+#text {
+    margin-right: 100px;
+    margin-left: 20px;
+    line-height: 30px;
+    text-align: justify;
+    color: white;
+}
+
+#cadeado {
+    width: 380px;
+}
+
+.container {
+    /* width: 165%; */
+    height: 75%;
+    padding: 15px;
+    margin-top: 75px;
+    padding-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+}
+
+#logintitulo p{
+    padding-top: 0;
+    margin: 0;
+    padding-bottom: 3px;
+    font-size: small;
+}
+
+#esqueceu {
+    font-size: small;
+    padding-top: 0;
+    margin: 0;
+}
+.formzao {
+    width: 300px;
+    border-radius:20px;
+
+}
+
+.lado-esq {
+    width: 100%;
+}
+
+.lado-dir {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#cadastro-form {
+    width:fit-content;
+    margin: 30px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.foto-cadeado {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#enviar {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 150px;
+    margin-right: 20px;
+    border-radius:20px;
+}
+
+#cadastrarse {
+    width: 350px;
+    border-radius:20px;
+}
+
+.vparalogin{
+  color: #570e93;
+  text-decoration: none;
+  font-size: small;
 }

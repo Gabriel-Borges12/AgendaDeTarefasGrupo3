@@ -29,13 +29,26 @@ input {
     color: white;
 }
 
+
+
 button {
-    padding: 10px 20px;
-    background-color: #CD90FE;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+        cursor: pointer;
+        background:#CD90FE;
+        padding: 8px 5px;
+        color: #fff;
+        border: 1px solid #3274e7;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        outline: none;
+        width: 95%;
+        margin-top: 4px;
+        padding: 10px;
+        border:none;
+
+}
+
+button:hover{
+    background-color:#a25fda;
 }
 
 #logologin {
@@ -113,17 +126,26 @@ button {
     display: flex;
 }
 
+.cadastre-se{
+    text-decoration: none;
+    color: #570e93;
+    font-size: small;
+}
+
+.esqueceur{
+    text-decoration: none;
+    font-size: small;
+    padding-top: 0;
+    margin: 0;
+    color: #570e93;
+}
+
 #logintitulo {
     padding-top: 0;
     margin: 0;
     padding-bottom: 50px;
 }
 
-#esqueceu {
-    font-size: small;
-    padding-top: 0;
-    margin: 0;
-}
 .formzao {
     width: 300px;
     border-radius:20px;
