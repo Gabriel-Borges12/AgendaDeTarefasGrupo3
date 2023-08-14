@@ -3,8 +3,9 @@
 body {
     margin: 0;
     padding: 0;
-    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
-    font-family: 'Inter', sans-serif;
+    background-image: url(img/calendario.jpg);
+    background-size: cover;
+
 }
 
 .primeira-navbar, .segunda-navbar {
@@ -48,6 +49,8 @@ body {
     margin: 0 30px;
     transition: color 0.3s;
     direction: rtl;
+    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-calendario {
@@ -56,18 +59,16 @@ body {
     margin: 0 30px;
     transition: color 0.3s;
     direction: rtl;
+    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-family: 'Inter', sans-serif;
 }
 
 .segunda-navbar .nav-calendario .nav-home {
     color: #ffffff;
 }
 
-.nav-calendario .nav-home:hover {
-    color: #ff0;
-}
-
 .seta-img {
-    width: 35px;
+    width: 40px;
     height: 35px;
     margin-right: 5px;
 }
@@ -77,6 +78,19 @@ body {
     margin-right: auto;
 }
 
-.seta-link:hover {
-    color: #ff0;
+.container {
+    width: 1200px; 
+    margin: 240px auto;
+    height: 300px;
+}
+
+.container .box{
+    position: relative; width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: #B012CA;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
 }
