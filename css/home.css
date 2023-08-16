@@ -37,6 +37,12 @@ body {
     margin-right: 10px;
 }
 
+.vastarefas{
+    text-decoration: none;
+    color: #fff;
+
+}
+
 .nome-empresa {
     src: url(fonts/JosefinSans-Italic-VariableFont_wght.ttf);
     font-family: 'Josefin Sans', sans-serif; /* Altera a fonte para 'Josefin Sans' */
