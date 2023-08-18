@@ -84,6 +84,8 @@ body {
     grid-gap: 2px;
     height: 400px;
     grid-template-rows: 2em repeat(5, 1fr);
+    grid-template-rows: 2em repeat(5,1fr);
+    margin: 30px;
 }
 
 .data {
