@@ -9,6 +9,42 @@ body {
 
 }
 
+@media (max-width: 468px) {
+    .primeira-navbar, .segunda-navbar {
+        display: block;
+        flex-direction: column;
+    }
+
+    main {
+        display: block;
+    }
+
+    .estilar-table {
+        display: block;
+    }
+}
+
+@media (min-width: 469px) and (max-width:767px) {
+    .primeira-navbar, .segunda-navbar {
+        display: block;
+        flex-direction: column;
+    }
+
+    main {
+        display: block;
+    }
+    
+    .estilar-table {
+        display: block;
+    }
+     
+
+}
+
+@media (min-width: 768px) {
+
+}
+
 .primeira-navbar, .segunda-navbar {
     height: 80px;
     display: flex;
