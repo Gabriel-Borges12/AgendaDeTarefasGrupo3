@@ -116,32 +116,62 @@ body {
 
 }
 
-
-
 footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
-    text-align: center;
+    background-color: #B012CA;
     padding: 20px;
-    background-color: #B012CA; 
+    text-align: center;
+    color: #fff;
 }
 
+
 .conteudogeral {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px; 
+    display: flex; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.conteudo1, .conteudo2, .conteudo3, .social-icons, .social-icon{
+    flex: 1; 
+    margin: 10px; 
+    color: #fff;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.social-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+    filter: brightness(1.2); /* Increase brightness on hover */
 }
 
 
 .linksfooter {
+    display: flex;
+    justify-content: justify; 
     text-decoration: none;
     color: #333;
-    margin: 5px;
     display: block;
+    margin: 5px;
+    color: #fff;
+    align-items: center  ;
 }
 
-/* Estilizar os cabeçalhos */
 h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -149,6 +179,12 @@ h3 {
 
 h4 {
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-bottom: 5px;
 }
+
+.linksfooter:hover {
+    color:darkgray;
+
+}
+
