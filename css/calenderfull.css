@@ -119,18 +119,6 @@ footer {
     filter: brightness(1.2); 
 }
 
-
-.linksfooter {
-    display: flex;
-    justify-content: justify; 
-    text-decoration: none;
-    color: #333;
-    display: block;
-    margin: 5px;
-    color: #fff;
-    align-items: center  ;
-}
-
 h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -142,7 +130,40 @@ h4 {
     margin-bottom: 5px;
 }
 
+.linksfooter {
+    display: block;
+    justify-content: justify;
+    color: #fff;
+}
+
+.linksfooter li{
+    text-align: justify;
+    margin-left: 98px;
+}
+
 .linksfooter:hover {
-    color:darkgray;
+    color:white;
 
 }
+
+.linkemail{
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.linkemail:hover{
+    color: darkgray;
+}
+
+.linksimportantes{
+    color: #fff;
+    text-decoration: none;
+    justify-content: justify;
+
+}
+
+.linksimportantes:hover{
+    color: darkgray;
+}
+

@@ -156,20 +156,8 @@ footer {
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Add a slight scale effect on hover */
-    filter: brightness(1.2); /* Increase brightness on hover */
-}
-
-
-.linksfooter {
-    display: flex;
-    justify-content: justify; 
-    text-decoration: none;
-    color: #333;
-    display: block;
-    margin: 5px;
-    color: #fff;
-    align-items: center  ;
+    transform: scale(1.1); 
+    filter: brightness(1.2); 
 }
 
 h3 {
@@ -183,8 +171,41 @@ h4 {
     margin-bottom: 5px;
 }
 
+.linksfooter {
+    display: block;
+    justify-content: justify;
+    color: #fff;
+}
+
+.linksfooter li{
+    text-align: justify;
+    margin-left: 98px;
+}
+
 .linksfooter:hover {
-    color:darkgray;
+    color:white;
+
+}
+
+.linkemail{
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.linkemail:hover{
+    color: darkgray;
+}
+
+.linksimportantes{
+    color: #fff;
+    text-decoration: none;
+    justify-content: justify;
+
+}
+
+.linksimportantes:hover{
+    color: darkgray;
 
 }
 
