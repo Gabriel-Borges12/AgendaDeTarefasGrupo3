@@ -34,14 +34,14 @@
                 <form id="cadastro-form">
                     <h1 id="logintitulo">Login</h1>
                     <img id="img-user" src="img/user.png">
-                    <input type="text" class="formzao" placeholder="Usuario">
+                    <input type="text" class="formzao" name="user" placeholder="Usuario">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Senha">
+                    <input type="password" class="formzao" name="senha" placeholder="Senha">
 
                     <p id=""><a class="esqueceur" href="redefinirsenha.html">Esqueceu sua senha?</a></p>
                     <!-- <input type="button" value="" href="home.html"> -->
-                    <button type="button" id="botaologin" onclick="window.location.href='./home.html'">Login</button>
+                    <button type="button" id="botaologin" onclick="window.location.href='./home.php'">Login</button>
                     
                     <p id="naotenho">Não tem uma conta?</p>
                     <a class="cadastre-se" href="cadastro.html">Cadastre-se</a>
