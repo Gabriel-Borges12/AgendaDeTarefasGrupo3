@@ -210,6 +210,7 @@ button:hover{
     }
     #tituloDir{
         display: block;
+        color: white;
     }
     .lado-dir{
         flex-direction: column;
@@ -234,6 +235,7 @@ button:hover{
     }
     #tituloDir{
         display: block;
+        color: white;
     }
     .lado-dir{
         flex-direction: column;
@@ -257,6 +259,7 @@ button:hover{
     }
     #tituloDir{
         display: block;
+        color: white;
     }
     .lado-dir{
         flex-direction: column;
@@ -270,5 +273,6 @@ button:hover{
     }
     #tituloDir{
         display: none;
+        color: white;
     }
 }

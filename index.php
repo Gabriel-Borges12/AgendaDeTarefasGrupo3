@@ -39,12 +39,12 @@
                     <img id="img-senha" src="img/senha.png">
                     <input type="password" class="formzao" name="senha" placeholder="Senha">
 
-                    <p id=""><a class="esqueceur" href="redefinirsenha.html">Esqueceu sua senha?</a></p>
+                    <p id=""><a class="esqueceur" href="redefinirsenha.php">Esqueceu sua senha?</a></p>
                     <!-- <input type="button" value="" href="home.html"> -->
                     <button type="button" id="botaologin" onclick="window.location.href='./home.php'">Login</button>
                     
                     <p id="naotenho">Não tem uma conta?</p>
-                    <a class="cadastre-se" href="cadastro.html">Cadastre-se</a>
+                    <a class="cadastre-se" href="cadastro.php">Cadastre-se</a>
                 </form>
             </div>
         </div>

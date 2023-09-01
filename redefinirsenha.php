@@ -38,7 +38,7 @@
                     <br><br>
                     <button type="submit" id="redefinir">Redefinir</button>
                     <br><br>
-                    <a class="vparalogin" href="index.html">Voltar ao login</a>
+                    <a class="vparalogin" href="index.php">Voltar ao login</a>
                 </form>
             </div>
         </div>

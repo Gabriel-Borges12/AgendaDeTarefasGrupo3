@@ -28,7 +28,15 @@
             start:'2023-08-18',
             end:'2023-08-18',
             color: 'pink'
-            }
+            },
+
+            {
+            title: 'Dia da Yas <3<3<3 ',
+            start:'2023-09-27',
+            end:'2023-09-27',
+            color: '#fc0fc0'
+            
+            },
 
           ],
 
@@ -46,13 +54,13 @@
               <span class="nome-empresa">W E E K</span>
           </div>
           <!-- <span class="nav-home">Home</span> -->
-          <span class="nav-home"><a class="vastarefas" href="home.html">Home</a></span>
+          <span class="nav-home"><a class="vastarefas" href="home.php">Home</a></span>
       </header>
       <nav class="segunda-navbar">
-          <a href="index.html" class="seta-link">
+          <a href="index.php" class="seta-link">
               <img src="img/return.png" alt="Seta" class="seta-img">
           </a>
-          <span class="nav-calendario"><a class="vastarefas" href="home.html">Voltar as tarefas</a></span>
+          <span class="nav-calendario"><a class="vastarefas" href="home.php">Voltar as tarefas</a></span>
       </nav>
   </div>
     <div id='calendar'></div>

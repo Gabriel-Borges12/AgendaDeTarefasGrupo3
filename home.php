@@ -24,14 +24,14 @@
                 <img src="img/logo.png" alt="Logo" class="logo">
                 <span class="nome-empresa">W E E K</span>
             </div>
-            <span class="nav-home"><a class="vastarefas" href="home.html">Home</a></span>
+            <span class="nav-home"><a class="vastarefas" href="home.php">Home</a></span>
         </header>
         <nav class="segunda-navbar">
-            <a href="index.html" class="seta-link">
+            <a href="index.php" class="seta-link">
                 <img src="img/return.png" alt="Seta" class="seta-img">
             </a>
             <!-- <span class="nav-calendario">Calendário</span> -->
-            <a class="nav-calendario" href="indexCalendario.html" >Calendário</a>
+            <a class="nav-calendario" href="indexCalendario.php" >Calendário</a>
         </nav>
         <main>
             <form class="adicionar-form">
