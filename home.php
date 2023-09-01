@@ -22,7 +22,7 @@
         <a href="#" class="nav-link seta-link">
             <img src="img/return.png" alt="Arrow" class="seta-img">
         </a>
-        <span class="nav-calendario">Calendário</span>
+        <span class="nav-calendario"><a class="nav-calendario" href="indexCalendario.php">Calendário</a></span>
     </nav>
   <main>
 

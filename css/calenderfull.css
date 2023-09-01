@@ -1,7 +1,16 @@
-body{
-    margin: 0;
-    padding: 0;
+*{
+    margin: 0 !important;
+    padding: 0 !important;
 }
+
+.add-form{
+    width: 95%;
+}
+
+#calendar{
+    margin: 15px !important;
+}
+
 .primeira-navbar, .segunda-navbar {
     height: 80px;
     display: flex;
@@ -84,6 +93,15 @@ footer {
     padding: 20px;
     text-align: center;
     color: #fff;
+}
+
+main{
+    width: 100%;
+}
+
+@media(max-width: 768px){
+    
+
 }
 
 .conteudogeral {
@@ -178,6 +196,36 @@ h4 {
     
     .linksfooter li {
         margin: 5px 0; 
+    }
+}
+
+@media (min-width: 469px) and (max-width:767px) {
+    .primeira-navbar, .segunda-navbar {
+        display: block;
+        flex-direction: column;
+    }
+
+    main {
+        display: block;
+    }
+    
+    .estilar-table {
+        display: block;
+    }
+}
+
+@media (max-width: 468px) {
+    .primeira-navbar, .segunda-navbar {
+        display: block;
+        flex-direction: column;
+    }
+
+    main {
+        display: block;
+    }
+
+    .estilar-table {
+        display: block;
     }
 }
 
