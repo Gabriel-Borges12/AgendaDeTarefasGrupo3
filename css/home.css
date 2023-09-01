@@ -1,51 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400&display=swap');
 
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
     background-image: url(img/calendario.jpg);
     background-size: cover;
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
-@media (max-width: 468px) {
-    .primeira-navbar, .segunda-navbar {
-        display: block;
-        flex-direction: column;
-    }
-
-    main {
-        display: block;
-    }
-
-    .estilar-table {
-        display: block;
-    }
+main {
+    background-color: #e079f0;
+    border-radius: 8px;
+    padding: 40px;
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
 }
 
-@media (min-width: 469px) and (max-width:767px) {
-    .primeira-navbar, .segunda-navbar {
-        display: block;
-        flex-direction: column;
-    }
-
-    main {
-        display: block;
-    }
-    
-    .estilar-table {
-        display: block;
-    }
-     
-
+.add-form {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 15px;
+    width: 100%;
 }
 
-@media (min-width: 768px) {
-
+input {
+    width: 100%;
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
-.primeira-navbar, .segunda-navbar {
+button[type="submit"] {
+    background-color: #B012CA;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    padding: 10px 15px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+td {
+    color: #333;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #d237ea;
+}
+
+select {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: #ffffff;
+}
+
+select:hover {
+    background-color: #B012CA;
+}
+
+.btn-action {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #FFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-action:nth-child(1) {
+    background-color: #4b1fdc;
+    margin-right: 5px;
+}
+
+.btn-action:nth-child(2) {
+    background-color: #cb2323;
+    margin-right: 5px;
+}
+
+.btn-action:nth-child(3) {
+    background-color: #008000;
+    margin-right: 5px;
+}
+
+
+
+.primeira-navbar,
+.segunda-navbar {
     height: 80px;
     display: flex;
     align-items: center;
@@ -73,41 +154,20 @@ body {
     margin-right: 10px;
 }
 
-.vastarefas{
-    text-decoration: none;
-    color: #fff;
-
-}
-
 .nome-empresa {
-    src: url(fonts/JosefinSans-Italic-VariableFont_wght.ttf);
-    font-family: 'Josefin Sans', sans-serif; /* Altera a fonte para 'Josefin Sans' */
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 2.0rem;
     font-weight: bold;
 }
 
-.nav-home {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 30px;
-    transition: color 0.3s;
-    direction: rtl;
-    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
-    font-family: 'Inter', sans-serif;
-}
-
+.nav-home,
 .nav-calendario {
     color: #fff;
     text-decoration: none;
     margin: 0 30px;
     transition: color 0.3s;
     direction: rtl;
-    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
     font-family: 'Inter', sans-serif;
-}
-
-.segunda-navbar .nav-calendario .nav-home {
-    color: #ffffff;
 }
 
 .seta-img {
@@ -121,137 +181,243 @@ body {
     margin-right: auto;
 }
 
-.container {
-    width: 1200px; 
-    margin: 240px auto;
-    height: 300px;
-}
-
-.container .box{
-    position: relative; width: calc(400px - 30px);
-    height: calc(300px - 30px);
-    background: #B012CA;
-    float: left;
-    margin: 15px;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.estilizar-table{
-    font-family: 'Urbanist', sans-serif;
-}
-
-.adicionar-form{
-    font-family: 'Urbanist', sans-serif;
-}
-
-.estilizar-select{
-    font-family: 'Urbanist', sans-serif;
-}
-
-main{
-    background-color: #e079f0;
-    border-radius: 8px;
+footer {
+    background-color: #B012CA;
     padding: 20px;
-    width: 90%;
-    margin: 40px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.adicionar-form{
-    display: flex;
-    margin-bottom: 50px;
-    gap: 15px;
-    width: 100%;
-}
-
-input{
-    width: 100%;
-    flex: 1;
-    padding: 15px;
-    border: 1px solid #DDD;
-    border-radius: 5px;
-    outline: none;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-button[type="submit"] {
-    background-color: #B012CA;
-    height: 50px;
-    width: 50px;
-    border: none;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 1.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-table{
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    padding: 10px 15px;
-    border: 1px solid #000000;
     text-align: center;
+    color: #fff;
+    margin-top: auto;
 }
 
-td {
-    color: #333;
-    font-weight: 600;
+
+.conteudogeral {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-tr:nth-child(even) {
- background-color: #d237ea;
+
+.conteudo1,
+.conteudo2,
+.conteudo3,
+.social-icons,
+.social-icon {
+    flex: 1;
+    margin: 10px;
+    color: #fff;
 }
 
-select {
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.social-icon img {
     width: 100%;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-transform: capitalize;
-    background-color: #ffffff;
+    height: auto;
 }
 
-select:hover {
-    background-color: #B012CA;
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
-.btn-acao{
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.linksfooter {
+    display: block;
+    justify-content: justify;
+    color: #fff;
+}
+
+.linksfooter li {
+    text-align: justify;
+    margin-left: 98px;
+}
+
+.linksfooter:hover {
+    color: white;
 
 }
 
-.btn-acao:nth-child(1){
-    background-color: #4b1fdc;
-    margin-right: 5px;
+.linkemail {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
 }
 
-.btn-acao:nth-child(2){
-    background-color: #cb2323;
-    margin-right: 5px;
+.linkemail:hover {
+    color: darkgray;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+.linksimportantes {
+    color: #fff;
+    text-decoration: none;
+    justify-content: justify;
+
+}
+
+.linksimportantes:hover {
+    color: darkgray;
+
+}
+
+/* Estilos para dispositivos com largura de tela até 768px (celulares) */
+/* @media (max-width: 768px) {
+    body {
+      background-image: none; 
+    }
+  
+    main {
+      width: 100%; 
+      
+    }
+  
+    
+    button[type="submit"] {
+      width: 100px;
+      height: 40px;
+      font-size: 1.5rem;
+    }
+
+    td, th {
+      padding: 5px 10px;
+    }
+
+    .primeira-navbar, .segunda-navbar {
+      padding: 10px;
+    }
+  
+
+    .logo {
+      width: 40px;
+      height: 35px;
+    }
+  
+    .nome-empresa {
+      font-size: 1.5rem;
+    }
+  
+
+    .nav-home, .nav-calendario {
+      margin: 0 10px;
+      font-size: 1rem;
+    }
+
+    footer {
+      padding: 10px;
+    }
+  }
+   */
+@media (max-width: 768px) {
+    body {
+        background-image: none;
+        /* Remove a imagem de fundo em telas menores */
+    }
+
+    main {
+        width: 100%;
+        /* margin: 10px;  */
+    }
+
+    button[type="submit"] {
+        width: 100px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    td,
+    th {
+        padding: 5px 10px;
+    }
+
+    .primeira-navbar,
+    .segunda-navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 35px;
+    }
+
+    .nome-empresa {
+        font-size: 1.5rem;
+    }
+
+    .nav-home,
+    .nav-calendario {
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .conteudogeral {
+        flex-direction: column;
+        /* Altera a direção do flex para empilhar verticalmente */
+    }
+
+    .conteudo1,
+    .conteudo2,
+    .conteudo3,
+    .social-icons {
+        flex: none;
+        /* Impede que os elementos ocupem espaço igual no rodapé */
+        width: 100%;
+        /* Ocupa toda a largura disponível */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .linksfooter li {
+        margin-left: 0;
+        /* Remove a margem para alinhar à esquerda */
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    main {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (min-width: 1201px) {
+    main {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+
 }

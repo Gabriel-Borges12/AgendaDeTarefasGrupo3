@@ -1,84 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Home Week</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <title>Home - Lista de Tarefas</title>
 </head>
-
 <body>
+    <header class="primeira-navbar">
+        <div class="estrutura-logo">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <span class="nome-empresa">W E E K</span>
+        </div>
+        <a href="#" class="nav-home">Home</a>
+    </header>
+    <nav class="segunda-navbar">
+        <a href="#" class="nav-link seta-link">
+            <img src="img/return.png" alt="Arrow" class="seta-img">
+        </a>
+        <span class="nav-calendario">Calendário</span>
+    </nav>
+  <main>
 
-    <div class="navbar">
-        <!--<div class="top-navbar">
-          <img src="img/WEEK-removebg-preview.png" alt="Logo do WEEK" srcset="">  
-          <div class="logo"></div>
-          <p>WEEK</p>
-           <a href="#">Home</a> -->
+    <form class="add-form">
+      <input type="text" placeholder="Adicionar tarefa" class="input-task">
+      <button type="submit">+</button>
+    </form>
 
-        <header class="primeira-navbar">
-            <div class="estrutura-logo">
-                <img src="img/logo.png" alt="Logo" class="logo">
-                <span class="nome-empresa">W E E K</span>
+    <table>
+      <thead>
+        <tr>
+          <th>Tarefa</th>
+          <th>Criada em</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- <tr>
+          <td>título da task</td>
+          <td>00 de janeiro de 2023 15:00</td>
+          <td>
+            <select>
+              <option value="pendente">pendente</option>
+              <option value="em andamento">em andamento</option>
+              <option value="concluída">concluída</option>
+            </select>
+          </td>
+          <td>
+            <button class="btn-action">
+              <span class="material-symbols-outlined">edit</span>
+            </button>
+
+            <button class="btn-action">
+              <span class="material-symbols-outlined">delete</span>
+            </button>
+          </td>
+        </tr> -->
+      </tbody>
+
+
+    </table>
+
+  </main>
+  <footer>
+    <div class="conteudogeral">
+        <div class="conteudo1">
+            <h4>Sobre nós</h4><br>
+            <p>Ajudamos as pessoas a organizarem suas vidas através</p>
+            <p>de um gerenciador de tarefas simples, prático e bonito.</p>
+            <p>Com o WEEK a organização se torna fácil!</p>
+        </div>
+        <div class="conteudo2">
+            <h4>Links Importantes</h4><br>
+            <ul class="linksfooter">
+                <li><a class="linksimportantes" href="#">Funcionalidades</a></li>
+                <li><a class="linksimportantes" href="#">Termos de uso</a></li>
+                <li><a class="linksimportantes" href="#">Dúvidas</a></li>
+                <li><a class="linksimportantes" href="#">Planos</a></li>
+                <li><a class="linksimportantes" href="#">Blog</a></li>
+            </ul>
+
+        </div>
+        <div class="conteudo3">
+            <h4>Siga nossas redes sociais!</h4>
+            <div class="social-icons">
+                <!-- ícones encontrados no site icons8.com.br -->
+                <a href="#" class="social-icon"><img src="img/icons8-facebook-48.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="img/icons8-instagram-50 (1).png" alt="Instagram"></a>
+                <h5>Dúvidas ou sugestões?</h5>
+                <a href="#" class="linkemail">contact@weekcalendario</a><br>
             </div>
-            <span class="nav-home"><a class="vastarefas" href="home.php">Home</a></span>
-        </header>
-        <nav class="segunda-navbar">
-            <a href="index.php" class="seta-link">
-                <img src="img/return.png" alt="Seta" class="seta-img">
-            </a>
-            <!-- <span class="nav-calendario">Calendário</span> -->
-            <a class="nav-calendario" href="indexCalendario.php" >Calendário</a>
-        </nav>
-        <main>
-            <form class="adicionar-form">
-                <input type="text" placeholder="Adicionar tarefa" class="input-task">
-                <button type="submit">+</button>
-            </form>
+        </div>
+    </div>
+    </div>
+</footer>
 
-            <table class="estilizar-table">
-                <thead>
-                    <tr>
-                        <th>Tarefa</th>+
-                        <th>Criada em</th>
-                        <th>Status</th>
-                        <th>Ações</th>
-
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Título</td>
-                        <td>00 de Janeiro de 2023 15:00</td>
-                        <td>
-                            <select class="estilizar-select">
-                                <option value="pendente">Pendente</option>
-                                <option value="em andamento">Em andamento</option>
-                                <option value="concluida">Concluída</option>
-                            </select>
-                        </td>
-                        <td>
-                            <button class="btn-acao">
-                                <span class="material-symbols-outlined">
-                                    edit
-                                </span>
-                            </button>
-                            <button class="btn-acao">
-                                <span class="material-symbols-outlined">
-                                    delete
-                                </span>
-                            </button>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </main>
-
+  <script src="js/home.js"></script>
 </body>
-
 </html>
