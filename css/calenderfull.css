@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 .primeira-navbar, .segunda-navbar {
     height: 80px;
     display: flex;
@@ -82,7 +86,6 @@ footer {
     color: #fff;
 }
 
-
 .conteudogeral {
     display: flex; 
     max-width: 1200px;
@@ -166,3 +169,20 @@ h4 {
 .linksimportantes:hover{
     color: darkgray;
 }
+
+@media screen and (max-width: 768px) {
+    .linksfooter {
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    .linksfooter li {
+        margin: 5px 0; 
+    }
+}
+
+
+
+
+
+
