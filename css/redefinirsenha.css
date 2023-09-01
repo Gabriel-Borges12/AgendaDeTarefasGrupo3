@@ -190,3 +190,88 @@ button:hover{
   text-decoration: none;
   font-size: small;
 }
+
+@media (min-width: 120px) and (max-width: 467px) {
+    .lado-esq{
+        display: none;
+
+    }
+
+    body {
+        background: #a25fda !important;
+    }
+
+    #logologin {
+        align-items: center;
+    }
+    #logoLoginDir{
+        display: block;
+        width: 180px;
+    }
+    #tituloDir{
+        display: block;
+    }
+    .lado-dir{
+        flex-direction: column;
+    }
+}
+@media (max-width: 468px) {
+    .lado-esq{
+        display: none;
+
+    }
+
+    body {
+        background: #a25fda !important;
+    }
+
+    #logologin {
+        align-items: center;
+    }
+    #logoLoginDir{
+        display: block;
+        width: 180px;
+    }
+    #tituloDir{
+        display: block;
+    }
+    .lado-dir{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 469px) and (max-width:945px) {
+    .lado-esq{
+        display: none;
+    }
+
+    body {
+        background: #a25fda !important;
+    }
+    #logologin {
+        align-items: center;
+    }
+    #logoLoginDir{
+        display: block;
+        width: 180px;
+    }
+    #tituloDir{
+        display: block;
+    }
+    .lado-dir{
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width: 945px) {
+    #logoLoginDir{
+        display: none;
+    }
+    #tituloDir{
+        display: none;
+    }
+}
+
+  
+  
