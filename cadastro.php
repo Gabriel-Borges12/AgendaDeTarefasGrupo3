@@ -31,19 +31,19 @@
             <img id="logoLoginDir" src="img/WEEK.png">
             <h1 id="tituloDir">Bem vindo ao Week!</h1>
             <div class="container">
-                <form id="cadastro-form">
+                <form id="cadastro-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <h1 id="logintitulo">Cadastro</h1>
                     <img id="img-user"src="img/user.png">
-                    <input type="text" class="formzao" placeholder="Usuario">
+                    <input type="text" class="formzao" placeholder="Usuario" name= "usuario" required>
                     <br> <br>
                     <img id="img-email"src="img/e-mail.png">
-                    <input type="text" class="formzao" placeholder="Email">
+                    <input type="text" class="formzao" placeholder="Email" name= "email" required>
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Senha">
+                    <input type="password" class="formzao" placeholder="Senha" name= "senha" required>
                     <br><br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Confirmar senha">
+                    <input type="password" class="formzao" placeholder="Confirmar senha" name= "confirmarsenha" required>
                     <br><br><br>
                 
                     
@@ -53,6 +53,35 @@
             </div>
         </div>
     </div>
+    
+    <?php
+    //conecta ao banco de dados
+    $conn = new mysqli("localhost","root","", "teste_php");
+
+    //verifica se a conexão foi bem sucedida
+    if($conn->connect_error) {
+        die("Erro de conexão:" . $conn->connect_error);
+    }
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        //obtém os valores do formulário
+        $nome = $_POST["usuario"];
+        $email = $_POST["email"];
+        $senha = $_POST["Senha"];
+        $confirmar_senha = $_POST["confirmarsenha"];
+
+        //insere os dados na tabela de usuários
+        $sql = "INSERT INTO week_calendario (nome, email, senha, confirmarsenha) VALUES (?,?,?,?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $nome, $email, $senha, $confirmar_senha);
+        $stmt->execute();
+        header:exit();
+        $conn->close();
+    }
+
+
+
+    ?>
     
 </body>
 
