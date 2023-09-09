@@ -91,7 +91,7 @@
                   <a href="#" class="social-icon"><img src="img/icons8-facebook-48.png" alt="Facebook"></a>
                   <a href="#" class="social-icon"><img src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
                   <a href="#" class="social-icon"><img src="img/icons8-instagram-50 (1).png" alt="Instagram"></a>
-                  <h5>Dúvidas ou sugestões?</h5>
+                  <br><br><h5>Dúvidas ou sugestões?</h5>
                   <a href="#" class="linkemail">contact@weekcalendario</a><br>
               </div>
           </div>
