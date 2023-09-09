@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     Option 1: Include in HTML -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> -->
-    <title>Login Week</title>
+    <title>Cadastro Week</title>
 </head>
 
 <body>
@@ -55,13 +55,13 @@
     </div>
     
     <?php
-    //conecta ao banco de dados
-    $conn = new mysqli("localhost","root","", "teste_php");
+    // conecta ao banco de dados
+    // $conn = new mysqli("localhost","root","", "teste_php");
 
     //verifica se a conexão foi bem sucedida
-    if($conn->connect_error) {
-        die("Erro de conexão:" . $conn->connect_error);
-    }
+    // if($conn->connect_error) {
+    //     die("Erro de conexão:" . $conn->connect_error);
+    // }
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         //obtém os valores do formulário

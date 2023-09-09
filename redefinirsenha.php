@@ -16,9 +16,9 @@
                 cotidiana. Com uma interface intuitiva e amigável, ele permite que você liste e priorize suas tarefas em
                 uma
                 única plataforma. A organização se torna fácil!</p>
-            <div class="foto-cadeado">
+            <!-- <div class="foto-cadeado">
                 <img id="cadeado" src="img/senharedefinir.png">
-            </div>
+            </div> -->
         </div>
         <div class="lado-dir">
             <div class="container">
