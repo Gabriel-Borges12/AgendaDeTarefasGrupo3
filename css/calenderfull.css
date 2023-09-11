@@ -184,21 +184,52 @@ h4 {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .primeira-navbar,
+    .segunda-navbar {
+        padding: 10px 20px; /* Aumentar o padding horizontal para evitar cortes de texto */
+    }
+
+    .logo {
+        width: 40px;
+        height: 35px;
+    }
+
+    .nome-empresa {
+        font-size: 1.5rem;
+    }
+
+    .nav-home,
+    .nav-calendario {
+        margin: 0 15px; /* Espaçamento ligeiramente maior */
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+    }
+
     .conteudogeral {
         flex-direction: column;
     }
 
-    .conteudo1, .conteudo2, .conteudo3, .social-icons, .social-icon, .linksfooter {
-        flex: 1;
-        margin: 10px;
-        color: #fff;
+    .conteudo1,
+    .conteudo2,
+    .conteudo3,
+    .social-icons {
+        width: 100%;
         text-align: center;
     }
 
     .linksfooter li {
         margin-left: 0;
-        /* Remove a margem para alinhar à esquerda */
         display: flex;
         justify-content: center;
+    }
+
+    .linksimportantes,
+    .linkemail {
+        margin: 5px 0;
+    }
 }
-}
+
