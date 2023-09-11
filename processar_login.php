@@ -1,6 +1,6 @@
 <?php
  session_start();
-    $user1 = ['Borges' , '123'];
+    $user1 = ['user' , 'L@na'];
 
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
 

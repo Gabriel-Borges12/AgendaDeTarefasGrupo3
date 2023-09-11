@@ -16,10 +16,10 @@
             <img src="img/logo.png" alt="Logo" class="logo">
             <span class="nome-empresa">W E E K</span>
         </div>
-        <a href="#" class="nav-home">Home</a>
+        <a href="home.php" class="nav-home">Home</a>
     </header>
     <nav class="segunda-navbar">
-        <a href="#" class="nav-link seta-link">
+        <a href="index.php" class="nav-link seta-link">
             <img src="img/return.png" alt="Arrow" class="seta-img">
         </a>
         <span class="nav-calendario"><a class="nav-calendario" href="indexCalendario.php">Calendário</a></span>
