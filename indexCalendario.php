@@ -89,9 +89,9 @@
               <h4>Siga nossas redes sociais!</h4>
               <div class="social-icons">
                   <!-- ícones encontrados no site icons8.com.br -->
-                  <a href="#" class="social-icon"><img src="img/icons8-facebook-48.png" alt="Facebook"></a>
-                  <a href="#" class="social-icon"><img src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
-                  <a href="#" class="social-icon"><img src="img/icons8-instagram-50 (1).png" alt="Instagram"></a>
+                  <a href="https://www.facebook.com/?locale=pt_BR" class="social-icon"><img src="img/icons8-facebook-48.png" alt="Facebook"></a>
+                  <a href="https://twitter.com/login?lang=pt" class="social-icon"><img src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com/" class="social-icon"><img src="img/icons8-instagram-50 (1).png" alt="Instagram"></a>
                   <br><br><h5>Dúvidas ou sugestões?</h5>
                   <a href="#" class="linkemail">contact@weekcalendario</a><br>
               </div>
