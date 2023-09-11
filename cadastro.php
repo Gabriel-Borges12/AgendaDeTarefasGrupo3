@@ -48,6 +48,7 @@
                 
                     
                     <button type="submit" id="botaocadastro">Cadastrar</button>
+                    <a class="vparalogin" href="index.php">Voltar ao login</a>
                     
                 </form>
             </div>
