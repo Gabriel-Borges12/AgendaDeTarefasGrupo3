@@ -1,11 +1,17 @@
+<?php
+include 'conexao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/redefinirsenha.css">
     <title>Redefinir senha</title>
 </head>
+
 <body>
     <div class="main">
         <div class="lado-esq">
@@ -24,10 +30,10 @@
             <div class="container">
                 <form id="cadastro-form">
                     <h1 id="logintitulo">Esqueceu sua senha?</h1>
-                    <p>Para redefinir sua senha, digite o nome de</p> 
+                    <p>Para redefinir sua senha, digite o nome de</p>
                     <p> usuário que você usa para fazer login no </p>
                     <p> Week, e crie uma senha nova.</p>
-                    <img id="img-user"src="img/user.png">
+                    <img id="img-user" src="img/user.png">
                     <input type="text" class="formzao" placeholder="Usuario">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
@@ -44,4 +50,5 @@
         </div>
     </div>
 </body>
+
 </html>

@@ -1,3 +1,15 @@
+<?php 
+include 'conexao.php';
+
+session_start();
+
+if($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME']) && $_SESSION['usuario_logado'] !== true){
+    session_destroy();
+    header('Location: index.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,7 +31,7 @@
         <a href="home.php" class="nav-home">Home</a>
     </header>
     <nav class="segunda-navbar">
-        <a href="index.php" class="nav-link seta-link">
+        <a href="logout.php" class="nav-link seta-link">
             <img src="img/return.png" alt="Arrow" class="seta-img">
         </a>
         <span class="nav-calendario"><a class="nav-calendario" href="indexCalendario.php">Calendário</a></span>

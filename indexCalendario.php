@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+<?php 
+include 'conexao.php';
+
+session_start();
+
+if($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME']) && $_SESSION['usuario_logado'] !== true){
+    session_destroy();
+    header('Location: index.php');
+    exit;
+}
+?>
+
+<!-- <!DOCTYPE html>
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
@@ -53,12 +65,12 @@
           <div class="estrutura-logo">
               <img src="img/logo.png" alt="Logo" class="logo">
               <span class="nome-empresa">W E E K</span>
-          </div>
-          <!-- <span class="nav-home">Home</span> -->
-          <span class="nav-home"><a class="vastarefas" href="home.php">Home</a></span>
+          </div> -->
+         
+          <!-- <span class="nav-home"><a class="vastarefas" href="home.php">Home</a></span>
       </header>
       <nav class="segunda-navbar">
-          <a href="index.php" class="seta-link">
+          <a href="logout.php" class="seta-link">
               <img src="img/return.png" alt="Seta" class="seta-img">
           </a>
           <span class="nav-calendario"><a class="vastarefas" href="home.php">Voltar as tarefas</a></span>
@@ -87,9 +99,9 @@
           </div>
           <div class="conteudo3">
               <h4>Siga nossas redes sociais!</h4>
-              <div class="social-icons">
+              <div class="social-icons"> -->
                   <!-- ícones encontrados no site icons8.com.br -->
-                  <a href="https://www.facebook.com/?locale=pt_BR" class="social-icon"><img src="img/icons8-facebook-48.png" alt="Facebook"></a>
+                  <!-- <a href="https://www.facebook.com/?locale=pt_BR" class="social-icon"><img src="img/icons8-facebook-48.png" alt="Facebook"></a>
                   <a href="https://twitter.com/login?lang=pt" class="social-icon"><img src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
                   <a href="https://www.instagram.com/" class="social-icon"><img src="img/icons8-instagram-50 (1).png" alt="Instagram"></a>
                   <br><br><h5>Dúvidas ou sugestões?</h5>
@@ -100,4 +112,4 @@
       </div>
   </footer>
   </body>
-</html>
+</html> -->

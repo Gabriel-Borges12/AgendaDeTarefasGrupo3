@@ -1,3 +1,26 @@
+<?php 
+// echo "<script>alert('teste')</script>";
+include 'conexao.php';
+
+
+// if($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME'])){
+//     session_destroy();
+//     header('Location: index.php');
+//     exit;
+// }
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $user = $_POST['usuario'];
+    $email = $_POST['email'];
+    $senha = password_hash($_POST['senha'],PASSWORD_DEFAULT);
+
+    $conn->query("INSERT INTO usuarios (user,email,senha) VALUES ('$user', '$email', '$senha')");
+
+    header ("Location: index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,59 +54,27 @@
             <img id="logoLoginDir" src="img/WEEK.png">
             <h1 id="tituloDir">Bem vindo ao Week!</h1>
             <div class="container">
-                <form id="cadastro-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <form id="cadastro-form" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
                     <h1 id="logintitulo">Cadastro</h1>
-                    <img id="img-user"src="img/user.png">
-                    <input type="text" class="formzao" placeholder="Usuario" name= "usuario" required>
+                    <img id="img-user" src="img/user.png">
+                    <input type="text" class="formzao" placeholder="Usuario" name="usuario" required>
                     <br> <br>
-                    <img id="img-email"src="img/e-mail.png">
-                    <input type="text" class="formzao" placeholder="Email" name= "email" required>
+                    <img id="img-email" src="img/e-mail.png">
+                    <input type="text" class="formzao" placeholder="Email" name="email" required>
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Senha" name= "senha" required>
+                    <input type="password" class="formzao" placeholder="Senha" name="senha" required>
                     <br><br>
-                    <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Confirmar senha" name= "confirmarsenha" required>
-                    <br><br><br>
-                
-                    
+
+
                     <button type="submit" id="botaocadastro">Cadastrar</button>
                     <a class="vparalogin" href="index.php">Voltar ao login</a>
-                    
+
                 </form>
             </div>
         </div>
     </div>
-    
-    <?php
-    // conecta ao banco de dados
-    // $conn = new mysqli("localhost","root","", "teste_php");
 
-    //verifica se a conexão foi bem sucedida
-    // if($conn->connect_error) {
-    //     die("Erro de conexão:" . $conn->connect_error);
-    // }
-
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        //obtém os valores do formulário
-        $nome = $_POST["usuario"];
-        $email = $_POST["email"];
-        $senha = $_POST["Senha"];
-        $confirmar_senha = $_POST["confirmarsenha"];
-
-        //insere os dados na tabela de usuários
-        $sql = "INSERT INTO week_calendario (nome, email, senha, confirmarsenha) VALUES (?,?,?,?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssss", $nome, $email, $senha, $confirmar_senha);
-        $stmt->execute();
-        header:exit();
-        $conn->close();
-    }
-
-
-
-    ?>
-    
 </body>
 
 </html>

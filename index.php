@@ -45,6 +45,8 @@
                         <input type="submit" value="Login" id="botaologin">
                         <p id="naotenho">Não tem uma conta?</p>
                         <a class="cadastre-se" href="cadastro.php">Cadastre-se</a>
+                      
+                        <!-- <input type="button" value="Click Me" onclick=""/> -->
                 </form>
             </div>
         </div>
