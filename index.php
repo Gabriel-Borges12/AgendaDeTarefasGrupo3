@@ -32,21 +32,22 @@
             <h1 id="tituloDir">Bem vindo ao Week!</h1>
             <div class="container">
                 <form id="cadastro-form" method="post" action="processar_login.php">
-                        <h1 id="logintitulo">Login</h1>
-                        <img id="img-user" src="img/user.png">
-                        <input type="text" class="formzao" name="user" placeholder="Usuario">
-                        <br> <br>
-                        <img id="img-senha" src="img/senha.png">
-                        <input type="password" class="formzao" name="senha" placeholder="Senha">
+                    <h1 id="logintitulo">Login</h1>
+                    <img id="img-user" src="img/user.png">
+                    <input type="text" class="formzao" name="user" placeholder="Usuario">
+                    <br> <br>
+                    <img id="img-senha" src="img/senha.png">
+                    <input type="password" class="formzao" name="senha" placeholder="Senha">
 
-                        <p id=""><a class="esqueceur" href="redefinirsenha.php">Esqueceu sua senha?</a></p>
-                        <!-- <input type="button" value="" href="home.html"> -->
-                        <!-- <button type="button" id="botaologin" onclick="window.location.href='./home.php'">Login</button> -->
-                        <input type="submit" value="Login" id="botaologin">
-                        <p id="naotenho">Não tem uma conta?</p>
-                        <a class="cadastre-se" href="cadastro.php">Cadastre-se</a>
-                      
-                        <!-- <input type="button" value="Click Me" onclick=""/> -->
+                    <p id=""><a class="esqueceur" href="redefinirsenha.php">Esqueceu sua senha?</a></p>
+                    <!-- <input type="button" value="" href="home.html"> -->
+                    <!-- <button type="button" id="botaologin" onclick="window.location.href='./home.php'">Login</button> -->
+                    <input type="submit" value="Login" id="botaologin">
+      
+                    <p id="naotenho">Não tem uma conta?</p>
+                    <a class="cadastre-se" href="cadastro.php">Cadastre-se</a>
+
+                    <!-- <input type="button" value="Click Me" onclick=""/> -->
                 </form>
             </div>
         </div>

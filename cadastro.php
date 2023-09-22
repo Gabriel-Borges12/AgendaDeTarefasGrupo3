@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = $_POST['email'];
     $senha = password_hash($_POST['senha'],PASSWORD_DEFAULT);
 
-    $conn->query("INSERT INTO usuarios (user,email,senha) VALUES ('$user', '$email', '$senha')");
+    $conn->query("INSERT INTO funcionario (funcionario_nome,funcionario_email,funcionario_senha) VALUES ('$user', '$email', '$senha')");
 
     header ("Location: index.php");
     exit();
