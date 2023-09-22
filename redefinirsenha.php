@@ -8,7 +8,7 @@ include 'conexao.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/redefinirsenha.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Redefinir senha</title>
 </head>
 
@@ -25,6 +25,9 @@ include 'conexao.php';
             <!-- <div class="foto-cadeado">
                 <img id="cadeado" src="img/senharedefinir.png">
             </div> -->
+            <div class="foto-caderneta">
+                <img id="caderneta" src="img/cadernetalogin.png">
+            </div>
         </div>
         <div class="lado-dir">
             <div class="container">
@@ -33,6 +36,7 @@ include 'conexao.php';
                     <p>Para redefinir sua senha, digite o nome de</p>
                     <p> usuário que você usa para fazer login no </p>
                     <p> Week, e crie uma senha nova.</p>
+                    <br><br>
                     <img id="img-user" src="img/user.png">
                     <input type="text" class="formzao" placeholder="Usuario">
                     <br> <br>

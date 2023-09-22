@@ -121,13 +121,11 @@ input {
 .cadastre-se{
     text-decoration: none;
     color: #570e93;
-    font-size: small;
     padding-top: 20px;
 }
 
 .esqueceur{
     text-decoration: none;
-    font-size: small;
     padding-top: 0;
     margin: 0;
     color: #570e93;
@@ -190,7 +188,59 @@ input {
     width: 350px;
     border-radius:20px;
 }
+/* ADICIONAR DAQUI */
+.vparalogin{
+    color: #570e93;
+    text-decoration: none;
+  }
+
+.cadastre-se{
+    text-decoration: none;
+    color: #570e93;
+}
+
+#botaocadastro{
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    background:#CD90FE;
+    padding: 8px 5px;
+    color: #fff;
+    border: 1px solid #3274e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border:none;
+
+}
+
+button:hover{
+background-color:#a25fda;
+}
+
+.containersenha {
+    /* width: 165%; */
+    height: 75%;
+    padding: 15px;
+    margin-top: 75px;
+    padding-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
 /* Aqui começa os medias queries */
+
+
 
 @media (min-width: 120px) and (max-width: 467px) {
     .lado-esq{
