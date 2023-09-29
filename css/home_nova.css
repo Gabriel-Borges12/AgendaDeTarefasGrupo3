@@ -96,11 +96,6 @@ select {
 select:hover {
     background-color: #cb69da;
 }
-
-.input.btn{
-    width: 500px;
-}
-
 .primeira-navbar,
 .segunda-navbar {
     height: 80px;
@@ -288,7 +283,7 @@ input[type="text"],
 select,
 input[type="date"] {
     width: 650px;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #DDD;
     border-radius: 5px;
     outline: none;
@@ -310,7 +305,7 @@ input[type="submit"] {
     font-size: 1.7rem;
     font-weight: 500;
     cursor: pointer;
-    margin-top: 20px; /* Espaçamento superior para o botão de enviar */
+    margin-top: 30px; /* Espaçamento superior para o botão de enviar */
 }
 
 
@@ -408,4 +403,22 @@ input[type="submit"] {
     }
 
 
+}
+
+
+/* Estilo para o botão "Salvar a tarefa" e "Lista de tarefas" */
+.btn, .botaotarefas {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B012CA;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilo quando o mouse passa por cima dos botões */
+.btn:hover, .botaotarefas:hover {
+    background-color: #9822AB;
 }
