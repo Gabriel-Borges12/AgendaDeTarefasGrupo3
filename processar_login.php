@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($senha, $senha_bd)) {
             $_SESSION['usuario_logado'] = true;
             $_SESSION['usuario_id'] = $linha['funcionario_id'];
-            header('Location: home.php');
+            header('Location: home_nova.php');
             exit();
         }
     }

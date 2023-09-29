@@ -40,21 +40,21 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVE
     <div class="content"><br>
     <h1>Escreva suas tarefas!</h1>
     <br>
-        <form action="cadastro_paciente.php" method="POST" class="formulario">
+        <form action="adicionar_tarefa.php" method="POST" class="formulario">
         <div class="campo">
-            <label for="nome">Nome da tarefa:</label>
-            <input type="text" name="nome" id="" placeholder="Digite o nome da sua tarefa">
-            <label for="data">Selecione uma data:</label>
-            <input type="date" id="data" name="data">
-            <label for="status">Status:</label>
-            <select name="status" id="">
-                <option value="concluido">Concluída</option>
-                <option value="andamento">Particular</option>
-                <option value="pendente">Particular</option>
+            <label for="descricao_tarefa">Nome da tarefa:</label>
+            <input type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa">
+            <label for="data_tarefa">Selecione uma data:</label>
+            <input type="date" id="data_tarefa" name="data_tarefa">
+            <label for="status_tarefa">Status:</label>
+            <select name="status_tarefa" id="status_tarefa">
+                <option value="pendente">Pendente</option>
+                <option value="em andamento">Em Andamento</option>
+                <option value="concluída">Concluída</option>
             </select>
             <input type="submit" value="Salvar a tarefa" class="btn">
         </form>
-        <button class="btn-voltar"><a href="lista_pacientes.php">Lista de tarefas</a></button>
+        <button class="btn-voltar"><a href="listartarefas.php">Lista de tarefas</a></button>
     </div>
     <footer>
     <div class="conteudogeral">
