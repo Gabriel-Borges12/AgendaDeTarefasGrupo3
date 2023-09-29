@@ -52,10 +52,12 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVE
                 <option value="andamento">Particular</option>
                 <option value="pendente">Particular</option>
             </select>
-            <input type="submit" value="Salvar a tarefa" class="btn">
+            <input type="submit" value="Salvar a tarefa" class="btn"><br>
+        <button class="btn-voltar"><a href="lista_pacientes.php" class="botaotarefas">Lista de tarefas</a></button>
         </form>
-        <button class="btn-voltar"><a href="lista_pacientes.php">Lista de tarefas</a></button>
+        </div>
     </div>
+    <br>
     <footer>
     <div class="conteudogeral">
         <div class="conteudo1">
