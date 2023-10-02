@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVE
             <img src="img/logo.png" alt="Logo" class="logo">
             <span class="nome-empresa">W E E K</span>
         </div>
-        <a href="home.php" class="nav-home">Home</a>
+        <a href="home_nova.php" class="nav-home">Home</a>
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">

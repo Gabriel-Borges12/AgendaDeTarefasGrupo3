@@ -23,11 +23,14 @@ if (isset($_GET['id'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $descricao_tarefa = $_POST['descricao_tarefa'];
     $data_tarefa = $_POST['data_tarefa'];
+    $data_tarefa_formatada = date("Y-m-d", strtotime($data_tarefa));
+
     $status_tarefa = $_POST['status_tarefa'];
 
     $sql = "UPDATE tarefas SET descricao_tarefa = ?, data_tarefa = ?, status_tarefa = ? WHERE id_tarefa = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sdii", $descricao_tarefa, $data_tarefa, $status_tarefa, $id);
+    $stmt->bind_param("sssi", $descricao_tarefa, $data_tarefa_formatada, $status_tarefa, $id);
+
 
     if ($stmt->execute()) {
         header("Location: listartarefas.php");
@@ -63,7 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <select name="status_tarefa" id="status_tarefa" required>
             <option value="pendente" <?php echo ($tarefas['status_tarefa'] == 'pendente') ? 'selected' : ''; ?>>Pendente
             </option>
-            <option value=<option "em andamento" <?php echo ($tarefas['status_tarefa'] == 'em andamento') ? 'selected' : ''; ?>>Em Andamento</option>
+            <option value="em andamento" <?php echo ($tarefas['status_tarefa'] == 'em andamento') ? 'selected' : ''; ?>>Em
+                Andamento</option>
             <option value="concluída" <?php echo ($tarefas['status_tarefa'] == 'concluída') ? 'selected' : ''; ?>>
                 Concluída</option>
         </select>
