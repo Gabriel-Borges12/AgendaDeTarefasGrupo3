@@ -39,7 +39,7 @@ $conn->close();
     <title>Lista</title>
 </head>
 <body>
-<button type="button" class="btn-volta"><a href="index.php">Voltar</a></button>
+<button type="button" class="btn-volta"><a href="home_nova.php">Voltar</a></button>
 </body>
 </html>
 
