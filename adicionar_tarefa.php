@@ -2,6 +2,10 @@
 session_start();
 include 'conexao.php';
 
+if(!isset($_SESSION['usuario_id'])){
+    header("Location: index.php");
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $var_descricao = $_POST['descricao_tarefa'];

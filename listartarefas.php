@@ -26,6 +26,12 @@
     </nav>
     <?php
 include 'conexao.php';
+session_start();
+
+if(!isset($_SESSION['usuario_id'])){
+    header("Location: index.php");
+    exit();
+}
 
 $sql = "SELECT * FROM tarefas
 INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario_id;

@@ -2,12 +2,9 @@
 session_start();
 include 'conexao.php';
 
-
-
-if($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME']) && $_SESSION['usuario_logado'] !== true){
-    session_destroy();
-    header('Location: index.php');
-    exit;
+if(!isset($_SESSION['usuario_id'])){
+    header("Location: index.php");
+    exit();
 }
 ?>
 
