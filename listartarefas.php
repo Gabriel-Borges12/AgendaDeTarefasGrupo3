@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/listartarefas.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   <title>Home - Lista de Tarefas</title>
@@ -26,43 +28,43 @@
     </nav>
     <?php
 include 'conexao.php';
-session_start();
 
-if(!isset($_SESSION['usuario_id'])){
-    header("Location: index.php");
-    exit();
-}
-
-$sql = "SELECT * FROM tarefas
-INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario_id;
-";
+$sql = "SELECT * FROM tarefas";
 $resultado = $conn->query($sql);
 
+echo "<br><h1>Lista de Tarefas</h1>";
+
 if ($resultado->num_rows > 0) {
+    echo "<div class='table-container'>";
     echo "<table border='2'>";
     echo "<tr><th>ID do Funcionário</th><th>Nome da Tarefa</th><th>Criada em</th><th>Status</th><th>Ações</th></tr>";
 
     while ($row = $resultado->fetch_assoc()) {
         echo "<tr>";
-        echo "<td>" . $row['funcionario_nome'] . "</td>";
+        echo "<td>" . $row['id_tarefa'] . "</td>";
         echo "<td>" . $row['descricao_tarefa'] . "</td>";
         echo "<td>" . $row['data_tarefa'] . "</td>";
         echo "<td>" . $row['status_tarefa'] . "</td>";
         echo "<td>";
-        echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'>Editar</a> | ";
-        echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "'>Apagar</a>";
+        echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>edit</span></a> | ";
+        echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>delete</span></a>";
+
         echo "</td>";
         echo "</tr>";
     }
 
     echo "</table>";
+    echo "</div>"; // Close the table-container div
 } else {
     echo "Nenhuma tarefa listada.";
 }
 
 $conn->close();
+
 ?>
-<button type="button" class="btn-volta"><a href="index.php">Voltar</a></button>
+<br>
+<button type="button" class="btn-volta"><a class="btn-texto"href="index.php">Voltar</a></button>
+<br>
 
 <footer>
     <div class="conteudogeral">

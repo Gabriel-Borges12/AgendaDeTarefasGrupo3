@@ -62,10 +62,33 @@ button[type="submit"] {
     cursor: pointer;
 }
 
+/* Estilo para a tabela */
+/* Estilo para a tabela */
 table {
     border-collapse: collapse;
     width: 100%;
+    margin-top: 20px; /* Espaçamento superior para a tabela */
+    margin-left: auto; /* Margem esquerda automática para centralizar a tabela */
+    margin-right: auto; /* Margem direita automática para centralizar a tabela */
+    border-spacing: 10px; /* Espaçamento entre as células da tabela */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    padding-left: 22px; /* Espaçamento no lado esquerdo */
+    padding-right: 22px; /* Espaçamento no lado direito */
+
 }
+
+/* CSS for the table container */
+.table-container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add space between the sides */
+    background-color: white; /* Add a background color if necessary */
+    border-radius: 10px; /* Optional: Add rounded corners to the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow */
+}
+
+
+
 
 td,
 th {
@@ -250,14 +273,13 @@ h4 {
 }
 
 /* Estilo para a tabela */
-table {
+/* table {
     border-collapse: collapse;
     width: 100%;
-    margin-top: 20px; /* Espaçamento superior para a tabela */
-    margin-left: auto; /* Margem esquerda automática para centralizar a tabela */
-    margin-right: auto; /* Margem direita automática para centralizar a tabela */
-    border-spacing: 10px; /* Espaçamento entre as células da tabela */
-}
+    margin-top: 20px; 
+    margin-right: auto; 
+    border-spacing: 10px; 
+} */
 
 td, th {
     padding: 10px 15px;
@@ -293,7 +315,33 @@ tr:nth-child(even) {
     background-color: #9822AB;
 }
 
+h1{
+    text-align: center;
+    justify-content:center;
+}
 
+.btn-volta {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #B012CA;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+    width: 10%; /* Defina a largura como 100% para ocupar todo o espaço da célula */
+    text-align: center; /* Centralize o texto no botão */
+    box-sizing: border-box;
+    height: 50px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    border: 2px solid #fff; /* Defina a borda como branca */
+}
+.btn-texto{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
 
 @media (max-width: 768px) {
     body {
