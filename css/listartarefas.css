@@ -247,71 +247,52 @@ h4 {
 
 .linksimportantes:hover {
     color: darkgray;
-
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    min-height: calc(100vh - 160px); /* Altura mínima excluindo o header e footer */
-    text-align: center; /* Centraliza o texto dentro da .content horizontalmente */
-}
-
-.formulario {
-    max-width: 700px; /* Ajuste a largura máxima do formulário conforme necessário */
-    width: 90%;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #e079f0;
-    text-align: left; /* Alinha o texto do formulário à esquerda */
-}
-
-.campo {
-    margin-bottom: 20px; /* Espaçamento entre os campos */
-}
-
-.campo label {
-    display: block; /* Coloca os rótulos em uma nova linha */
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-select,
-input[type="date"] {
-    width: 650px;
-    padding: 15px;
-    border: 1px solid #DDD;
-    border-radius: 5px;
-    outline: none;
-    font-size: 1rem;
-    font-weight: 600; /* Modifique a fonte conforme necessário */
-}
-
-select:hover {
-    background-color: #cb69da;
-}
-
-input[type="submit"] {
-    background-color: #B012CA;
-    height: 50px;
+/* Estilo para a tabela */
+table {
+    border-collapse: collapse;
     width: 100%;
-    border: none;
+    margin-top: 20px; /* Espaçamento superior para a tabela */
+    margin-left: auto; /* Margem esquerda automática para centralizar a tabela */
+    margin-right: auto; /* Margem direita automática para centralizar a tabela */
+    border-spacing: 10px; /* Espaçamento entre as células da tabela */
+}
+
+td, th {
+    padding: 10px 15px;
+    border: 1px solid #000;
+    text-align: center;
+    margin: 5px; /* Espaço entre as laterais das células */
+}
+
+td {
+    color: #333;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #d237ea;
+}
+
+/* Estilo para o botão */
+.btn-volta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B012CA;
+    color: #fff;
+    text-decoration: none;
     border-radius: 5px;
-    color: #FFF;
-    font-size: 1.7rem;
-    font-weight: 500;
-    cursor: pointer;
-    margin-top: 30px; /* Espaçamento superior para o botão de enviar */
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px; /* Espaçamento superior para o botão */
 }
 
-#status_tarefa:hover{
-    background-color: #c436da;
-
+/* Estilo quando o mouse passa por cima do botão */
+.btn-volta:hover {
+    background-color: #9822AB;
 }
+
 
 
 @media (max-width: 768px) {
@@ -408,83 +389,4 @@ input[type="submit"] {
     }
 
 
-}
-
-
-/* Estilo para o botão "Salvar a tarefa" e "Lista de tarefas"
-.btn, .botaotarefas {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #B012CA;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-    position: center;
-}
-
-Estilo quando o mouse passa por cima dos botões
-.btn:hover, .botaotarefas:hover {
-    background-color: #9822AB;
-} */
-
-
-
-/* .btn {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #B012CA;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-}
-
-
-.botaotarefas {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #B012CA;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-}
-
-
-.btn:hover, .botaotarefas:hover {
-    background-color: #9822AB;
-}
-
-
-.button-container {
-    text-align: center;
-    margin-top: 20px; 
-}
- */
-
- /* Estilo para o botão "Salvar a tarefa" e "Lista de tarefas" */
-.btn, .botaotarefas {
-    display: inline-block;
-    padding: 10px 20px; /* Ajuste o tamanho do botão aqui */
-    background-color: #B012CA;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* Estilo quando o mouse passa por cima dos botões */
-.btn:hover, .botaotarefas:hover {
-    background-color: #9822AB;
-}
-
-/* Estilo para centralizar os botões */
-.button-container {
-    text-align: center;
-    margin-top: 20px; /* Espaçamento superior entre os botões */
 }

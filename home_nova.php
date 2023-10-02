@@ -37,7 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVE
         </a>
         <span class="nav-calendario"><a class="nav-calendario" href="indexCalendario.php">Calendário</a></span>
     </nav>
-    <div class="content"><br>
+    <!-- <div class="content"><br>
     <h1>Escreva suas tarefas!</h1>
     <br>
         <form action="adicionar_tarefa.php" method="POST" class="formulario">
@@ -55,7 +55,31 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVE
             <input type="submit" value="Salvar a tarefa" class="btn"><br>
         <button class="btn-voltar"><a href="listartarefas.php" class="botaotarefas">Lista de tarefas</a></button>
         </form>
+        </div> -->
+        
+        <div class="content">
+    <br>
+    <h1>Escreva suas tarefas!</h1>
+    <br>
+    <form action="adicionar_tarefa.php" method="POST" class="formulario">
+        <div class="campo">
+            <label for="descricao_tarefa">Nome da tarefa:</label>
+            <input type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa">
+            <label for="data_tarefa">Selecione uma data:</label>
+            <input type="date" id="data_tarefa" name="data_tarefa">
+            <label for="status_tarefa">Status:</label>
+            <select name="status_tarefa" id="status_tarefa">
+                <option value="pendente">Pendente</option>
+                <option value="em andamento">Em Andamento</option>
+                <option value="concluída">Concluída</option>
+            </select>
+            <input type="submit" value="Salvar a tarefa" class="btn">
         </div>
+        <div class="button-container">
+            <a href="listartarefas.php" class="botaotarefas">Lista de tarefas</a>
+        </div>
+    </form>
+</div>
     </div>
     <br>
     <footer>
