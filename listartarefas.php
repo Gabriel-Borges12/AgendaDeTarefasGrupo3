@@ -63,7 +63,7 @@ $conn->close();
 
 ?>
 <br>
-<button type="button" class="btn-volta"><a class="btn-texto"href="index.php">Voltar</a></button>
+<button type="button" class="btn-volta"><a class="btn-texto"href="home_nova.php">Voltar</a></button>
 <br>
 
 <footer>
