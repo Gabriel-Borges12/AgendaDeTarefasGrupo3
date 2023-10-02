@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $stmt->bind_param("sssi", $var_descricao, $var_data, $var_status, $var_usuario_id);
 
     if ($stmt->execute()) {
-        header("Location: home_nova.php?msg=Paciente cadastrado com sucesso!");
+        header("Location: home_nova.php?msg=Tarefa registrada com sucesso!");
     } else {
         echo "Erro ao cadastrar paciente" . $conn->error;
     }

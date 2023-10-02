@@ -51,38 +51,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <h1>Editar Tarefas</h1>
     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-        <input type="hidden" name="id" value="<?php echo $paciente['id_tarefa']; ?>">
+        <input type="hidden" name="id" value="<?php echo $tarefas['id_tarefa']; ?>">
 
         <label for="descricao_tarefa">Descrição da Tarefa:</label>
         <input type="text" name="descricao_tarefa" id="descricao_tarefa"
             value="<?php echo $tarefas['descricao_tarefa']; ?>" required>
         <label for="data_tarefa">Data da Tarefa:</label>
         <input type="date" name="data_tarefa" id="data_tarefa" value="<?php echo $tarefas['data_tarefa']; ?>" required>
-        <label for="status_tarefa">Status da Tarefa:</label>
-        <select name="status_tarefa" id="status_tarefa" value="<?php echo $tarefas['status_tarefa']; ?>" required>>
-            <?php
-            if ($resultado->num_rows > 0) {
-                while ($row = $resultado->fetch_assoc()) {
-                    $status_tarefa = $row["status_tarefa"];
-                    echo '<option value="' . $status_tarefa . '">' . $status_tarefa  . '</option>"';
-                }
-            } else {
-                echo "Nenhuma opção encontrada.";
-            }
-            echo '</select>';
-            ?>
 
 
-            <button type="submit">Atualizar</button>
+        <select name="status_tarefa" id="status_tarefa" required>
+            <option value="pendente" <?php echo ($tarefas['status_tarefa'] == 'pendente') ? 'selected' : ''; ?>>Pendente
+            </option>
+            <option value=<option "em andamento" <?php echo ($tarefas['status_tarefa'] == 'em andamento') ? 'selected' : ''; ?>>Em Andamento</option>
+            <option value="concluída" <?php echo ($tarefas['status_tarefa'] == 'concluída') ? 'selected' : ''; ?>>
+                Concluída</option>
+        </select>
+
+        <button type="submit">Atualizar</button>
     </form>
 </body>
 
 </html>
-
-
-
-<!-- while ($_enum>rows) {
-            echo "<option value='$tarefas[status_tarefa]'>Pendente</option>";            
-        }
-        ?>
-        // </select> -->
