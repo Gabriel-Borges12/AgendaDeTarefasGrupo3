@@ -27,7 +27,9 @@
     <?php
 include 'conexao.php';
 
-$sql = "SELECT * FROM tarefas";
+$sql = "SELECT * FROM tarefas
+INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario_id;
+";
 $resultado = $conn->query($sql);
 
 if ($resultado->num_rows > 0) {
@@ -36,7 +38,7 @@ if ($resultado->num_rows > 0) {
 
     while ($row = $resultado->fetch_assoc()) {
         echo "<tr>";
-        echo "<td>" . $row['id_tarefa'] . "</td>";
+        echo "<td>" . $row['funcionario_nome'] . "</td>";
         echo "<td>" . $row['descricao_tarefa'] . "</td>";
         echo "<td>" . $row['data_tarefa'] . "</td>";
         echo "<td>" . $row['status_tarefa'] . "</td>";
