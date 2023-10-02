@@ -1,5 +1,29 @@
 <?php
 include 'conexao.php';
+
+// if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+//     session_destroy();
+//     header('Location: index.php');
+//     exit;
+// } else {
+
+    // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    //     $user = $_POST['user'];
+    //     $sql = "SELECT funcionario_senha FROM funcionario WHERE funcionario_nome = '$user'";
+    //     $sql_exec = $conn->query($sql) or die($conn->error);
+
+    //     $snh = $sql_exec->fetch_assoc();
+    //     $_POST['n-senha'] == $_POST['c-senha'] ? $n_senha = password_hash($_POST['n-senha'], PASSWORD_DEFAULT) : header('Location: redefinirsenha.php');
+
+    //     $sql = "UPDATE funcionario SET funcionario_senha = '$n_senha' WHERE funcionario_nome = '$user'";
+    //     $sql_exec = $conn->query($sql) or die($conn->error);
+
+    //     sleep(1);
+    //     header('Location: index.php');
+    // }
+    // $conn->close();
+// }
 ?>
 
 <!DOCTYPE html>
@@ -38,13 +62,13 @@ include 'conexao.php';
                     <p> Week, e crie uma senha nova.</p>
                     <br><br>
                     <img id="img-user" src="img/user.png">
-                    <input type="text" class="formzao" placeholder="Usuario">
+                    <input type="text" class="formzao" name="user" placeholder="Usuario">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Nova senha">
+                    <input type="password" class="formzao" name= "n-senha" placeholder="Nova senha">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Confirmar senha">
+                    <input type="password" class="formzao" name= "c-senha" placeholder="Confirmar senha">
                     <br><br>
                     <button type="submit" id="redefinir">Redefinir</button>
                     <br><br>

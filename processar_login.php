@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Se a autenticação falhar, redirecione de volta para a página de login
-    header('Location: home.php');
+    header('Location: index.php');
     exit();
 }
 ?>
