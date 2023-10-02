@@ -34,10 +34,10 @@
                 <form id="cadastro-form" method="post" action="processar_login.php">
                     <h1 id="logintitulo">Login</h1>
                     <img id="img-user" src="img/user.png">
-                    <input type="text" class="formzao" name="user" placeholder="nome do usuario">
+                    <input type="text" class="formzao" name="user" placeholder="Nome do usuario">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" name="senha" placeholder="senha">
+                    <input type="password" class="formzao" name="senha" placeholder="Senha">
 
                     <p id=""><a class="esqueceur" href="redefinirsenha.php">Esqueceu sua senha?</a></p>
                     <!-- <input type="button" value="" href="home.html"> -->
