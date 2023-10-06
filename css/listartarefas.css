@@ -298,50 +298,44 @@ tr:nth-child(even) {
 }
 
 /* Estilo para o botão */
-.btn-volta {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #B012CA;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-    margin-top: 20px; /* Espaçamento superior para o botão */
-}
-
-/* Estilo quando o mouse passa por cima do botão */
-.btn-volta:hover {
-    background-color: #9822AB;
-}
 
 h1{
     text-align: center;
     justify-content:center;
 }
 
+.btn-volta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adicione outras propriedades de estilo ao contêiner, se necessário */
+}
+
 .btn-volta {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
     background-color: #B012CA;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
-    margin-top: 20px;
-    width: 10%; /* Defina a largura como 100% para ocupar todo o espaço da célula */
-    text-align: center; /* Centralize o texto no botão */
+    text-align: center; /* Centralize o texto dentro do botão */
     box-sizing: border-box;
-    height: 50px;
-    margin: 0 auto; /* Centraliza horizontalmente */
-    border: 2px solid #fff; /* Defina a borda como branca */
+    border: 2px solid #fff; /* Borda branca */
+    width: auto; /* Permita que a largura do botão seja baseada no conteúdo */
 }
-.btn-texto{
+
+
+.btn-texto {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
 }
+
+
+
+
 
 @media (max-width: 768px) {
     body {
@@ -413,6 +407,7 @@ h1{
         display: flex;
         justify-content: center;
     }
+    
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -437,4 +432,50 @@ h1{
     }
 
 
+}
+
+/* Estilo padrão para a tabela */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 10px;
+    border-radius: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+td, th {
+    padding: 10px 15px;
+    border: 1px solid #000;
+    text-align: center;
+    margin: 5px;
+}
+
+td {
+    color: #333;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #d237ea;
+}
+
+/* Adicione regras de mídia para telas menores */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.8rem; /* Reduza o tamanho da fonte */
+    }
+
+    td, th {
+        padding: 5px 10px; /* Reduza o preenchimento */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 0.6rem; /* Reduza ainda mais o tamanho da fonte */
+    }
 }
