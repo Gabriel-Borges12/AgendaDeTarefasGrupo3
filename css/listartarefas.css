@@ -325,6 +325,22 @@ h1{
     border: 2px solid #fff; /* Borda branca */
     width: auto; /* Permita que a largura do botão seja baseada no conteúdo */
 }
+.btn-volta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B012CA;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px; /* Espaçamento superior para o botão */
+}
+
+/* Estilo quando o mouse passa por cima do botão */
+.btn-volta:hover {
+    background-color: #9822AB;
+}
 
 
 .btn-texto {
