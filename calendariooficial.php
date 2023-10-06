@@ -23,11 +23,18 @@ if(!isset($_SESSION['usuario_id'])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/calenstyle.css" />
+  <link rel="stylesheet" href="css/calenstyle.css"/>
   <title>Calendário</title>
 </head>
 
 <body>
+<!-- <header class="primeira-navbar">
+        <div class="estrutura-logo">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <span class="nome-empresa">W E E K</span>
+        </div>
+        <a href="home_nova.php" class="nav-home">Home</a>
+    </header> -->
   <!-- <header class="primeira-navbar">
     <div class="estrutura-logo">
       <img src="img/logo.png" alt="Logo" class="logo">

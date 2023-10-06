@@ -32,7 +32,7 @@ if(!isset($_SESSION['usuario_id'])){
         <a href="logout.php" class="nav-link seta-link">
             <img src="img/return.png" alt="Arrow" class="seta-img">
         </a>
-        <span class="nav-calendario"><a class="nav-calendario" href="indexCalendario.php">Calendário</a></span>
+        <span class="nav-calendario"><a class="nav-calendario" href="calendariooficial.php">Calendário</a></span>
     </nav>
     <!-- <div class="content"><br>
     <h1>Escreva suas tarefas!</h1>

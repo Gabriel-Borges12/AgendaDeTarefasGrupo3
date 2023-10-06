@@ -18,18 +18,18 @@
             <img src="img/logo.png" alt="Logo" class="logo">
             <span class="nome-empresa">W E E K</span>
         </div>
-        <a href="home.php" class="nav-home">Home</a>
+        <a href="home_nova.php" class="nav-home">Home</a>
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">
             <img src="img/return.png" alt="Arrow" class="seta-img">
         </a>
-        <span class="nav-calendario"><a class="nav-calendario" href="indexCalendario.php">Calendário</a></span>
+        <span class="nav-calendario"><a class="nav-calendario" href="calendariooficial.php">Calendário</a></span>
     </nav>
     <?php
 include 'conexao.php';
 
-$sql = "SELECT * FROM tarefas";
+$sql = "SELECT * FROM tarefas INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario_id  ORDER BY data_tarefa ASC";
 $resultado = $conn->query($sql);
 
 echo "<br><h1>Lista de Tarefas</h1>";
@@ -37,11 +37,11 @@ echo "<br><h1>Lista de Tarefas</h1>";
 if ($resultado->num_rows > 0) {
     echo "<div class='table-container'>";
     echo "<table border='2'>";
-    echo "<tr><th>ID do Funcionário</th><th>Nome da Tarefa</th><th>Criada em</th><th>Status</th><th>Ações</th></tr>";
+    echo "<tr><th>Nome do Contribuidor</th><th>Nome da Tarefa</th><th>Data em que será realizada</th><th>Status</th><th>Ações</th></tr>";
 
     while ($row = $resultado->fetch_assoc()) {
         echo "<tr>";
-        echo "<td>" . $row['id_tarefa'] . "</td>";
+        echo "<td>" . $row['funcionario_nome'] . "</td>";
         echo "<td>" . $row['descricao_tarefa'] . "</td>";
         echo "<td>" . $row['data_tarefa'] . "</td>";
         echo "<td>" . $row['status_tarefa'] . "</td>";

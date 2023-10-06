@@ -21,6 +21,34 @@
       border-radius: 50px;
     }
     
+    .estrutura-logo {
+      display: flex;
+      align-items: center;
+  }
+  
+  .logo {
+      width: 60px;
+      height: 55px;
+      margin-right: 10px;
+  }
+  
+  .nome-empresa {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 2.0rem;
+      font-weight: bold;
+  }
+
+  .primeira-navbar {
+    height: 80px; 
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.primeira-navbar {
+    background-color: #9822AB;
+    color: #fff;
+}
     body {
       position: relative;
       min-height: 100vh;
