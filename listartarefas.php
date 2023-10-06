@@ -34,6 +34,7 @@ $resultado = $conn->query($sql);
 
 echo "<br><h1>Lista de Tarefas</h1>";
 
+
 if ($resultado->num_rows > 0) {
     echo "<div class='table-container'>";
     echo "<table border='2'>";
@@ -63,7 +64,9 @@ $conn->close();
 
 ?>
 <br>
-<button type="button" class="btn-volta"><a class="btn-texto"href="home_nova.php">Voltar</a></button>
+<div class="btn-volta-container">
+    <a href="home_nova.php" class="btn-volta">Voltar</a>
+</div>
 <br>
 
 <footer>
