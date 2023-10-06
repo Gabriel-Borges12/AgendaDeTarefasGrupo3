@@ -332,89 +332,33 @@ addEventSubmit.addEventListener("click", () => {
   const eventTitle = addEventTitle.value;
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
-  if (eventTitle === "" || eventTimeFrom === "" || eventTimeTo === "") {
-    alert("Por favor preencha todos os campos");
-    return;
-  }
+  
+  // Suponhamos que você também tenha uma variável "activeDay" definida anteriormente
 
-  //check correct time format 24 hour
-  const timeFromArr = eventTimeFrom.split(":");
-  const timeToArr = eventTimeTo.split(":");
-  if (
-    timeFromArr.length !== 2 ||
-    timeToArr.length !== 2 ||
-    timeFromArr[0] > 23 ||
-    timeFromArr[1] > 59 ||
-    timeToArr[0] > 23 ||
-    timeToArr[1] > 59
-  ) {
-    alert("Formato de horário inválido");
-    return;
-  }
+  // Crie um objeto FormData para enviar os dados
+  const formData = new FormData();
+  formData.append("eventTitle", eventTitle);
+  formData.append("eventTimeFrom", eventTimeFrom);
+  formData.append("eventTimeTo", eventTimeTo);
+  formData.append("activeDay", activeDay);
+  formData.append("month", month);
 
-  const timeFrom = convertTime(eventTimeFrom);
-  const timeTo = convertTime(eventTimeTo);
+  // Crie uma requisição AJAX
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "adicionar_tarefa.php", true);
 
-  //check if event is already added
-  let eventExist = false;
-  eventsArr.forEach((event) => {
-    if (
-      event.day === activeDay &&
-      event.month === month + 1 &&
-      event.year === year
-    ) {
-      event.events.forEach((event) => {
-        if (event.title === eventTitle) {
-          eventExist = true;
-        }
-      });
+  // Defina o manipulador de eventos para lidar com a resposta do servidor
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // A resposta do servidor (por exemplo, "Evento inserido com sucesso!") está em xhr.responseText
+      alert(xhr.responseText);
     }
-  });
-  if (eventExist) {
-    alert("Evento já adicionado");
-    return;
-  }
-  const newEvent = {
-    title: eventTitle,
-    time: timeFrom + " - " + timeTo,
   };
-  console.log(newEvent);
-  console.log(activeDay);
-  let eventAdded = false;
-  if (eventsArr.length > 0) {
-    eventsArr.forEach((item) => {
-      if (
-        item.day === activeDay &&
-        item.month === month + 1 &&
-        item.year === year
-      ) {
-        item.events.push(newEvent);
-        eventAdded = true;
-      }
-    });
-  }
 
-  if (!eventAdded) {
-    eventsArr.push({
-      day: activeDay,
-      month: month + 1,
-      year: year,
-      events: [newEvent],
-    });
-  }
-
-  console.log(eventsArr);
-  addEventWrapper.classList.remove("active");
-  addEventTitle.value = "";
-  addEventFrom.value = "";
-  addEventTo.value = "";
-  updateEvents(activeDay);
-  //select active day and add event class if not added
-  const activeDayEl = document.querySelector(".day.active");
-  if (!activeDayEl.classList.contains("event")) {
-    activeDayEl.classList.add("event");
-  }
+  // Envie a requisição com os dados do formulário
+  xhr.send(formData);
 });
+
 
 //function to delete event when clicked on event
 eventsContainer.addEventListener("click", (e) => {
