@@ -15,7 +15,7 @@ if(!isset($_SESSION['usuario_id'])){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/home_nova.css">
+  <link rel="stylesheet" href="./css/home_novaa.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   <title>Home - Lista de Tarefas</title>
@@ -60,6 +60,7 @@ if(!isset($_SESSION['usuario_id'])){
     <form action="adicionar_tarefa.php" method="POST" class="formulario">
         <div class="campo">
             <label for="descricao_tarefa">Nome da tarefa:</label>
+<<<<<<< HEAD
             <input type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa" required>
             <label for="data_tarefa">Selecione uma data:</label>
             <input type="date" id="data_tarefa" name="data_tarefa" required>
@@ -68,6 +69,16 @@ if(!isset($_SESSION['usuario_id'])){
                 <option value="pendente" required>Pendente</option>
                 <option value="em andamento" required>Em Andamento</option>
                 <option value="concluída" required>Concluída</option>
+=======
+            <input class="inputs" type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa">
+            <label for="data_tarefa">Selecione uma data:</label>
+            <input class="inputs" type="date" id="data_tarefa" name="data_tarefa">
+            <label for="status_tarefa">Status:</label>
+            <select class="inputs" name="status_tarefa" id="status_tarefa">
+                <option value="pendente">Pendente</option>
+                <option value="em andamento">Em Andamento</option>
+                <option value="concluída">Concluída</option>
+>>>>>>> 8636fae6f73b0effbe498df357310d89310556c5
             </select>
             <input type="submit" value="Salvar a tarefa" class="btn">
         </div>

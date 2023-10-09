@@ -19,6 +19,7 @@ body {
     margin: 0;
 }
 
+/* Estilos da seção principal */
 main {
     background-color: #e079f0;
     border-radius: 8px;
@@ -29,6 +30,7 @@ main {
     flex-grow: 1;
 }
 
+/* Estilos do formulário de adição */
 .add-form {
     display: flex;
     margin-bottom: 50px;
@@ -36,17 +38,19 @@ main {
     width: 100%;
 }
 
+/* Estilos dos inputs */
 input {
-    width: 500px;
-    flex: 1;
+    width: 100%;
+    /* Preenche a largura disponível */
     padding: 15px;
     border: 1px solid #DDD;
     border-radius: 5px;
     outline: none;
     font-size: 1rem;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
+/* Estilos do botão de envio */
 button[type="submit"] {
     background-color: #B012CA;
     height: 50px;
@@ -62,33 +66,11 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-/* Estilo para a tabela */
-/* Estilo para a tabela */
+/* Estilos da tabela */
 table {
     border-collapse: collapse;
     width: 100%;
-    margin-top: 20px; /* Espaçamento superior para a tabela */
-    margin-left: auto; /* Margem esquerda automática para centralizar a tabela */
-    margin-right: auto; /* Margem direita automática para centralizar a tabela */
-    border-spacing: 10px; /* Espaçamento entre as células da tabela */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    padding-left: 22px; /* Espaçamento no lado esquerdo */
-    padding-right: 22px; /* Espaçamento no lado direito */
-
 }
-
-/* CSS for the table container */
-.table-container {
-    width: 80%; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0px; /* Add space between the sides */
-    background-color: white; /* Add a background color if necessary */
-    border-radius: 10px; /* Optional: Add rounded corners to the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-
-
 
 td,
 th {
@@ -106,8 +88,10 @@ tr:nth-child(even) {
     background-color: #d237ea;
 }
 
+/* Estilos do select */
 select {
-    width: 500px;
+    width: 100%;
+    /* Preenche a largura disponível */
     border: none;
     padding: 10px;
     border-radius: 8px;
@@ -119,6 +103,8 @@ select {
 select:hover {
     background-color: #cb69da;
 }
+
+/* Estilos da primeira barra de navegação */
 .primeira-navbar,
 .segunda-navbar {
     height: 80px;
@@ -132,11 +118,13 @@ select:hover {
     color: #fff;
 }
 
+/* Estilos da segunda barra de navegação */
 .segunda-navbar {
     background-color: #B012CA;
     color: #fff;
 }
 
+/* Estilos do logotipo */
 .estrutura-logo {
     display: flex;
     align-items: center;
@@ -154,6 +142,7 @@ select:hover {
     font-weight: bold;
 }
 
+/* Estilos dos links de navegação */
 .nav-home,
 .nav-calendario {
     color: #fff;
@@ -164,6 +153,7 @@ select:hover {
     font-family: 'Inter', sans-serif;
 }
 
+/* Estilos da seta do link */
 .seta-img {
     width: 40px;
     height: 35px;
@@ -175,6 +165,7 @@ select:hover {
     margin-right: auto;
 }
 
+/* Estilos do rodapé */
 footer {
     background-color: #B012CA;
     padding: 20px;
@@ -183,7 +174,7 @@ footer {
     margin-top: auto;
 }
 
-
+/* Estilos do conteúdo do rodapé */
 .conteudogeral {
     display: flex;
     max-width: 1200px;
@@ -191,7 +182,7 @@ footer {
     padding: 20px;
 }
 
-
+/* Estilos dos elementos do conteúdo do rodapé */
 .conteudo1,
 .conteudo2,
 .conteudo3,
@@ -202,6 +193,7 @@ footer {
     color: #fff;
 }
 
+/* Estilos dos ícones sociais */
 .social-icons {
     margin-top: 20px;
 }
@@ -224,6 +216,7 @@ footer {
     filter: brightness(1.2);
 }
 
+/* Estilos para títulos */
 h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -235,6 +228,7 @@ h4 {
     margin-bottom: 5px;
 }
 
+/* Estilos dos links no rodapé */
 .linksfooter {
     display: block;
     justify-content: justify;
@@ -248,9 +242,9 @@ h4 {
 
 .linksfooter:hover {
     color: white;
-
 }
 
+/* Estilos do link de e-mail no rodapé */
 .linkemail {
     text-align: center;
     color: #fff;
@@ -261,98 +255,138 @@ h4 {
     color: darkgray;
 }
 
+/* Estilos dos links importantes no rodapé */
 .linksimportantes {
     color: #fff;
     text-decoration: none;
     justify-content: justify;
-
 }
 
 .linksimportantes:hover {
     color: darkgray;
 }
 
-/* Estilo para a tabela */
-/* table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px; 
-    margin-right: auto; 
-    border-spacing: 10px; 
-} */
-
-td, th {
-    padding: 10px 15px;
-    border: 1px solid #000;
-    text-align: center;
-    margin: 5px; /* Espaço entre as laterais das células */
-}
-
-td {
-    color: #333;
-    font-weight: 600;
-}
-
-tr:nth-child(even) {
-    background-color: #d237ea;
-}
-
-/* Estilo para o botão */
-
-h1{
-    text-align: center;
-    justify-content:center;
-}
-
-.btn-volta-container {
+/* Estilos do conteúdo principal */
+.content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    /* Adicione outras propriedades de estilo ao contêiner, se necessário */
+    justify-content: center;
+    min-height: calc(100vh - 160px);
+    text-align: center;
 }
 
-.btn-volta {
+/* Estilos do formulário */
+.formulario {
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #e079f0;
+    text-align: left;
+}
+
+.inputs {
+    width: 100% !important;
+}
+
+/* Estilos dos campos do formulário */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilos dos inputs e selects no formulário em telas menores */
+@media (max-width: 768px) {
+    .formulario {
+        max-width: 100% !important;
+        padding: 10px;
+    }
+
+    .campo label {
+        font-size: 1rem;
+    }
+
+    input{
+        width: 100% !important;
+        font-size: 0.9rem;
+    }
+
+    input[type="submit"] {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+}
+
+/* Estilos adicionais para telas ainda menores (opcional) */
+@media (max-width: 568px) {
+    .formulario {
+        padding: 5px;
+    }
+
+    .campo label {
+        font-size: 0.9rem;
+    }
+
+    input{
+        width: 100% !important;
+        font-size: 0.8rem;
+    }
+
+    input[type="submit"] {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+}
+
+
+select:hover {
+    background-color: #cb69da;
+}
+
+input[type="submit"] {
+    background-color: #B012CA;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 30px; /* Espaçamento superior para o botão de enviar */
+}
+
+#status_tarefa:hover{
+    background-color: #c436da;
+}
+
+ /* Estilo para o botão "Salvar a tarefa" e "Lista de tarefas" */
+ .btn, .botaotarefas {
     display: inline-block;
-    padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
+    padding: 10px 20px; 
     background-color: #B012CA;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
-    text-align: center; /* Centralize o texto dentro do botão */
-    box-sizing: border-box;
-    border: 2px solid #fff; /* Borda branca */
-    width: auto; /* Permita que a largura do botão seja baseada no conteúdo */
-}
-.btn-volta {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #B012CA;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-    margin-top: 20px; /* Espaçamento superior para o botão */
 }
 
-/* Estilo quando o mouse passa por cima do botão */
-.btn-volta:hover {
+
+.btn:hover, .botaotarefas:hover {
     background-color: #9822AB;
 }
 
-
-.btn-texto {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
+.button-container {
+    text-align: center;
+    margin-top: 20px; 
 }
-
-
-
-
-
 
 
 @media (max-width: 768px) {
@@ -363,7 +397,6 @@ h1{
 
     main {
         width: 100%;
-        /* margin: 10px;  */
     }
 
     button[type="submit"] {
@@ -404,7 +437,7 @@ h1{
 
     .conteudogeral {
         flex-direction: column;
-        /* Altera a direção do flex para empilhar verticalmente */
+
     }
 
     .conteudo1,
@@ -412,89 +445,14 @@ h1{
     .conteudo3,
     .social-icons {
         flex: none;
-        /* Impede que os elementos ocupem espaço igual no rodapé */
         width: 100%;
-        /* Ocupa toda a largura disponível */
         text-align: center;
-        /* Centraliza o texto */
     }
 
     .linksfooter li {
         margin-left: 0;
-        /* Remove a margem para alinhar à esquerda */
         display: flex;
         justify-content: center;
-    }
-    
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-    main {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-}
-
-
-@media (min-width: 1201px) {
-    main {
-        width: 70%;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-
-}
-
-/* Estilo padrão para a tabela */
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border-spacing: 10px;
-    border-radius: 10px;
-    padding-left: 22px;
-    padding-right: 22px;
-}
-
-td, th {
-    padding: 10px 15px;
-    border: 1px solid #000;
-    text-align: center;
-    margin: 5px;
-}
-
-td {
-    color: #333;
-    font-weight: 600;
-}
-
-tr:nth-child(even) {
-    background-color: #d237ea;
-}
-
-/* Adicione regras de mídia para telas menores */
-@media (max-width: 768px) {
-    table {
-        font-size: 0.8rem; /* Reduza o tamanho da fonte */
-    }
-
-    td, th {
-        padding: 5px 10px; /* Reduza o preenchimento */
-    }
-}
-
-@media (max-width: 480px) {
-    table {
-        font-size: 0.6rem; /* Reduza ainda mais o tamanho da fonte */
     }
 }
 
