@@ -495,3 +495,52 @@ tr:nth-child(even) {
         font-size: 0.6rem; /* Reduza ainda mais o tamanho da fonte */
     }
 }
+/* Estilo padrão para a tabela */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 10px;
+    border-radius: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+td, th {
+    padding: 10px 15px;
+    border: 1px solid #000;
+    text-align: center;
+    margin: 5px;
+}
+
+td {
+    color: #333;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #d237ea;
+}
+
+/* Adicione regras de mídia para telas menores */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.8rem; /* Reduza o tamanho da fonte */
+    }
+
+    td, th {
+        padding: 5px 10px; /* Reduza o preenchimento */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 0.6rem; /* Reduza ainda mais o tamanho da fonte */
+    }
+
+    td, th {
+        padding: 3px 6px; /* Reduza ainda mais o preenchimento */
+    }
+}
