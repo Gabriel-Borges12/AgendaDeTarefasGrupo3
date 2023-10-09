@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    background-image: url(img/calendario.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilos da seção principal */
+main {
+    background-color: #e079f0;
+    border-radius: 8px;
+    padding: 40px;
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+/* Estilos do formulário de adição */
+.add-form {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Estilos dos inputs */
+input {
+    width: 100%;
+    /* Preenche a largura disponível */
+    padding: 15px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Estilos do botão de envio */
+button[type="submit"] {
+    background-color: #B012CA;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilos da tabela */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    padding: 10px 15px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+td {
+    color: #333;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #d237ea;
+}
+
+/* Estilos do select */
+select {
+    width: 100%;
+    /* Preenche a largura disponível */
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: #ffffff;
+}
+
+select:hover {
+    background-color: #cb69da;
+}
+
+/* Estilos da primeira barra de navegação */
+.primeira-navbar,
+.segunda-navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.primeira-navbar {
+    background-color: #9822AB;
+    color: #fff;
+}
+
+/* Estilos da segunda barra de navegação */
+.segunda-navbar {
+    background-color: #B012CA;
+    color: #fff;
+}
+
+/* Estilos do logotipo */
+.estrutura-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 55px;
+    margin-right: 10px;
+}
+
+.nome-empresa {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+/* Estilos dos links de navegação */
+.nav-home,
+.nav-calendario {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 30px;
+    transition: color 0.3s;
+    direction: rtl;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilos da seta do link */
+.seta-img {
+    width: 40px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.seta-link {
+    font-size: 1.2rem;
+    margin-right: auto;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #B012CA;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: auto;
+}
+
+/* Estilos do conteúdo do rodapé */
+.conteudogeral {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos dos elementos do conteúdo do rodapé */
+.conteudo1,
+.conteudo2,
+.conteudo3,
+.social-icons,
+.social-icon {
+    flex: 1;
+    margin: 10px;
+    color: #fff;
+}
+
+/* Estilos dos ícones sociais */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.social-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Estilos para títulos */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+/* Estilos dos links no rodapé */
+.linksfooter {
+    display: block;
+    justify-content: justify;
+    color: #fff;
+}
+
+.linksfooter li {
+    text-align: justify;
+    margin-left: 127px;
+}
+
+.linksfooter:hover {
+    color: white;
+}
+
+/* Estilos do link de e-mail no rodapé */
+.linkemail {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.linkemail:hover {
+    color: darkgray;
+}
+
+/* Estilos dos links importantes no rodapé */
+.linksimportantes {
+    color: #fff;
+    text-decoration: none;
+    justify-content: justify;
+}
+
+.linksimportantes:hover {
+    color: darkgray;
+}
+
+/* Estilos do conteúdo principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 160px);
+    text-align: center;
+}
+
+/* Estilos do formulário */
+.formulario {
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #e079f0;
+    text-align: left;
+}
+
+.inputs {
+    width: 100% !important;
+}
+
+/* Estilos dos campos do formulário */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilos dos inputs e selects no formulário em telas menores */
+@media (max-width: 768px) {
+    .formulario {
+        max-width: 100% !important;
+        padding: 10px;
+    }
+
+    .campo label {
+        font-size: 1rem;
+    }
+
+    input{
+        width: 100% !important;
+        font-size: 0.9rem;
+    }
+
+    input[type="submit"] {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+}
+
+/* Estilos adicionais para telas ainda menores (opcional) */
+@media (max-width: 568px) {
+    .formulario {
+        padding: 5px;
+    }
+
+    .campo label {
+        font-size: 0.9rem;
+    }
+
+    input{
+        width: 100% !important;
+        font-size: 0.8rem;
+    }
+
+    input[type="submit"] {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+}
+
+
+select:hover {
+    background-color: #cb69da;
+}
+
+input[type="submit"] {
+    background-color: #B012CA;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 30px; /* Espaçamento superior para o botão de enviar */
+}
+
+#status_tarefa:hover{
+    background-color: #c436da;
+}
+
+ /* Estilo para o botão "Salvar a tarefa" e "Lista de tarefas" */
+ .btn, .botaotarefas {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #B012CA;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.btn:hover, .botaotarefas:hover {
+    background-color: #9822AB;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-image: none;
+        /* Remove a imagem de fundo em telas menores */
+    }
+
+    main {
+        width: 100%;
+    }
+
+    button[type="submit"] {
+        width: 100px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    td,
+    th {
+        padding: 5px 10px;
+    }
+
+    .primeira-navbar,
+    .segunda-navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 35px;
+    }
+
+    .nome-empresa {
+        font-size: 1.5rem;
+    }
+
+    .nav-home,
+    .nav-calendario {
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .conteudogeral {
+        flex-direction: column;
+
+    }
+
+    .conteudo1,
+    .conteudo2,
+    .conteudo3,
+    .social-icons {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .linksfooter li {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+

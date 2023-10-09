@@ -15,7 +15,7 @@ if(!isset($_SESSION['usuario_id'])){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/home_nova.css">
+  <link rel="stylesheet" href="./css/home_novaa.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   <title>Home - Lista de Tarefas</title>
@@ -60,11 +60,11 @@ if(!isset($_SESSION['usuario_id'])){
     <form action="adicionar_tarefa.php" method="POST" class="formulario">
         <div class="campo">
             <label for="descricao_tarefa">Nome da tarefa:</label>
-            <input type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa">
+            <input class="inputs" type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa">
             <label for="data_tarefa">Selecione uma data:</label>
-            <input type="date" id="data_tarefa" name="data_tarefa">
+            <input class="inputs" type="date" id="data_tarefa" name="data_tarefa">
             <label for="status_tarefa">Status:</label>
-            <select name="status_tarefa" id="status_tarefa">
+            <select class="inputs" name="status_tarefa" id="status_tarefa">
                 <option value="pendente">Pendente</option>
                 <option value="em andamento">Em Andamento</option>
                 <option value="concluída">Concluída</option>
