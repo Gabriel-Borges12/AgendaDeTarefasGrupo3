@@ -55,22 +55,19 @@ include 'conexao.php';
         </div>
         <div class="lado-dir">
             <div class="container">
-                <form id="cadastro-form">
+                <form action="processar_redefinir.php"id="cadastro-form" method = "post">
                     <h1 id="logintitulo">Esqueceu sua senha?</h1>
                     <p>Para redefinir sua senha, digite o nome de</p>
                     <p> usuário que você usa para fazer login no </p>
                     <p> Week, e crie uma senha nova.</p>
                     <br><br>
                     <img id="img-user" src="img/user.png">
-                    <input type="text" class="formzao" name="user" placeholder="Usuario">
+                    <input type="email" name="email" class="formzao" placeholder="Seu email">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" name= "n-senha" placeholder="Nova senha">
-                    <br> <br>
-                    <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" name= "c-senha" placeholder="Confirmar senha">
+                    <input type="password" class="formzao" name="new_password" placeholder="Nova senha">
                     <br><br>
-                    <button type="submit" id="redefinir">Redefinir</button>
+                    <button type="submit" id="redefinir">Salvar nova senha</button>
                     <br><br>
                     <a class="vparalogin" href="index.php">Voltar ao login</a>
                 </form>

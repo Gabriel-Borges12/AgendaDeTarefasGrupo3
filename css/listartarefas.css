@@ -81,10 +81,10 @@ table {
 .table-container {
     width: 80%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Add space between the sides */
+    padding: 0px; /* Add space between the sides */
     background-color: white; /* Add a background color if necessary */
     border-radius: 10px; /* Optional: Add rounded corners to the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -325,6 +325,22 @@ h1{
     border: 2px solid #fff; /* Borda branca */
     width: auto; /* Permita que a largura do botão seja baseada no conteúdo */
 }
+.btn-volta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B012CA;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px; /* Espaçamento superior para o botão */
+}
+
+/* Estilo quando o mouse passa por cima do botão */
+.btn-volta:hover {
+    background-color: #9822AB;
+}
 
 
 .btn-texto {
@@ -332,6 +348,8 @@ h1{
     text-decoration: none;
     font-size: 1.2rem;
 }
+
+
 
 
 
@@ -479,3 +497,4 @@ tr:nth-child(even) {
         font-size: 0.6rem; /* Reduza ainda mais o tamanho da fonte */
     }
 }
+
