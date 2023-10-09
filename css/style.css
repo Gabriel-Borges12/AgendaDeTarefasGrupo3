@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -7,6 +7,8 @@ body {
     background: linear-gradient(90deg, rgb(138, 7, 145) 0% 50%, rgb(241, 239, 239) 50% 100%);
     font-family: Arial, sans-serif;
 }
+
+/* Adicione a meta tag viewport no HTML para a responsividade */
 
 label {
     display: block;
@@ -25,23 +27,22 @@ input {
 }
 
 #botaologin {
-        cursor: pointer;
-        background:#CD90FE;
-        padding: 8px 5px;
-        color: #fff;
-        border: 1px solid #3274e7;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        outline: none;
-        width: 95%;
-        margin-top: 4px;
-        padding: 10px;
-        border:none;
-
+    cursor: pointer;
+    background: #CD90FE;
+    padding: 8px 5px;
+    color: #fff;
+    border: 1px solid #3274e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: none;
 }
 
-#botaologin:hover{
-    background-color:#a25fda;
+#botaologin:hover {
+    background-color: #a25fda;
 }
 
 #logologin {
@@ -60,31 +61,26 @@ input {
     margin: 7px;
 }
 
-#img-email{
+#img-email {
     width: 25px;
     height: 25px;
     position: absolute;
     margin: 7px;
 }
 
-#img-senha{
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    margin: 7px;
-}
-#img-csenha{
+#img-senha {
     width: 25px;
     height: 25px;
     position: absolute;
     margin: 7px;
 }
 
-/* .bi{
+#img-csenha {
+    width: 25px;
+    height: 25px;
     position: absolute;
-    margin-left: -190px;
-    margin-top: 5px;
-} */
+    margin: 7px;
+}
 
 #text {
     margin-right: 100px;
@@ -99,10 +95,8 @@ input {
 }
 
 .container {
-    /* width: 165%; */
     height: 75%;
     padding: 15px;
-    /* margin-top: 75px; */
     padding-top: 20px;
     background-color: #f9f9f9;
     border-radius: 5px;
@@ -118,13 +112,13 @@ input {
     display: flex;
 }
 
-.cadastre-se{
+.cadastre-se {
     text-decoration: none;
     color: #570e93;
     padding-top: 20px;
 }
 
-.esqueceur{
+.esqueceur {
     text-decoration: none;
     padding-top: 0;
     margin: 0;
@@ -139,8 +133,7 @@ input {
 
 .formzao {
     width: 300px;
-    border-radius:20px;
-
+    border-radius: 20px;
 }
 
 .lado-esq {
@@ -160,12 +153,11 @@ input {
 }
 
 #cadastro-form {
-    width:fit-content;
+    width: fit-content;
     margin: 30px;
     display: inline-block;
     align-items: center;
     justify-content: center;
-
 }
 
 .foto-caderneta {
@@ -173,157 +165,27 @@ input {
     justify-content: flex-end;
 }
 
-#enviar {
-    display: flex;
-    align-items: center;
-    margin-left: 100px;
-    justify-content: center;
-    margin-top: 20px;
-    width: 150px;
-    margin-right: 20px;
-    border-radius:20px;
-}
-
-#cadastrarse {
-    width: 350px;
-    border-radius:20px;
-}
-/* ADICIONAR DAQUI */
-.vparalogin{
-    color: #570e93;
-    text-decoration: none;
-  }
-
-.cadastre-se{
-    text-decoration: none;
-    color: #570e93;
-}
-
-#botaocadastro{
-    width: 100%;
-}
-
-button {
-    cursor: pointer;
-    background:#CD90FE;
-    padding: 8px 5px;
-    color: #fff;
-    border: 1px solid #3274e7;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    outline: none;
-    width: 95%;
-    margin-top: 4px;
-    padding: 10px;
-    border:none;
-
-}
-
-button:hover{
-background-color:#a25fda;
-}
-
-.containersenha {
-    /* width: 165%; */
-    height: 75%;
-    padding: 15px;
-    margin-top: 75px;
-    padding-top: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-    margin-left: 30px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    text-align: center;
-}
-/* Aqui começa os medias queries */
-
-
-
-@media (min-width: 120px) and (max-width: 467px) {
-    .lado-esq{
-        display: none;
-
+/* Estilos para telas menores (celulares) */
+@media (max-width: 767px) {
+    .container {
+        width: 100%; /* Fazer a parte roxa ocupar a tela inteira */
+        margin-left: 0;
     }
 
+    /* Ajustar o tamanho da fonte para telas menores */
     body {
-        background: #a25fda !important;
+        font-size: 14px;
     }
 
-    #logologin {
+    /* Reorganizar o layout para telas menores */
+    .main {
+        flex-direction: column;
         align-items: center;
     }
-    #logoLoginDir{
-        display: block;
-        width: 180px;
-    }
-    #tituloDir{
-        display: block;
-        color: white;
-    }
-    .lado-dir{
-        flex-direction: column;
-    }
-}
-@media (max-width: 468px) {
-    .lado-esq{
-        display: none;
-
-    }
-
-    body {
-        background: #a25fda !important;
-    }
-
-    #logologin {
-        align-items: center;
-    }
-    #logoLoginDir{
-        display: block;
-        width: 180px;
-    }
-    #tituloDir{
-        display: block;
-        color: white;
-    }
-    .lado-dir{
-        flex-direction: column;
-    }
-}
-
-@media (min-width: 469px) and (max-width:945px) {
-    .lado-esq{
-        display: none;
-    }
-
-    body {
-        background: #a25fda !important;
-    }
-    #logologin {
-        align-items: center;
-    }
-    #logoLoginDir{
-        display: block;
-        width: 180px;
-    }
-    #tituloDir{
-        display: block;
-        color: white;
-    }
-    .lado-dir{
-        flex-direction: column;
-    }
-
-}
-
-@media (min-width: 945px) {
-    #logoLoginDir{
-        display: none;
-    }
-    #tituloDir{
-        display: none;
-        color: white;
+    .lado-esq,
+    .lado-dir {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
     }
 }

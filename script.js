@@ -37,29 +37,11 @@ const months = [
   "Dezembro",
 ];
 
-// const eventsArr = [
-//   {
-//     day: 13,
-//     month: 11,
-//     year: 2022,
-//     events: [
-//       {
-//         title: "Event 1 lorem ipsun dolar sit genfa tersd dsad ",
-//         time: "10:00 AM",
-//       },
-//       {
-//         title: "Event 2",
-//         time: "11:00 AM",
-//       },
-//     ],
-//   },
-// ];
-
 const eventsArr = [];
 getEvents();
 console.log(eventsArr);
 
-//function to add days in days with class day and prev-date next-date on previous month and next month days and active on today
+// Function to add days in days with class day and prev-date next-date on previous month and next month days and active on today
 function initCalendar() {
   const firstDay = new Date(year, month, 1);
   const lastDay = new Date(year, month + 1, 0);
@@ -78,13 +60,14 @@ function initCalendar() {
   }
 
   for (let i = 1; i <= lastDate; i++) {
-    //check if event is present on that day
+    // Check if event is present on that day
     let event = false;
     eventsArr.forEach((eventObj) => {
+      const eventDate = new Date(eventObj.data_tarefa);
       if (
-        eventObj.day === i &&
-        eventObj.month === month + 1 &&
-        eventObj.year === year
+        i === eventDate.getDate() &&
+        month === eventDate.getMonth() &&
+        year === eventDate.getFullYear()
       ) {
         event = true;
       }
@@ -118,7 +101,7 @@ function initCalendar() {
   addListner();
 }
 
-//function to add month and year on prev and next button
+// Function to add month and year on prev and next button
 function prevMonth() {
   month--;
   if (month < 0) {
@@ -142,7 +125,7 @@ next.addEventListener("click", nextMonth);
 
 initCalendar();
 
-//function to add active on day
+// Function to add active on day
 function addListner() {
   const days = document.querySelectorAll(".day");
   days.forEach((day) => {
@@ -150,16 +133,16 @@ function addListner() {
       getActiveDay(e.target.innerHTML);
       updateEvents(Number(e.target.innerHTML));
       activeDay = Number(e.target.innerHTML);
-      //remove active
+      // Remove active
       days.forEach((day) => {
         day.classList.remove("active");
       });
-      //if clicked prev-date or next-date switch to that month
+      // If clicked prev-date or next-date switch to that month
       if (e.target.classList.contains("prev-date")) {
         prevMonth();
-        //add active to clicked day afte month is change
+        // Add active to clicked day after month is change
         setTimeout(() => {
-          //add active where no prev-date or next-date
+          // Add active where no prev-date or next-date
           const days = document.querySelectorAll(".day");
           days.forEach((day) => {
             if (
@@ -172,7 +155,7 @@ function addListner() {
         }, 100);
       } else if (e.target.classList.contains("next-date")) {
         nextMonth();
-        //add active to clicked day afte month is changed
+        // Add active to clicked day after month is changed
         setTimeout(() => {
           const days = document.querySelectorAll(".day");
           days.forEach((day) => {
@@ -216,7 +199,6 @@ dateInput.addEventListener("input", (e) => {
 gotoBtn.addEventListener("click", gotoDate);
 
 function gotoDate() {
-  console.log("here");
   const dateArr = dateInput.value.split("/");
   if (dateArr.length === 2) {
     if (dateArr[0] > 0 && dateArr[0] < 13 && dateArr[1].length === 4) {
@@ -229,7 +211,7 @@ function gotoDate() {
   alert("Data Inválida");
 }
 
-//function get active day day name and date and update eventday eventdate
+// Function to get active day, day name, and date and update event day and event date
 function getActiveDay(date) {
   const day = new Date(year, month, date);
   const dayName = day.toString().split(" ")[0];
@@ -237,38 +219,37 @@ function getActiveDay(date) {
   eventDate.innerHTML = date + " " + months[month] + " " + year;
 }
 
-//function update events when a day is active
+// Function to update events when a day is active
 function updateEvents(date) {
   let events = "";
-  eventsArr.forEach((event) => {
+  eventsArr.forEach((eventObj) => {
+    const eventDate = new Date(eventObj.data_tarefa);
     if (
-      date === event.day &&
-      month + 1 === event.month &&
-      year === event.year
+      date === eventDate.getDate() &&
+      month === eventDate.getMonth() &&
+      year === eventDate.getFullYear()
     ) {
-      event.events.forEach((event) => {
-        events += `<div class="event">
-            <div class="title">
-              <i class="fas fa-circle"></i>
-              <h3 class="event-title">${event.title}</h3>
-            </div>
-            <div class="event-time">
-              <span class="event-time">${event.time}</span>
-            </div>
-        </div>`;
-      });
+      events += `<div class="event">
+          <div class="title">
+            <i class="fas fa-circle"></i>
+            <h3 class="event-title">${eventObj.title}</h3>
+          </div>
+          <div class="event-time">
+            <span class="event-time">${eventObj.time}</span>
+          </div>
+      </div>`;
     }
   });
   if (events === "") {
     events = `<div class="no-event">
-            <h3>Sem eventos</h3>
-        </div>`;
+          <h3>Sem eventos</h3>
+      </div>`;
   }
   eventsContainer.innerHTML = events;
   saveEvents();
 }
 
-//function to add event
+// Function to add event
 addEventBtn.addEventListener("click", () => {
   addEventWrapper.classList.toggle("active");
 });
@@ -283,30 +264,12 @@ document.addEventListener("click", (e) => {
   }
 });
 
-//allow 50 chars in eventtitle
+// Allow 50 chars in event title
 addEventTitle.addEventListener("input", (e) => {
   addEventTitle.value = addEventTitle.value.slice(0, 60);
 });
 
-function defineProperty() {
-  var osccred = document.createElement("div");
-  osccred.style.position = "absolute";
-  osccred.style.bottom = "0";
-  osccred.style.right = "0";
-  osccred.style.fontSize = "10px";
-  osccred.style.color = "#ccc";
-  osccred.style.fontFamily = "sans-serif";
-  osccred.style.padding = "5px";
-  osccred.style.background = "#fff";
-  osccred.style.borderTopLeftRadius = "5px";
-  osccred.style.borderBottomRightRadius = "5px";
-  osccred.style.boxShadow = "0 0 5px #ccc";
-  document.body.appendChild(osccred);
-}
-
-defineProperty();
-
-//allow only time in eventtime from and to
+// Allow only time in event time from and to
 addEventFrom.addEventListener("input", (e) => {
   addEventFrom.value = addEventFrom.value.replace(/[^0-9:]/g, "");
   if (addEventFrom.value.length === 2) {
@@ -327,92 +290,85 @@ addEventTo.addEventListener("input", (e) => {
   }
 });
 
-//function to add event to eventsArr
+// Function to add event to eventsArr
 addEventSubmit.addEventListener("click", () => {
   const eventTitle = addEventTitle.value;
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
-  
-  // Suponhamos que você também tenha uma variável "activeDay" definida anteriormente
+  const eventDate = new Date(year, month, activeDay); // Use activeDay
 
-  // Crie um objeto FormData para enviar os dados
-  const formData = new FormData();
-  formData.append("eventTitle", eventTitle);
-  formData.append("eventTimeFrom", eventTimeFrom);
-  formData.append("eventTimeTo", eventTimeTo);
-  formData.append("activeDay", activeDay);
-  formData.append("month", month);
-
-  // Crie uma requisição AJAX
-  const xhr = new XMLHttpRequest();
-  xhr.open("POST", "adicionar_tarefa.php", true);
-
-  // Defina o manipulador de eventos para lidar com a resposta do servidor
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      // A resposta do servidor (por exemplo, "Evento inserido com sucesso!") está em xhr.responseText
-      alert(xhr.responseText);
-    }
+  // Create an object to store the event data
+  const eventData = {
+    title: eventTitle,
+    time: eventTimeFrom + " - " + eventTimeTo,
+    data_tarefa: eventDate.toISOString().slice(0, 10), // Format the date as "YYYY-MM-DD"
   };
 
-  // Envie a requisição com os dados do formulário
-  xhr.send(formData);
+  // Add the event data to eventsArr
+  eventsArr.push(eventData);
+
+  // Update the events
+  updateEvents(activeDay);
+
+  // Reset the input fields
+  addEventTitle.value = "";
+  addEventFrom.value = "";
+  addEventTo.value = "";
+
+  // Save events to local storage
+  saveEvents();
 });
 
-
-//function to delete event when clicked on event
+// Function to delete event when clicked on event
 eventsContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("event")) {
     if (confirm("Tem certeza que deseja deletar esse evento?")) {
-      const eventTitle = e.target.children[0].children[1].innerHTML;
-      eventsArr.forEach((event) => {
+      const eventTitle = e.target.querySelector(".event-title").textContent;
+      eventsArr.forEach((event, index) => {
+        const eventDate = new Date(event.data_tarefa);
         if (
-          event.day === activeDay &&
-          event.month === month + 1 &&
-          event.year === year
+          activeDay === eventDate.getDate() &&
+          month === eventDate.getMonth() &&
+          year === eventDate.getFullYear() &&
+          eventTitle === event.title
         ) {
-          event.events.forEach((item, index) => {
-            if (item.title === eventTitle) {
-              event.events.splice(index, 1);
-            }
-          });
-          //if no events left in a day then remove that day from eventsArr
-          if (event.events.length === 0) {
-            eventsArr.splice(eventsArr.indexOf(event), 1);
-            //remove event class from day
-            const activeDayEl = document.querySelector(".day.active");
-            if (activeDayEl.classList.contains("event")) {
-              activeDayEl.classList.remove("event");
-            }
-          }
+          eventsArr.splice(index, 1);
         }
       });
       updateEvents(activeDay);
+      saveEvents();
     }
   }
 });
 
-//function to save events in local storage
+// Function to save events in local storage
 function saveEvents() {
   localStorage.setItem("events", JSON.stringify(eventsArr));
 }
 
-//function to get events from local storage
+// Function to get events from local storage
 function getEvents() {
-  //check if events are already saved in local storage then return event else nothing
+  // Check if events are already saved in local storage then return event else nothing
   if (localStorage.getItem("events") === null) {
     return;
   }
   eventsArr.push(...JSON.parse(localStorage.getItem("events")));
 }
 
-function convertTime(time) {
-  //convert time to 24 hour format
-  let timeArr = time.split(":");
-  let timeHour = timeArr[0];
-  let timeMin = timeArr[1];
-  let timeFormat = timeHour >= 12 ? "PM" : "AM";
-  timeHour = timeHour % 12 || 12;
-  time = timeHour + ":" + timeMin + " " + timeFormat;
-  return time;
+function defineProperty() {
+  var osccred = document.createElement("div");
+  osccred.style.position = "absolute";
+  osccred.style.bottom = "0";
+  osccred.style.right = "0";
+  osccred.style.fontSize = "10px";
+  osccred.style.color = "#ccc";
+  osccred.style.fontFamily = "sans-serif";
+  osccred.style.padding = "5px";
+  osccred.style.background = "#fff";
+  osccred.style.borderTopLeftRadius = "5px";
+  osccred.style.borderBottomRightRadius = "5px";
+  osccred.style.boxShadow = "0 0 5px #ccc";
+  document.body.appendChild(osccred);
 }
+
+defineProperty();

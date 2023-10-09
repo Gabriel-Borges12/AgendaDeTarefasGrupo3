@@ -60,14 +60,14 @@ if(!isset($_SESSION['usuario_id'])){
     <form action="adicionar_tarefa.php" method="POST" class="formulario">
         <div class="campo">
             <label for="descricao_tarefa">Nome da tarefa:</label>
-            <input type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa">
+            <input type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa" required>
             <label for="data_tarefa">Selecione uma data:</label>
-            <input type="date" id="data_tarefa" name="data_tarefa">
+            <input type="date" id="data_tarefa" name="data_tarefa" required>
             <label for="status_tarefa">Status:</label>
-            <select name="status_tarefa" id="status_tarefa">
-                <option value="pendente">Pendente</option>
-                <option value="em andamento">Em Andamento</option>
-                <option value="concluída">Concluída</option>
+            <select name="status_tarefa" id="status_tarefa" required>
+                <option value="pendente" required>Pendente</option>
+                <option value="em andamento" required>Em Andamento</option>
+                <option value="concluída" required>Concluída</option>
             </select>
             <input type="submit" value="Salvar a tarefa" class="btn">
         </div>

@@ -3,7 +3,7 @@ include 'conexao.php';
 
 session_start();
 
-if(!isset($_SESSION['usuario_id'])){
+if (!isset($_SESSION['usuario_id'])) {
   header("Location: index.php");
   exit();
 }
@@ -23,12 +23,12 @@ if(!isset($_SESSION['usuario_id'])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/calenstyle.css"/>
+  <link rel="stylesheet" href="css/calendariooficial.css" />
   <title>Calendário</title>
 </head>
 
 <body>
-<!-- <header class="primeira-navbar">
+  <!-- <header class="primeira-navbar">
         <div class="estrutura-logo">
             <img src="img/logo.png" alt="Logo" class="logo">
             <span class="nome-empresa">W E E K</span>
@@ -46,9 +46,18 @@ if(!isset($_SESSION['usuario_id'])){
     <a href="#" class="nav-link seta-link">
       <img src="img/return.png" alt="Arrow" class="seta-img">
     </a> -->
-    <!-- <span class="nav-calendario">Calendário</span> -->
-  </nav>
+  <!-- <span class="nav-calendario">Calendário</span> -->
+  <!-- </nav> -->
   <div class="container">
+    <div class="left">
+      <div class="calendar">
+        <iframe src="adicionar_tarefa_calendario.php" width="100%" height="600px" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- <div class="container">
     <div class="left">
       <div class="calendar">
         <div class="month">
@@ -105,7 +114,7 @@ if(!isset($_SESSION['usuario_id'])){
     <button class="add-event">
       <i class="fas fa-plus"></i>
     </button>
-  </div>
+  </div> -->
 
   <!-- <footer>
     <div class="conteudogeral">
