@@ -51,12 +51,30 @@ if (!isset($_SESSION['usuario_id'])) {
   <div class="container">
     <div class="left">
       <div class="calendar">
-        <iframe src="adicionar_tarefa_calendario.php" width="100%" height="600px" frameborder="0"></iframe>
+        <div class="days"></div>
+        <div class="goto">
+          <input type="text" placeholder="mês/ano" class="date-input" />
+          <i class="fas fa-angle-left prev"></i>
+          <iframe src="adicionar_tarefa_calendario.php" width="100%" height="600px" frameborder="0"></iframe>
+        <div class="days"></div>
+        <div class="goto-today">
+          <div class="goto">
+            <input type="text" placeholder="mês/ano" class="date-input" />
+            <button class="goto-btn">Ir</button>
+          </div>
+          <button class="today-btn">Hoje</button>
+        </div>
+      </div>
+    </div>
+        </div>
       </div>
     </div>
   </div>
+  </div>
+  </div>
+  </div>
 
-  
+
   <!-- <div class="container">
     <div class="left">
       <div class="calendar">
