@@ -17,7 +17,7 @@ if(!isset($_SESSION['usuario_id'])){
 
   <link rel="stylesheet" href="./css/home_novaa.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
+  <link rel="icon" href=" ./img/logo.png">
   <title>Home - Lista de Tarefas</title>
 </head>
 <body>

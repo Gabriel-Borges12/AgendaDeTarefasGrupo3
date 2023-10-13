@@ -24,6 +24,7 @@ if (!isset($_SESSION['usuario_id'])) {
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/calendariooficial.css" />
+  <link rel="icon" href=" ./img/logo.png">
   <title>Calendário</title>
 </head>
 
@@ -53,8 +54,8 @@ if (!isset($_SESSION['usuario_id'])) {
       <div class="calendar">
         <div class="days"></div>
         <div class="goto">
-          <input type="text" placeholder="mês/ano" class="date-input" />
-          <i class="fas fa-angle-left prev"></i>
+
+        
           <iframe src="adicionar_tarefa_calendario.php" width="100%" height="600px" frameborder="0"></iframe>
         <div class="days"></div>
         <div class="goto-today">
