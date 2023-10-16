@@ -7,7 +7,9 @@ if (!isset($_SESSION['usuario_id'])) {
   header("Location: index.php");
   exit();
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -56,10 +58,11 @@ if (!isset($_SESSION['usuario_id'])) {
       <div class="days"></div>
       <div class="goto-today">
         <div class="goto">
-          <input type="text" placeholder="mês/ano" class="date-input" />
-          <button class="goto-btn">Ir</button>
+            <input type="text" placeholder="mês/ano" class="date-input" />
+            <button class="goto-btn">Ir</button>
+          </div>
+          <button class="today-btn">Hoje</button>
         </div>
-        <button class="today-btn">Hoje</button>
       </div>
     </div>
     <div>
