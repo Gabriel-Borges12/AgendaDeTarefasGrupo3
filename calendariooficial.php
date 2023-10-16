@@ -7,7 +7,9 @@ if (!isset($_SESSION['usuario_id'])) {
   header("Location: index.php");
   exit();
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -48,19 +50,29 @@ if (!isset($_SESSION['usuario_id'])) {
   <!-- <span class="nav-calendario">Calendário</span> -->
   <!-- </nav> -->
   <div class="container">
-    <div class="calendar">
-      <div class="days"></div>
-      <div class="goto">
-        <iframe src="adicionar_tarefa_calendario.php" frameborder="0"></iframe>
-      <div class="days"></div>
-      <div class="goto-today">
+    <div class="left">
+      <div class="calendar">
+        <div class="days"></div>
         <div class="goto">
-          <input type="text" placeholder="mês/ano" class="date-input" />
-          <button class="goto-btn">Ir</button>
+
+        
+          <iframe src="adicionar_tarefa_calendario.php" width="100%" height="600px" frameborder="0"></iframe>
+        <div class="days"></div>
+        <div class="goto-today">
+          <div class="goto">
+            <input type="text" placeholder="mês/ano" class="date-input" />
+            <button class="goto-btn">Ir</button>
+          </div>
+          <button class="today-btn">Hoje</button>
         </div>
-        <button class="today-btn">Hoje</button>
       </div>
     </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
   </div>
 
 
