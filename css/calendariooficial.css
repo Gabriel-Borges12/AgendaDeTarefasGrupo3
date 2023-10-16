@@ -78,7 +78,7 @@
 
   /* Estilizar o link quando o cursor passar por cima */
   .navbar a:hover {
-    background-color: #ddd;
+    background-color: #9822AB;
     /* Cor de fundo ao passar o cursor por cima */
     color: black;
     /* Cor do texto ao passar o cursor por cima */
