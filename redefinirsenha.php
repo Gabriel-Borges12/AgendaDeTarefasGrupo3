@@ -32,7 +32,7 @@ include 'conexao.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="icon" href=" ./img/logo.png">
     <title>Redefinir senha</title>
 </head>
@@ -68,7 +68,7 @@ include 'conexao.php';
                     <img id="img-senha" src="img/senha.png">
                     <input type="password" class="formzao" name="new_password" placeholder="Nova senha">
                     <br><br>
-                    <button type="submit" id="redefinir">Salvar nova senha</button>
+                    <input type="submit" value="Salvar nova senha" id="botao-salvar-senha">
                     <br><br>
                     <a class="vparalogin" href="index.php">Voltar ao login</a>
                 </form>

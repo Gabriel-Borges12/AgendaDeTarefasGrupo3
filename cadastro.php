@@ -52,8 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             </div>
         </div>
         <div class="lado-dir">
-            <img id="logoLoginDir" src="img/WEEK.png">
-            <h1 id="tituloDir">Bem vindo ao Week!</h1>
             <div class="container">
                 <form id="cadastro-form" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
                     <h1 id="logintitulo">Cadastro</h1>

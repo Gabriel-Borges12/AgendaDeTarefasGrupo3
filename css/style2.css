@@ -42,6 +42,7 @@ input {
 }
 #botaologin:hover {
     background-color: #a25fda;
+    transition: background-color 0.3s ease;
 }
 
 #logologin {
@@ -189,9 +190,9 @@ input {
     }
 }
 
-/* #botao-salvar-senha {
+#botao-salvar-senha{
     cursor: pointer;
-    background: #8f06ff;
+    background-color: #CD90FE;
     padding: 8px 5px;
     color: #fff;
     border: 1px solid #3274e7;
@@ -202,9 +203,10 @@ input {
     margin-top: 4px;
     padding: 10px;
     border: none;
-} */
+}
 
-#input[type="submit"]:hover {
-    background-color: #a25fda; /* Altere para a cor desejada ao passar o mouse */
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave de cor ao passar o mouse */
+#botao-salvar-senha:hover{
+    background-color: #a25fda;
+    transition: background-color 0.3s ease;
+
 }

@@ -48,6 +48,7 @@ if (!isset($_SESSION['usuario_id'])) {
   <!-- <span class="nav-calendario">Calendário</span> -->
   <!-- </nav> -->
   <div class="container">
+    <div class="left">
     <div class="calendar">
       <div class="days"></div>
       <div class="goto">
@@ -61,6 +62,7 @@ if (!isset($_SESSION['usuario_id'])) {
         <button class="today-btn">Hoje</button>
       </div>
     </div>
+    <div>
   </div>
 
 
