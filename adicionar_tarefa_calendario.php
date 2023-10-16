@@ -76,7 +76,7 @@ for ($day = 1; $day <= $num_days; $day++) {
     echo "<div class='date'>$day</div>";
     echo "<ul>";
     foreach ($tasks as $task) {
-        echo "<li>$task</li>";
+        echo "<p>$task</p>";
     }
     echo "</ul>";
     echo "</td>";

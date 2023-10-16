@@ -119,7 +119,7 @@ select {
 select:hover {
     background-color: #cb69da;
 }
-.primeira-navbar,
+/* .primeira-navbar, */
 .segunda-navbar {
     height: 80px;
     display: flex;
@@ -130,6 +130,7 @@ select:hover {
 .primeira-navbar {
     background-color: #9822AB;
     color: #fff;
+    top: 0px;
 }
 
 .segunda-navbar {
@@ -140,6 +141,7 @@ select:hover {
 .estrutura-logo {
     display: flex;
     align-items: center;
+    /* background-color: red; */
 }
 
 .logo {
