@@ -166,30 +166,87 @@ input {
 }
 
 /* Estilos para telas menores (celulares) */
-@media (max-width: 767px) {
-    .container {
-        width: 100%; /* Fazer a parte roxa ocupar a tela inteira */
-        margin-left: 0;
+@media (min-width: 120px) and (max-width: 467px) {
+    .lado-esq{
+        display: none;
+
     }
 
-    /* Ajustar o tamanho da fonte para telas menores */
     body {
-        font-size: 14px;
+        background: #a25fda !important;
     }
 
-    /* Reorganizar o layout para telas menores */
-    .main {
-        flex-direction: column;
+    #logologin {
         align-items: center;
     }
-    .lado-esq,
-    .lado-dir {
-        width: 100%;
-        margin-left: 0;
-        text-align: center;
+    #logoLoginDir{
+        display: block;
+        width: 180px;
+    }
+    #tituloDir{
+        display: block;
+    }
+    .lado-dir{
+        flex-direction: column;
+    }
+}
+@media (max-width: 468px) {
+    .lado-esq{
+        display: none;
+
+    }
+
+    body {
+        background: #a25fda !important;
+    }
+
+    #logologin {
+        align-items: center;
+    }
+    #logoLoginDir{
+        display: block;
+        width: 180px;
+    }
+    #tituloDir{
+        display: block;
+    }
+    .lado-dir{
+        flex-direction: column;
     }
 }
 
+@media (min-width: 469px) and (max-width:945px) {
+    .lado-esq{
+        display: none;
+    }
+
+    body {
+        background: #a25fda !important;
+    }
+    #logologin {
+        align-items: center;
+    }
+    #logoLoginDir{
+        display: block;
+        width: 180px;
+    }
+    #tituloDir{
+        display: block;
+    }
+    .lado-dir{
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width: 945px) {
+    #logoLoginDir{
+        display: none;
+    }
+    #tituloDir{
+        display: none;
+    }
+}
 #botao-salvar-senha{
     cursor: pointer;
     background-color: #CD90FE;
