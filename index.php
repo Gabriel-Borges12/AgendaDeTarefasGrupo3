@@ -44,7 +44,7 @@
                     <!-- <input type="button" value="" href="home.html"> -->
                     <!-- <button type="button" id="botaologin" onclick="window.location.href='./home.php'">Login</button> -->
                     <input type="submit" value="Login" id="botaologin">
-      
+
                     <p id="naotenho">Não tem uma conta?</p>
                     <a class="cadastre-se" href="cadastro.php">Cadastre-se</a>
 
