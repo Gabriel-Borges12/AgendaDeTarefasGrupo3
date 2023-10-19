@@ -47,7 +47,7 @@ echo "<br><h1>Lista de Tarefas</h1>";
 if ($resultado->num_rows > 0) {
     echo "<div class='table-container'>";
     echo "<table border='2'>";
-    echo "<tr><th>Nome do Contribuidor</th><th>Nome da Tarefa</th><th>Data em que será realizada</th><th>Status</th><th>Ações</th></tr>";
+    echo "<tr><th>Nome do funcionário</th><th>Nome da Tarefa</th><th>Data em que será realizada</th><th>Status</th><th>Funcionário que realizara</th><th>Ações</th></tr>";
 
     while ($row = $resultado->fetch_assoc()) {
         echo "<tr>";
@@ -55,6 +55,7 @@ if ($resultado->num_rows > 0) {
         echo "<td>" . $row['descricao_tarefa'] . "</td>";
         echo "<td>" . $row['data_tarefa'] . "</td>";
         echo "<td>" . $row['status_tarefa'] . "</td>";
+        echo "<td>" . $row['funcionario_nome'] . "</td>";
         echo "<td>";
         echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>edit</span></a> | ";
         echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>delete</span></a>";
