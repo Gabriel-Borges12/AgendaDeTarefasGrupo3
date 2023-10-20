@@ -154,6 +154,7 @@ select.formzao option:hover {
     height: 32px;
     position: absolute;
     margin: 7px;
+    margin-top: 4px;
 }
 
 
