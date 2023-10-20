@@ -148,6 +148,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
   }
 
   .container {
@@ -700,7 +701,7 @@
   }
 
   /* media queries */
-
+/* 
   @media screen and (max-width: 1000px) {
     body {
       align-items: flex-start;
@@ -755,9 +756,9 @@
     .add-event-wrapper {
       bottom: 100px;
     }
-  }
+  } */
 
-  @media screen and (max-width: 500px) {
+  /* @media screen and (max-width: 1500px) {
     .calendar .month {
       height: 75px;
     }
@@ -779,7 +780,14 @@
     .right .today-date {
       padding: 20px;
     }
-  }
+    .calendar {
+    
+      overflow-y: auto;
+      max-height: 500px; 
+    }
+     
+  }*/
+  
 
   /*   
       .credits {
@@ -819,4 +827,3 @@
     color: #fff;
     font-weight: bold;
   }
-  

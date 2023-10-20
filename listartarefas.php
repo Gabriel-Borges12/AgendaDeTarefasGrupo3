@@ -6,6 +6,11 @@ if(!isset($_SESSION['usuario_id'])){
     header("Location: index.php");
     exit();
 }
+ if (isset($_SESSION['funcionario_nome'])) {
+     $funcionario_nome = $_SESSION['funcionario_nome'];
+} else {
+     $funcionario_nome = "funcionario_nome"; // Ou qualquer valor padrão desejado
+ }
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +36,8 @@ if(!isset($_SESSION['usuario_id'])){
             <a href="home_nova.php" class="nav-home">Home</a>
             <br>
         </div>
+        <a href="home_nova.php" class="nav-home">Home</a>
+        <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
         <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
         
         <a href="home_nova.php" class="nav-home">Home</a>
