@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a href="logout.php" class="nav-link seta-link">
             <img src="img/return.png" alt="Arrow" class="seta-img">
         </a>
-        <span class="nav-calendario"><a class="nav-calendario" href="indexCalendario.php">Calendário</a></span>
+        <span class="nav-calendario"><a class="nav-calendario" href="calendariooficial.php">Calendário</a></span>
     </nav>
     <br>
     <h1>Editar Tarefas</h1>

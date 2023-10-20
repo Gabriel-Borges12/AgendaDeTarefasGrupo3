@@ -69,6 +69,12 @@ if(!isset($_SESSION['usuario_id'])){
                 <option value="em andamento" required>Em Andamento</option>
                 <option value="concluída" required>Concluída</option>
             </select>
+            <label for="status_tarefa">Funcionário que realizara:</label>
+            <select name="criarnobanco" id="criarnobanco" required>
+                <option value="tal" required>tal</option>
+                <option value="tal" required>tal</option>
+                <option value="tal" required>tal</option>
+            </select>
             <input type="submit" value="Salvar a tarefa" class="btn">
         </div>
         <div class="button-container">
