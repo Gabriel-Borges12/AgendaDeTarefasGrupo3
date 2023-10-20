@@ -40,7 +40,7 @@ include 'conexao.php';
 <body>
     <div class="main">
         <div class="lado-esq">
-            <img id="logologin" src="img/WEEK.png">
+            <img id="logologin1" src="img/WEEK.png">
             <h1 id="titulo">Redefina sua senha!</h1>
             <p id="text">O aplicativo de gerenciamento de tarefas é uma ferramenta inovadora projetada para simplificar
                 sua vida

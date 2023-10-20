@@ -6,7 +6,13 @@ if(!isset($_SESSION['usuario_id'])){
     header("Location: index.php");
     exit();
 }
+ if (isset($_SESSION['funcionario_nome'])) {
+     $funcionario_nome = $_SESSION['funcionario_nome'];
+} else {
+     $funcionario_nome = "funcionario_nome"; // Ou qualquer valor padrão desejado
+ }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,10 +31,15 @@ if(!isset($_SESSION['usuario_id'])){
 <body>
     <header class="primeira-navbar">
         <div class="estrutura-logo">
+            <br>
             <img src="img/logo.png" alt="Logo" class="logo">
             <span class="nome-empresa">W E E K</span>
+            <a href="home_nova.php" class="nav-home">Home</a>
+            <br>
         </div>
-        <a href="home_nova.php" class="nav-home">Home</a>
+        <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
+        
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">
@@ -36,59 +47,54 @@ if(!isset($_SESSION['usuario_id'])){
         </a>
         <span class="nav-calendario"><a class="nav-calendario" href="calendariooficial.php">Calendário</a></span>
     </nav>
+
     <?php
-include 'conexao.php';
+    include 'conexao.php';
 
-$sql = "SELECT *
-        FROM tarefas 
-        INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario.funcionario_id
-        ORDER BY data_tarefa ASC";
-$resultado = $conn->query($sql);
+    $sql = "SELECT *
+            FROM tarefas 
+            INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario.funcionario_id
+            ORDER BY data_tarefa ASC";
+    $resultado = $conn->query($sql);
 
-echo "<br><h1>Lista de Tarefas</h1>";
+    echo "<br><h1>Lista de Tarefas</h1>";
 
+    if ($resultado->num_rows > 0) {
+        echo "<div class='table-container'>";
+        echo "<table border='2'>";
+        echo "<tr><th>Nome do funcionário</th><th>Nome da Tarefa</th><th>Data em que será realizada</th><th>Status</th><th>Funcionário que realizará</th><th>Ações</th></tr>";
+    
+        while ($row = $resultado->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $row['funcionario_nome'] . "</td>";
+            echo "<td>" . $row['descricao_tarefa'] . "</td>";
+            echo "<td>" . $row['data_tarefa'] . "</td>";
+            echo "<td>" . $row['status_tarefa'] . "</td>";
+            echo "<td>" . $row['responsavel_tarefa'] . "</td>";
+            echo "<td>";
+            if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'administrativo'){
+                echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>edit</span></a> | ";
+                echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>delete</span></a>";
+            } else {
+                echo "";
+            }
+            
 
-if ($resultado->num_rows > 0) {
-    echo "<div class='table-container'>";
-    echo "<table border='2'>";
-    echo "<tr><th>Nome do funcionário</th><th>Nome da Tarefa</th><th>Data em que será realizada</th><th>Status</th><th>Funcionário que realizara</th><th>Ações</th></tr>";
-
-    while ($row = $resultado->fetch_assoc()) {
-        echo "<tr>";
-        echo "<td>" . $row['funcionario_nome'] . "</td>";
-        echo "<td>" . $row['descricao_tarefa'] . "</td>";
-        echo "<td>" . $row['data_tarefa'] . "</td>";
-        echo "<td>" . $row['status_tarefa'] . "</td>";
-        echo "<td>" . $row['responsavel_tarefa'] . "</td>";
-        echo "<td>";
-        if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'administrativo'){
-            echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>edit</span></a> | ";
-            echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>delete</span></a>";
-        } else {
-            echo "";
+            echo "</td>";
+            echo "</tr>";
         }
-        
-
-        echo "</td>";
-        echo "</tr>";
     }
+    $conn->close();
 
-    echo "</table>";
-    echo "</div>"; // Close the table-container div
-} else {
-    echo "Nenhuma tarefa listada.";
-}
+    ?>
 
-$conn->close();
+    <br>
+    <div class="btn-volta-container">
+        <a href="home_nova.php" class="btn-volta">Voltar</a>
+    </div>
+    <br>
 
-?>
-<br>
-<div class="btn-volta-container">
-    <a href="home_nova.php" class="btn-volta">Voltar</a>
-</div>
-<br>
-
-<footer>
+    <footer>
     <div class="conteudogeral">
         <div class="conteudo1">
             <h4>Sobre nós</h4><br>
@@ -119,42 +125,14 @@ $conn->close();
             </div>
         </div>
     </div>
-    </div>
-</footer>
+    </div>    </footer>
+
+
+    <script>
+    function confirmarExclusao() {
+        return confirm("Tem certeza de que deseja excluir esta tarefa?");
+    }
+    </script>
+
 </body>
 </html>
-
-
-
-
-
-<!-- // include 'conexao.php';
-
-// $sql = "SELECT * FROM paciente";
-// $resultado = $conexao->query($sql);
-
-// if ($resultado->num_rows > 0) {
-//     while ($row = $resultado->fetch_assoc()) {
-
-//     }
-// } else {
-//     echo "Nenhum paciente cadastrado.";
-// }
-
-// echo "<table>";
-// echo "<tr><th>ID</th><th>Nome</th><th>Idade</th><th></tr>";
-// while ($row = $resultado->fetch_assoc()) {
-//     echo "<tr>";
-//     echo "td" . $row['id_paciente'] . "</td>";
-//     echo "td" . $row['nome_paciente'] . "</td>";
-//     echo "td" . $row['cpf_paciente'] . "</td>";
-//     echo "td" . $row['convenio_paciente'] . "</td>";
-// }
-
-// echo "</table>";
-
-// if ($resultado->num_rows === 0) {
-//     echo "Nenhum paciente cadastrado";
-// }
-
-// $conexao->close(); -->

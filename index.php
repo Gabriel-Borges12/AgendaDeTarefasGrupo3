@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +18,7 @@
 <body>
     <div class="main">
         <div class="lado-esq">
-            <img id="logologin" src="img/WEEK.png">
+            <img id="logologin1" src="img/WEEK.png">
             <h1 id="titulo">Bem vindo ao Week!</h1>
             <p id="text">O aplicativo de gerenciamento de tarefas é uma ferramenta inovadora projetada para simplificar
                 sua vida
@@ -31,7 +32,11 @@
         <div class="lado-dir">
             <!-- <img id="logoLoginDir" src="img/WEEK.png"> -->
             <!-- <h1 id="tituloDir">Bem vindo ao Week!</h1> -->
+            <div class="logo-responsiva">
+    <img id="logologin" src="img/WEEK.png">
+</div>
             <div class="container">
+
                 <form id="cadastro-form" method="post" action="processar_login.php">
                     <h1 id="logintitulo">Login</h1>
                     <img id="img-user" src="img/user.png">

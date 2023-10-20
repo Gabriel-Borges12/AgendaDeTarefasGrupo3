@@ -12,6 +12,11 @@ if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'a
 } else {
     header("Location: listartarefas.php");
 }
+ if (isset($_SESSION['funcionario_nome'])) {
+    $funcionario_nome = $_SESSION['funcionario_nome'];
+ } else {
+     $funcionario_nome = "funcionario_nome"; // Ou qualquer valor padrão desejado
+ }
 ?>
 
 <!DOCTYPE html>
@@ -31,8 +36,10 @@ if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'a
         <div class="estrutura-logo">
             <img src="img/logo.png" alt="Logo" class="logo">
             <span class="nome-empresa">W E E K</span>
+            <a href="home_nova.php" class="nav-home">Home</a>
         </div>
-        <a href="home_nova.php" class="nav-home">Home</a>
+        <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">
