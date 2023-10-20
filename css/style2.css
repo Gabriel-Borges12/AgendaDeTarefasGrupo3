@@ -28,7 +28,7 @@ input {
 
 #botaologin {
     cursor: pointer;
-    background: #8f06ff;
+    background: #CD90FE;
     padding: 8px 5px;
     color: #fff;
     border: 1px solid #3274e7;
@@ -45,8 +45,34 @@ input {
     transition: background-color 0.3s ease;
 }
 
+#botaocadastro{
+    cursor: pointer;
+    background: #CD90FE;
+    padding: 8px 5px;
+    color: #fff;
+    border: 1px solid #3274e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: none;
+
+}
+
+#botaocadastro:hover {
+    background-color: #a25fda;
+    transition: background-color 0.3s ease;
+}
+
 #logologin {
     width: 180px;
+}
+
+#logologin1{
+    width: 180px;
+
 }
 
 #titulo {
@@ -189,6 +215,7 @@ input {
     .lado-dir{
         flex-direction: column;
     }
+    
 }
 @media (max-width: 468px) {
     .lado-esq{
@@ -200,9 +227,9 @@ input {
         background: #a25fda !important;
     }
 
-    #logologin {
+     #logologin {
         align-items: center;
-    }
+        }
     #logoLoginDir{
         display: block;
         width: 180px;
@@ -223,8 +250,7 @@ input {
     body {
         background: #a25fda !important;
     }
-    #logologin {
-        align-items: center;
+    
     }
     #logoLoginDir{
         display: block;
@@ -237,7 +263,7 @@ input {
         flex-direction: column;
     }
 
-}
+
 
 @media (min-width: 945px) {
     #logoLoginDir{
@@ -246,6 +272,11 @@ input {
     #tituloDir{
         display: none;
     }
+    #logologin{
+        align-items: center;
+        display: none; /* Oculta a logo nas telas menores (responsivas) */
+    }
+
 }
 #botao-salvar-senha{
     cursor: pointer;
@@ -270,4 +301,7 @@ input {
 
 .vparalogin {
     text-decoration: none;
+}
+.vparalogin:hover{
+    color: #570e93;
 }
