@@ -29,11 +29,15 @@ if(!isset($_SESSION['usuario_id'])){
 <body>
     <header class="primeira-navbar">
         <div class="estrutura-logo">
+            <br>
             <img src="img/logo.png" alt="Logo" class="logo">
             <span class="nome-empresa">W E E K</span>
+            <a href="home_nova.php" class="nav-home">Home</a>
+            <br>
         </div>
         <a href="home_nova.php" class="nav-home">Home</a>
         <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">
