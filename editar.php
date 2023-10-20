@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <span class="nome-empresa">W E E K</span>
         </div>
         <a href="home_nova.php" class="nav-home">Home</a>
-        <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <span class="nav-usuario">Bem-vindo (a), <?php echo $_SESSION['funcionario_nome']; ?></span>
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">

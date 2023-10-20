@@ -38,7 +38,7 @@ if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'a
             <span class="nome-empresa">W E E K</span>
             <a href="home_nova.php" class="nav-home">Home</a>
         </div>
-        <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <span class="nav-usuario">Bem-vindo (a), <?php echo $_SESSION['funcionario_nome']; ?></span>
         <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
     </header>
     <nav class="segunda-navbar">
