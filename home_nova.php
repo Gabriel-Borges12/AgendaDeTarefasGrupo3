@@ -25,8 +25,9 @@ if(!isset($_SESSION['usuario_id'])){
         <div class="estrutura-logo">
             <img src="img/logo.png" alt="Logo" class="logo">
             <span class="nome-empresa">W E E K</span>
+            <a href="home_nova.php" class="nav-home">Home</a>
         </div>
-        <a href="home_nova.php" class="nav-home">Home</a>
+        <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">

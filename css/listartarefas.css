@@ -119,6 +119,7 @@ select:hover {
     background-color: #cb69da;
 }
 /* .primeira-navbar, */
+.primeira-navbar,
 .segunda-navbar {
     height: 80px;
     display: flex;
@@ -129,18 +130,18 @@ select:hover {
 .primeira-navbar {
     background-color: #9822AB;
     color: #fff;
-    top: 0px;
 }
 
+/* Estilos da segunda barra de navegação */
 .segunda-navbar {
     background-color: #B012CA;
     color: #fff;
 }
 
+/* Estilos do logotipo */
 .estrutura-logo {
     display: flex;
     align-items: center;
-    /* background-color: red; */
 }
 
 .logo {
@@ -155,6 +156,7 @@ select:hover {
     font-weight: bold;
 }
 
+/* Estilos dos links de navegação */
 .nav-home,
 .nav-calendario {
     color: #fff;
@@ -163,6 +165,7 @@ select:hover {
     transition: color 0.3s;
     direction: rtl;
     font-family: 'Inter', sans-serif;
+    display: block;
 }
 
 .seta-img {
@@ -452,14 +455,21 @@ h1{
 
 
 }
+/* Estilo para o contêiner da tabela */
+.table-container {
+    overflow-x: auto; /* Adiciona rolagem horizontal em telas menores */
+    max-width: 100%; /* Evita que a tabela ultrapasse a largura da tela */
+    margin: 0 auto; /* Centraliza o contêiner na tela */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Espaçamento ao redor da tabela */
+}
 
 /* Estilo padrão para a tabela */
 table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     border-spacing: 10px;
     border-radius: 10px;
     padding-left: 22px;
@@ -473,25 +483,23 @@ td, th {
     margin: 5px;
 }
 
-td {
-    color: #333;
-    font-weight: 600;
+/* Adicione regras de mídia para telas menores */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.8rem;
+    }
+
+    td, th {
+        padding: 5px 10px;
+    }
 }
+
 
 tr:nth-child(even) {
     background-color: #d237ea;
 }
 
 /* Adicione regras de mídia para telas menores */
-@media (max-width: 768px) {
-    table {
-        font-size: 0.8rem; /* Reduza o tamanho da fonte */
-    }
-
-    td, th {
-        padding: 5px 10px; /* Reduza o preenchimento */
-    }
-}
 
 @media (max-width: 480px) {
     table {
