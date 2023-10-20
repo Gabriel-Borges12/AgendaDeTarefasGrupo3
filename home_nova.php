@@ -32,7 +32,6 @@ if(!isset($_SESSION['usuario_id'])){
             <span class="nome-empresa">W E E K</span>
             <a href="home_nova.php" class="nav-home">Home</a>
         </div>
-        <a href="home_nova.php" class="nav-home">Home</a>
         <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
         <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
     </header>
