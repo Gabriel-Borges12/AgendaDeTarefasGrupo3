@@ -2,9 +2,15 @@
 session_start();
 include 'conexao.php';
 
-if(!isset($_SESSION['usuario_id'])){
-    header("Location: index.php");
-    exit();
+// if(!isset($_SESSION['usuario_id'])){
+//     header("Location: index.php");
+//     exit();
+// }
+
+if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'administrativo'){
+
+} else {
+    header("Location: listartarefas.php");
 }
 ?>
 
@@ -69,11 +75,18 @@ if(!isset($_SESSION['usuario_id'])){
                 <option value="em andamento" required>Em Andamento</option>
                 <option value="concluída" required>Concluída</option>
             </select>
-            <label for="status_tarefa">Funcionário que realizara:</label>
-            <select name="criarnobanco" id="criarnobanco" required>
-                <option value="tal" required>tal</option>
-                <option value="tal" required>tal</option>
-                <option value="tal" required>tal</option>
+            <label for="responsavel_tarefa">Funcionário que realizará:</label>
+            <select name='responsavel_tarefa' id='responsavel_tarefa' required>
+            <?php
+            $sql = "SELECT * FROM funcionario ";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($linha = $result->fetch_assoc()) {
+                    echo "<option value='".$linha['funcionario_nome']."' required>".$linha['funcionario_nome']."</option>";
+                }
+            }
+            ?>
             </select>
             <input type="submit" value="Salvar a tarefa" class="btn">
         </div>

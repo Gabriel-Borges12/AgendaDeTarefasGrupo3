@@ -1,4 +1,4 @@
-<?php 
+<?php
 // echo "<script>alert('teste')</script>";
 include 'conexao.php';
 
@@ -9,14 +9,15 @@ include 'conexao.php';
 //     exit;
 // }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $_POST['usuario'];
     $email = $_POST['email'];
-    $senha = password_hash($_POST['senha'],PASSWORD_DEFAULT);
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $cargo = $_POST['funcionario_cargo'];
 
-    $conn->query("INSERT INTO funcionario (funcionario_nome,funcionario_email,funcionario_senha) VALUES ('$user', '$email', '$senha')");
+    $conn->query("INSERT INTO funcionario (funcionario_nome,funcionario_email,funcionario_senha, funcionario_cargo) VALUES ('$user', '$email', '$senha', '$cargo')");
 
-    header ("Location: index.php");
+    header("Location: index.php");
     exit();
 }
 ?>
@@ -64,7 +65,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <img id="img-senha" src="img/senha.png">
                     <input type="password" class="formzao" placeholder="Senha" name="senha" required>
                     <br><br>
-
+                    <select class="formzao" name="funcionario_cargo" id="funcionario_cargo" required autocomplete="off">
+                        <option class="formzao" value="admnistrativo" required>Admnistração</option>
+                        <option class="formzao" value="funcionario" required>Funcionário</option>
+                    </select>
+                    <br><br>
 
                     <button type="submit" id="botaocadastro">Cadastrar</button>
                     <a class="vparalogin" href="index.php">Voltar ao login</a>

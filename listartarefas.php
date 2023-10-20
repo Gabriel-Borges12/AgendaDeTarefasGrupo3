@@ -18,6 +18,7 @@ if(!isset($_SESSION['usuario_id'])){
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script src = "acaodocargo.js"></script>;
   <link rel="icon" href=" ./img/logo.png" widht="500px">
   <title>Home - Lista de Tarefas</title>
 </head>
@@ -38,7 +39,10 @@ if(!isset($_SESSION['usuario_id'])){
     <?php
 include 'conexao.php';
 
-$sql = "SELECT * FROM tarefas INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario_id  ORDER BY data_tarefa ASC";
+$sql = "SELECT *
+        FROM tarefas 
+        INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario.funcionario_id
+        ORDER BY data_tarefa ASC";
 $resultado = $conn->query($sql);
 
 echo "<br><h1>Lista de Tarefas</h1>";
@@ -55,10 +59,15 @@ if ($resultado->num_rows > 0) {
         echo "<td>" . $row['descricao_tarefa'] . "</td>";
         echo "<td>" . $row['data_tarefa'] . "</td>";
         echo "<td>" . $row['status_tarefa'] . "</td>";
-        echo "<td>" . $row['funcionario_nome'] . "</td>";
+        echo "<td>" . $row['responsavel_tarefa'] . "</td>";
         echo "<td>";
-        echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>edit</span></a> | ";
-        echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>delete</span></a>";
+        if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'administrativo'){
+            echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>edit</span></a> | ";
+            echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>delete</span></a>";
+        } else {
+            echo "";
+        }
+        
 
         echo "</td>";
         echo "</tr>";
