@@ -39,7 +39,6 @@ if(!isset($_SESSION['usuario_id'])){
         <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
         <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
         
-        <a href="home_nova.php" class="nav-home">Home</a>
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">
