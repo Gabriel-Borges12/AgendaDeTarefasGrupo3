@@ -24,7 +24,6 @@ if(!isset($_SESSION['usuario_id'])){
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <script src = "acaodocargo.js"></script>;
   <link rel="icon" href=" ./img/logo.png" widht="500px">
   <title>Home - Lista de Tarefas</title>
 </head>
@@ -49,8 +48,6 @@ if(!isset($_SESSION['usuario_id'])){
     </nav>
 
     <?php
-    include 'conexao.php';
-
     $sql = "SELECT *
             FROM tarefas 
             INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario.funcionario_id
@@ -83,9 +80,10 @@ if(!isset($_SESSION['usuario_id'])){
             echo "</td>";
             echo "</tr>";
         }
+        echo "</table>";
+        echo "</div>";
     }
     $conn->close();
-
     ?>
 
     <br>
@@ -124,8 +122,8 @@ if(!isset($_SESSION['usuario_id'])){
                 <a href="#" class="linkemail">contact@weekcalendario</a><br>
             </div>
         </div>
-    </div>
-    </div>    </footer>
+    </div> 
+ </footer>
 
 
     <script>

@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="password" class="formzao" placeholder="Senha" name="senha" required>
                     <br><br>
                     <select class="formzao" name="funcionario_cargo" id="funcionario_cargo" required autocomplete="off">
-                        <option class="formzao" value="admnistrativo" required>Admnistração</option>
+                        <option class="formzao" value="administrativo" required>Administração</option>
                         <option class="formzao" value="funcionario" required>Funcionário</option>
                     </select>
                     <br><br>
