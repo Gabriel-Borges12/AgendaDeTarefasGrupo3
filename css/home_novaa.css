@@ -151,6 +151,7 @@ select:hover {
     transition: color 0.3s;
     direction: rtl;
     font-family: 'Inter', sans-serif;
+    display: block;
 }
 
 /* Estilos da seta do link */

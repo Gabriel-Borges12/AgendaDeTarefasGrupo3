@@ -60,11 +60,11 @@ if(!isset($_SESSION['usuario_id'])){
     <form action="adicionar_tarefa.php" method="POST" class="formulario">
         <div class="campo">
             <label for="descricao_tarefa">Nome da tarefa:</label>
-            <input type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa" required>
+            <input type="text" name="descricao_tarefa" id="descricao_tarefa" placeholder="Digite o nome da sua tarefa" required autocomplete="off">
             <label for="data_tarefa">Selecione uma data:</label>
-            <input type="date" id="data_tarefa" name="data_tarefa" required>
+            <input type="date" id="data_tarefa" name="data_tarefa" required autocomplete="off">
             <label for="status_tarefa">Status:</label>
-            <select name="status_tarefa" id="status_tarefa" required>
+            <select name="status_tarefa" id="status_tarefa" required autocomplete="off">
                 <option value="pendente" required>Pendente</option>
                 <option value="em andamento" required>Em Andamento</option>
                 <option value="concluída" required>Concluída</option>
