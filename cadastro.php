@@ -57,10 +57,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <form id="cadastro-form" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
                     <h1 id="logintitulo">Cadastro</h1>
                     <img id="img-user" src="img/user.png">
-                    <input type="text" class="formzao" placeholder="Usuario" name="usuario" required>
+                    <input type="text" class="formzao" placeholder="Usuário" name="usuario" required>
                     <br> <br>
                     <img id="img-email" src="img/e-mail.png">
-                    <input type="text" class="formzao" placeholder="Email" name="email" required>
+                    <input type="text" class="formzao" placeholder="E-mail" name="email" required>
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
                     <input type="password" class="formzao" placeholder="Senha" name="senha" required>

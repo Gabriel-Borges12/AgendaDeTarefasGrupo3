@@ -298,7 +298,8 @@ input[type="select"]{
     }
     #logologin{
         align-items: center;
-        display: none; /* Oculta a logo nas telas menores (responsivas) */
+        /* Oculta a logo nas telas menores (responsivas) */
+        display: none;
     }
 
 }
