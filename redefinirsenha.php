@@ -34,6 +34,7 @@ include 'conexao.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style2.css">
     <link rel="icon" href=" ./img/logo.png">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <title>Redefinir senha</title>
 </head>
 
@@ -66,11 +67,26 @@ include 'conexao.php';
                     <input type="email" name="email" class="formzao" placeholder="Seu email">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" name="new_password" placeholder="Nova senha">
+                    <input type="password" class="formzao" name="new_password" placeholder="Nova senha" id="senha">
+                    <span class="lnr lnr-eye" id="show-password"></span>
                     <br><br>
                     <input type="submit" value="Salvar nova senha" id="botao-salvar-senha">
                     <br><br>
                     <a class="vparalogin" href="index.php">Voltar ao login</a>
+
+                    <script>
+                        const senhaInput = document.getElementById("senha");
+                        const showPasswordIcon = document.getElementById("show-password");
+
+                        showPasswordIcon.addEventListener("click", () => {
+                        if (senhaInput.type === "password") {
+                        senhaInput.type = "text";
+                        } else {
+                        senhaInput.type = "password";
+                            }
+                        });
+
+                    </script>
                 </form>
             </div>
         </div>

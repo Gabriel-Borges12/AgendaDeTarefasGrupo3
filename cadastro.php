@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     Option 1: Include in HTML -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> -->
     <link rel="icon" href=" ./img/logo.png">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <title>Cadastro Week</title>
 </head>
 
@@ -63,7 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="text" class="formzao" placeholder="Email" name="email" required>
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Senha" name="senha" required>
+                    <input type="password" class="formzao" placeholder="Senha" name="senha" id="senha" required>
+                    <span class="lnr lnr-eye" id="show-password"></span>
                     <br><br>
                     <select class="formzao" name="funcionario_cargo" id="funcionario_cargo" required autocomplete="off">
                         <option class="formzao" value="admnistrativo" required>Admnistração</option>
@@ -73,6 +75,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <button type="submit" id="botaocadastro">Cadastrar</button>
                     <a class="vparalogin" href="index.php">Voltar ao login</a>
+
+                    <script>
+                        const senhaInput = document.getElementById("senha");
+                        const showPasswordIcon = document.getElementById("show-password");
+
+                        showPasswordIcon.addEventListener("click", () => {
+                        if (senhaInput.type === "password") {
+                        senhaInput.type = "text";
+                        } else {
+                        senhaInput.type = "password";
+                            }
+                        });
+
+                    </script>
 
                 </form>
             </div>

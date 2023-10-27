@@ -12,6 +12,8 @@
     Option 1: Include in HTML -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> -->
     <link rel="icon" href=" ./img/logo.png">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
     <title>Login Week</title>
 </head>
 
@@ -43,8 +45,8 @@
                     <input type="text" class="formzao" name="user" placeholder="Nome do usuario">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" name="senha" placeholder="Senha">
-
+                    <input type="password" class="formzao" name="senha" placeholder="Senha" id="senha">
+                    <span class="lnr lnr-eye" id="show-password"></span>
                     <p id=""><a class="esqueceur" href="redefinirsenha.php">Esqueceu sua senha?</a></p>
                     <!-- <input type="button" value="" href="home.html"> -->
                     <!-- <button type="button" id="botaologin" onclick="window.location.href='./home.php'">Login</button> -->
@@ -54,6 +56,20 @@
                     <a class="cadastre-se" href="cadastro.php">Cadastre-se</a>
 
                     <!-- <input type="button" value="Click Me" onclick=""/> -->
+
+                    <script>
+                        const senhaInput = document.getElementById("senha");
+                        const showPasswordIcon = document.getElementById("show-password");
+
+                        showPasswordIcon.addEventListener("click", () => {
+                        if (senhaInput.type === "password") {
+                        senhaInput.type = "text";
+                        } else {
+                        senhaInput.type = "password";
+                            }
+                        });
+
+                    </script>
                 </form>
             </div>
         </div>
