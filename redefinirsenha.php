@@ -55,6 +55,9 @@ include 'conexao.php';
             </div>
         </div>
         <div class="lado-dir">
+        <div class="logo-responsiva">
+    <img id="logologin" src="img/WEEK.png">
+</div>
             <div class="container">
                 <form action="processar_redefinir.php"id="cadastro-form" method = "post">
                     <h1 id="logintitulo">Esqueceu sua senha?</h1>

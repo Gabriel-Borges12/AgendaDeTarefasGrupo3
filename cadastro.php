@@ -53,6 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
         <div class="lado-dir">
+        <div class="logo-responsiva">
+    <img id="logologin" src="img/WEEK.png">
+</div>
             <div class="container">
                 <form id="cadastro-form" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
                     <h1 id="logintitulo">Cadastro</h1>
