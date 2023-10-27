@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylepadrao.css">
+    <link rel="stylesheet" href="css/style2.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
@@ -45,8 +45,12 @@
                     <input type="text" class="formzao" name="user" placeholder="Nome do usuario" autocomplete = "off">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
+    
                     <input type="password" class="formzao" name="senha" placeholder="Senha" id="senha">
-                    <span class="lnr lnr-eye" id="show-password"></span>
+                    <!-- Adicione o ícone do olho para mostrar/ocultar a senha -->
+                    <span class="lnr lnr-eye" id="show-password" style="cursor: pointer;"></span>
+
+                   
                     <p id=""><a class="esqueceur" href="redefinirsenha.php">Esqueceu sua senha?</a></p>
                     <!-- <input type="button" value="" href="home.html"> -->
                     <!-- <button type="button" id="botaologin" onclick="window.location.href='./home.php'">Login</button> -->
@@ -58,18 +62,17 @@
                     <!-- <input type="button" value="Click Me" onclick=""/> -->
 
                     <script>
-                        const senhaInput = document.getElementById("senha");
-                        const showPasswordIcon = document.getElementById("show-password");
+                         const senhaInput = document.getElementById("senha");
+                         const showPasswordIcon = document.getElementById("show-password");
 
-                        showPasswordIcon.addEventListener("click", () => {
+                         showPasswordIcon.addEventListener("click", () => {
                         if (senhaInput.type === "password") {
                         senhaInput.type = "text";
-                        } else {
+                         } else {
                         senhaInput.type = "password";
-                            }
-                        });
-
-                    </script>
+                         }
+        });     
+    </script>
                 </form>
             </div>
         </div>
