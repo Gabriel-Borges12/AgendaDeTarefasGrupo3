@@ -29,12 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $descricao_tarefa = $_POST['descricao_tarefa'];
     $data_tarefa = $_POST['data_tarefa'];
     $data_tarefa_formatada = date("Y-m-d", strtotime($data_tarefa));
-
+    $var_funcionario = $_POST['responsavel_tarefa'];
     $status_tarefa = $_POST['status_tarefa'];
 
-    $sql = "UPDATE tarefas SET descricao_tarefa = ?, data_tarefa = ?, status_tarefa = ? WHERE id_tarefa = ?";
+    $sql = "UPDATE tarefas SET responsavel_tarefa = ?, descricao_tarefa = ?, data_tarefa = ?, status_tarefa = ? WHERE id_tarefa = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssi", $descricao_tarefa, $data_tarefa_formatada, $status_tarefa, $id);
+    $stmt->bind_param("ssssi", $var_funcionario, $descricao_tarefa, $data_tarefa_formatada, $status_tarefa, $id);
 
 
     if ($stmt->execute()) {
@@ -98,6 +98,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <option value="em andamento" <?php echo ($tarefas['status_tarefa'] == 'em andamento') ? 'selected' : ''; ?>>Em Andamento</option>
                     <option value="concluída" <?php echo ($tarefas['status_tarefa'] == 'concluída') ? 'selected' : ''; ?>>
                         Concluída</option>
+                </select>
+                <label for="status_tarefa">Funcionário que realizará:</label>
+                <select name="responsavel_tarefa" id="responsavel_tarefa" required>
+                <?php
+                    $var = "SELECT * FROM funcionario ";
+                    $result = $conn->query($var);
+
+                    if ($result->num_rows > 0) {
+                        while ($linha = $result->fetch_assoc()) {
+                            echo "<option value='".$linha['funcionario_nome']."' required>".$linha['funcionario_nome']."</option>";
+                        }
+                    }
+                ?>
                 </select>
 
             </div>

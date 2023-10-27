@@ -40,7 +40,7 @@
                 <form id="cadastro-form" method="post" action="processar_login.php">
                     <h1 id="logintitulo">Login</h1>
                     <img id="img-user" src="img/user.png">
-                    <input type="text" class="formzao" name="user" placeholder="Nome do usuario">
+                    <input type="text" class="formzao" name="user" placeholder="Nome do usuario" autocomplete = "off">
                     <br> <br>
                     <img id="img-senha" src="img/senha.png">
                     <input type="password" class="formzao" name="senha" placeholder="Senha">
