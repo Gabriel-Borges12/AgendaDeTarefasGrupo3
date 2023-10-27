@@ -25,6 +25,66 @@ input {
     background-color: #CD90FE;
     color: white;
 }
+/* .lnr lnr-eye {
+	z-index: 9999;
+	position: absolute;
+	top: 30%;
+	right: 10px;
+} */
+
+/* ====================================================== */
+
+
+.pwd{
+	position: relative;
+}
+.p-viewer {
+	z-index: 9999;
+	position: absolute;
+	top: 30%;
+	right: 10px;
+}
+
+.fa-eye {
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================= */
+
+#show-password {
+    float: right;
+    margin-top: -55px;
+    position: relative;
+    z-index: 1;
+    cursor:pointer;
+}
+#senha {
+    padding-right: 30px; /* Crie espaço à direita para acomodar o ícone do olho */
+}
+.p-viewer, .p-viewer2{
+    float: right;
+    margin-top: -55px;
+    position: relative;
+    z-index: 1;
+    cursor:pointer;
+  }
+.fa-eye {
+    color: #000;
+  }
+
+
 
 #botaologin {
     cursor: pointer;
