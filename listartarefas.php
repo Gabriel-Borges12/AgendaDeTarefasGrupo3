@@ -19,16 +19,15 @@ if(!isset($_SESSION['usuario_id'])){
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="css/listartarefas.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-  <link rel="icon" href=" ./img/logo.png" widht="500px">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+  <link rel="icon" href="./img/logo.png" width="500px">
   <title>Home - Lista de Tarefas</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
 </head>
 <body>
+
     <header class="primeira-navbar">
         <div class="estrutura-logo">
             <br>
@@ -72,7 +71,7 @@ if(!isset($_SESSION['usuario_id'])){
             echo "<td>";
             if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'administrativo'){
                 echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>edit</span></a> | ";
-                echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>delete</span></a>";
+                echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "' onclick='confirmDelete(" . $row['id_tarefa'] . ")'><span class='material-icons'>delete</span></a>";
             } else {
                 echo "";
             }
@@ -147,11 +146,31 @@ function confirmarExclusao() {
 }
 </script> -->
 
-    <script>
+    <!-- <script>
     function confirmarExclusao() {
         return confirm("Tem certeza de que deseja excluir esta tarefa?");
     }
-    </script>
+    </script> -->
 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script>
+        function confirmDelete(id) {
+            Swal.fire({
+                title: 'Você tem certeza?',
+                text: "Você não será capaz de reverter isso!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, exclua!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'excluir.php?id=' + id;
+                }
+            })
+        }
+    </script>
 </body>
 </html>
