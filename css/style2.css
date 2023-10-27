@@ -121,6 +121,14 @@ input {
     margin: 7px;
 }
 
+#img-cargo{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin: 7px;
+    
+}
+
 #text {
     margin-right: 100px;
     margin-left: 20px;
@@ -203,6 +211,22 @@ input {
     display: flex;
     justify-content: flex-end;
 }
+
+input[type="select"]{
+    background: #CD90FE;
+    padding: 8px 5px;
+    color: #fff;
+    border: 1px solid #3274e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: none;
+}
+
+
 
 /* Estilos para telas menores (celulares) */
 @media (min-width: 120px) and (max-width: 467px) {
@@ -287,7 +311,8 @@ input {
     }
     #logologin{
         align-items: center;
-        display: none; /* Oculta a logo nas telas menores (responsivas) */
+        /* Oculta a logo nas telas menores (responsivas) */
+        display: none;
     }
 
 }

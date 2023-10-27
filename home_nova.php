@@ -28,6 +28,7 @@ if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'a
 
   <link rel="stylesheet" href="./css/home_novaa.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
   <link rel="icon" href=" ./img/logo.png">
   <title>Home - Lista de Tarefas</title>
 </head>
@@ -38,7 +39,7 @@ if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'a
             <span class="nome-empresa">W E E K</span>
             <a href="home_nova.php" class="nav-home">Home</a>
         </div>
-        <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <span class="nav-usuario">Bem-vindo (a), <?php echo $_SESSION['funcionario_nome']; ?></span>
         <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
     </header>
     <nav class="segunda-navbar">
@@ -137,7 +138,7 @@ if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'a
     </div>
     </div>
 </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
   <script src="js/home.js"></script>
 </body>
 </html>

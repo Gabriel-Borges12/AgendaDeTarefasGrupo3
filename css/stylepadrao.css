@@ -28,7 +28,7 @@ input {
 
 #botaologin {
     cursor: pointer;
-    background: #8f06ff;
+    background: #CD90FE;
     padding: 8px 5px;
     color: #fff;
     border: 1px solid #3274e7;
@@ -42,10 +42,37 @@ input {
 }
 #botaologin:hover {
     background-color: #a25fda;
+    transition: background-color 0.3s ease;
+}
+
+#botaocadastro{
+    cursor: pointer;
+    background: #CD90FE;
+    padding: 8px 5px;
+    color: #fff;
+    border: 1px solid #3274e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: none;
+
+}
+
+#botaocadastro:hover {
+    background-color: #a25fda;
+    transition: background-color 0.3s ease;
 }
 
 #logologin {
     width: 180px;
+}
+
+#logologin1{
+    width: 180px;
+
 }
 
 #titulo {
@@ -80,6 +107,56 @@ input {
     position: absolute;
     margin: 7px;
 }
+#img-cargo{
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    margin: 7px;
+    text-align: center;
+    
+}
+/* Estilize o select para que fique no mesmo estilo que o input */
+select.formzao {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 6px solid #CD90FE;
+    border-radius: 5px;
+    background-color: #CD90FE;
+    color: white;
+    text-indent: 18px; /* Ajuste a quantidade de recuo desejada */
+}
+
+/* Estilo para a seta do select */
+select.formzao::-ms-expand {
+    display: none;
+}
+
+/* Estilo para o foco do select */
+select.formzao:focus {
+    border-color: #a25fda;
+}
+
+/* Estilo para as opções do select */
+select.formzao option {
+    background-color: #CD90FE;
+    color: white;
+}
+
+/* Estilo para o hover das opções do select */
+select.formzao option:hover {
+    background-color: #a25fda;
+}
+
+/* Estilo para a imagem do cargo */
+#img-cargo {
+    width: 25px;
+    height: 32px;
+    position: absolute;
+    margin: 7px;
+    margin-top: 4px;
+}
+
 
 #text {
     margin-right: 100px;
@@ -98,7 +175,7 @@ input {
     padding: 15px;
     padding-top: 20px;
     background-color: #f9f9f9;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     margin-left: 30px;
     align-items: center;
@@ -164,6 +241,41 @@ input {
     justify-content: flex-end;
 }
 
+/* Estilize o select para que fique no mesmo estilo que o input */
+select.formzao {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 6px solid #CD90FE;
+    border-radius: 20px;
+    background-color: #CD90FE;
+    color: rgb(119, 111, 111);
+}
+
+/* Estilo para a seta do select */
+select.formzao::-ms-expand {
+    display: none;
+}
+
+/* Estilo para o foco do select */
+select.formzao:focus {
+    border-color: #a25fda;
+}
+
+/* Estilo para as opções do select */
+select.formzao option {
+    background-color: #CD90FE;
+    color: rgb(130, 117, 117);
+}
+
+/* Estilo para o hover das opções do select */
+select.formzao option:hover {
+    background-color: #a25fda;
+}
+
+
+
+
 /* Estilos para telas menores (celulares) */
 @media (min-width: 120px) and (max-width: 467px) {
     .lado-esq{
@@ -188,6 +300,7 @@ input {
     .lado-dir{
         flex-direction: column;
     }
+    
 }
 @media (max-width: 468px) {
     .lado-esq{
@@ -199,9 +312,9 @@ input {
         background: #a25fda !important;
     }
 
-    #logologin {
+     #logologin {
         align-items: center;
-    }
+        }
     #logoLoginDir{
         display: block;
         width: 180px;
@@ -222,8 +335,7 @@ input {
     body {
         background: #a25fda !important;
     }
-    #logologin {
-        align-items: center;
+    
     }
     #logoLoginDir{
         display: block;
@@ -236,7 +348,7 @@ input {
         flex-direction: column;
     }
 
-}
+
 
 @media (min-width: 945px) {
     #logoLoginDir{
@@ -245,10 +357,15 @@ input {
     #tituloDir{
         display: none;
     }
+    #logologin{
+        align-items: center;
+        display: none; /* Oculta a logo nas telas menores (responsivas) */
+    }
+
 }
-/* #botao-salvar-senha {
+#botao-salvar-senha{
     cursor: pointer;
-    background: #8f06ff;
+    background-color: #CD90FE;
     padding: 8px 5px;
     color: #fff;
     border: 1px solid #3274e7;
@@ -259,9 +376,17 @@ input {
     margin-top: 4px;
     padding: 10px;
     border: none;
-} */
+}
 
-#input[type="submit"]:hover {
-    background-color: #a25fda; /* Altere para a cor desejada ao passar o mouse */
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave de cor ao passar o mouse */
+#botao-salvar-senha:hover{
+    background-color: #a25fda;
+    transition: background-color 0.3s ease;
+
+}
+
+.vparalogin {
+    text-decoration: none;
+}
+.vparalogin:hover{
+    color: #570e93;
 }

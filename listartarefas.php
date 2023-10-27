@@ -24,7 +24,7 @@ if(!isset($_SESSION['usuario_id'])){
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <script src = "acaodocargo.js"></script>;
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
   <link rel="icon" href=" ./img/logo.png" widht="500px">
   <title>Home - Lista de Tarefas</title>
 </head>
@@ -37,7 +37,7 @@ if(!isset($_SESSION['usuario_id'])){
             <a href="home_nova.php" class="nav-home">Home</a>
             <br>
         </div>
-        <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <span class="nav-usuario">Bem-vindo (a), <?php echo $_SESSION['funcionario_nome']; ?></span>
         <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
         
     </header>
@@ -49,8 +49,6 @@ if(!isset($_SESSION['usuario_id'])){
     </nav>
 
     <?php
-    include 'conexao.php';
-
     $sql = "SELECT *
             FROM tarefas 
             INNER JOIN funcionario ON tarefas.fk_cliente_id = funcionario.funcionario_id
@@ -83,9 +81,10 @@ if(!isset($_SESSION['usuario_id'])){
             echo "</td>";
             echo "</tr>";
         }
+        echo "</table>";
+        echo "</div>";
     }
     $conn->close();
-
     ?>
 
     <br>
@@ -124,9 +123,29 @@ if(!isset($_SESSION['usuario_id'])){
                 <a href="#" class="linkemail">contact@weekcalendario</a><br>
             </div>
         </div>
-    </div>
-    </div>    </footer>
+    </div> 
+ </footer>
 
+ <!-- <script>
+function confirmarExclusao() {
+    Swal.fire({
+        title: 'Tem certeza de que deseja excluir esta tarefa?',
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: `Sim`,
+        denyButtonText: `Não`,
+        imageUrl: 'https://via.placeholder.com/150', // Insira o URL da imagem do calendário aqui
+        imageWidth: 150,
+        imageHeight: 150,
+        imageAlt: 'Calendário',
+    }).then((result) => {
+        /* Se o usuário confirmar, você pode adicionar o código para excluir a tarefa aqui */
+        if (result.isConfirmed) {
+            // Código para excluir a tarefa
+        }
+    });
+}
+</script> -->
 
     <script>
     function confirmarExclusao() {

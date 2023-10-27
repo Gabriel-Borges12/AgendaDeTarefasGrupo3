@@ -32,7 +32,7 @@ include 'conexao.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/stylepadrao.css">
     <link rel="icon" href=" ./img/logo.png">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <title>Redefinir senha</title>
@@ -56,6 +56,9 @@ include 'conexao.php';
             </div>
         </div>
         <div class="lado-dir">
+        <div class="logo-responsiva">
+    <img id="logologin" src="img/WEEK.png">
+</div>
             <div class="container">
                 <form action="processar_redefinir.php"id="cadastro-form" method = "post">
                     <h1 id="logintitulo">Esqueceu sua senha?</h1>
