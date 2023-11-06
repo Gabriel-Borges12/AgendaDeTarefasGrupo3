@@ -71,7 +71,7 @@ if(!isset($_SESSION['usuario_id'])){
             echo "<td>";
             if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'administrativo'){
                 echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>edit</span></a> | ";
-                echo "<a href='excluir.php?id=" . $row['id_tarefa'] . "' onclick='confirmDelete(" . $row['id_tarefa'] . ")'><span class='material-icons'>delete</span></a>";
+                echo "<a onclick='confirmDelete(" . $row['id_tarefa'] . ")'><span class='material-icons'>delete</span></a>";
             } else {
                 echo "";
             }

@@ -23,6 +23,7 @@ if (isset($_GET['id'])) {
             confirmButtonColor: '#3085d6'
         });
         </script>";
+        header("Location:listartarefas.php");
     } else {
         echo "<script>
         Swal.fire({
