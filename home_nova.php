@@ -111,7 +111,7 @@ if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'a
             <h4>Sobre nós</h4><br>
             <p>Ajudamos as pessoas a organizarem suas vidas através</p>
             <p>de um gerenciador de tarefas simples, prático e bonito.</p>
-            <p>Com o WEEK a organização se torna fácil!</p>
+            <p>Com a WEEK a organização se torna fácil!</p>
         </div>
         <div class="conteudo2">
             <h4>Links Importantes</h4><br>
