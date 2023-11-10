@@ -45,11 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
 }
 
- if (isset($_SESSION['funcionario_nome'])) {
-     $funcionario_nome = $_SESSION['funcionario_nome'];
- } else {
-     $funcionario_nome = "funcionario_nome"; // Ou qualquer valor padrão desejado
- }
+if (isset($_SESSION['funcionario_nome'])) {
+    $funcionario_nome = $_SESSION['funcionario_nome'];
+} else {
+    $funcionario_nome = "funcionario_nome"; // Ou qualquer valor padrão desejado
+}
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +70,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <span class="nome-empresa">W E E K</span>
         </div>
         <a href="home_nova.php" class="nav-home">Home</a>
-        <span class="nav-usuario">Bem-vindo (a), <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <span class="nav-usuario">Bem-vindo (a),
+            <?php echo $_SESSION['funcionario_nome']; ?>
+        </span>
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">
@@ -101,16 +103,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </select>
                 <label for="status_tarefa">Funcionário que realizará:</label>
                 <select name="responsavel_tarefa" id="responsavel_tarefa" required>
-                <?php
+                    <?php
                     $var = "SELECT * FROM funcionario ";
                     $result = $conn->query($var);
 
                     if ($result->num_rows > 0) {
                         while ($linha = $result->fetch_assoc()) {
-                            echo "<option value='".$linha['funcionario_nome']."' required>".$linha['funcionario_nome']."</option>";
+                            echo "<option value='" . $linha['funcionario_nome'] . "' required>" . $linha['funcionario_nome'] . "</option>";
                         }
                     }
-                ?>
+                    ?>
                 </select>
 
             </div>

@@ -96,6 +96,7 @@ select {
 select:hover {
     background-color: #cb69da;
 }
+
 .primeira-navbar,
 .segunda-navbar {
     height: 80px;
@@ -253,28 +254,36 @@ h4 {
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    min-height: calc(100vh - 160px); /* Altura mínima excluindo o header e footer */
-    text-align: center; /* Centraliza o texto dentro da .content horizontalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    min-height: calc(100vh - 160px);
+    /* Altura mínima excluindo o header e footer */
+    text-align: center;
+    /* Centraliza o texto dentro da .content horizontalmente */
 }
 
 .formulario {
-    max-width: 700px; /* Ajuste a largura máxima do formulário conforme necessário */
+    max-width: 700px;
+    /* Ajuste a largura máxima do formulário conforme necessário */
     width: 90%;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background-color: #e079f0;
-    text-align: left; /* Alinha o texto do formulário à esquerda */
+    text-align: left;
+    /* Alinha o texto do formulário à esquerda */
 }
 
 .campo {
-    margin-bottom: 20px; /* Espaçamento entre os campos */
+    margin-bottom: 20px;
+    /* Espaçamento entre os campos */
 }
 
 .campo label {
-    display: block; /* Coloca os rótulos em uma nova linha */
+    display: block;
+    /* Coloca os rótulos em uma nova linha */
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -288,7 +297,8 @@ input[type="date"] {
     border-radius: 5px;
     outline: none;
     font-size: 1rem;
-    font-weight: 600; /* Modifique a fonte conforme necessário */
+    font-weight: 600;
+    /* Modifique a fonte conforme necessário */
 }
 
 select:hover {
@@ -305,10 +315,11 @@ input[type="submit"] {
     font-size: 1.7rem;
     font-weight: 500;
     cursor: pointer;
-    margin-top: 30px; /* Espaçamento superior para o botão de enviar */
+    margin-top: 30px;
+    /* Espaçamento superior para o botão de enviar */
 }
 
-#status_tarefa:hover{
+#status_tarefa:hover {
     background-color: #c436da;
 
 }
@@ -466,10 +477,12 @@ Estilo quando o mouse passa por cima dos botões
 }
  */
 
- /* Estilo para o botão "Salvar a tarefa" e "Lista de tarefas" */
-.btn, .botaotarefas {
+/* Estilo para o botão "Salvar a tarefa" e "Lista de tarefas" */
+.btn,
+.botaotarefas {
     display: inline-block;
-    padding: 10px 20px; /* Ajuste o tamanho do botão aqui */
+    padding: 10px 20px;
+    /* Ajuste o tamanho do botão aqui */
     background-color: #B012CA;
     color: #fff;
     text-decoration: none;
@@ -479,12 +492,14 @@ Estilo quando o mouse passa por cima dos botões
 }
 
 /* Estilo quando o mouse passa por cima dos botões */
-.btn:hover, .botaotarefas:hover {
+.btn:hover,
+.botaotarefas:hover {
     background-color: #9822AB;
 }
 
 /* Estilo para centralizar os botões */
 .button-container {
     text-align: center;
-    margin-top: 20px; /* Espaçamento superior entre os botões */
+    margin-top: 20px;
+    /* Espaçamento superior entre os botões */
 }

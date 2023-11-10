@@ -40,12 +40,13 @@ input {
     padding: 10px;
     border: none;
 }
+
 #botaologin:hover {
     background-color: #a25fda;
     transition: background-color 0.3s ease;
 }
 
-#botaocadastro{
+#botaocadastro {
     cursor: pointer;
     background: #CD90FE;
     padding: 8px 5px;
@@ -70,7 +71,7 @@ input {
     width: 180px;
 }
 
-#logologin1{
+#logologin1 {
     width: 180px;
 
 }
@@ -107,14 +108,16 @@ input {
     position: absolute;
     margin: 7px;
 }
-#img-cargo{
+
+#img-cargo {
     width: 25px;
     height: 15px;
     position: absolute;
     margin: 7px;
     text-align: center;
-    
+
 }
+
 /* Estilize o select para que fique no mesmo estilo que o input */
 select.formzao {
     width: 100%;
@@ -124,7 +127,8 @@ select.formzao {
     border-radius: 5px;
     background-color: #CD90FE;
     color: white;
-    text-indent: 18px; /* Ajuste a quantidade de recuo desejada */
+    text-indent: 18px;
+    /* Ajuste a quantidade de recuo desejada */
 }
 
 /* Estilo para a seta do select */
@@ -278,7 +282,7 @@ select.formzao option:hover {
 
 /* Estilos para telas menores (celulares) */
 @media (min-width: 120px) and (max-width: 467px) {
-    .lado-esq{
+    .lado-esq {
         display: none;
 
     }
@@ -290,20 +294,24 @@ select.formzao option:hover {
     #logologin {
         align-items: center;
     }
-    #logoLoginDir{
+
+    #logoLoginDir {
         display: block;
         width: 180px;
     }
-    #tituloDir{
+
+    #tituloDir {
         display: block;
     }
-    .lado-dir{
+
+    .lado-dir {
         flex-direction: column;
     }
-    
+
 }
+
 @media (max-width: 468px) {
-    .lado-esq{
+    .lado-esq {
         display: none;
 
     }
@@ -312,58 +320,68 @@ select.formzao option:hover {
         background: #a25fda !important;
     }
 
-     #logologin {
+    #logologin {
         align-items: center;
-        }
-    #logoLoginDir{
+    }
+
+    #logoLoginDir {
         display: block;
         width: 180px;
     }
-    #tituloDir{
+
+    #tituloDir {
         display: block;
     }
-    .lado-dir{
+
+    .lado-dir {
         flex-direction: column;
     }
 }
 
 @media (min-width: 469px) and (max-width:945px) {
-    .lado-esq{
+    .lado-esq {
         display: none;
     }
 
     body {
         background: #a25fda !important;
     }
-    
-    }
-    #logoLoginDir{
-        display: block;
-        width: 180px;
-    }
-    #tituloDir{
-        display: block;
-    }
-    .lado-dir{
-        flex-direction: column;
-    }
+
+}
+
+#logoLoginDir {
+    display: block;
+    width: 180px;
+}
+
+#tituloDir {
+    display: block;
+}
+
+.lado-dir {
+    flex-direction: column;
+}
 
 
 
 @media (min-width: 945px) {
-    #logoLoginDir{
+    #logoLoginDir {
         display: none;
     }
-    #tituloDir{
+
+    #tituloDir {
         display: none;
     }
-    #logologin{
+
+    #logologin {
         align-items: center;
-        display: none; /* Oculta a logo nas telas menores (responsivas) */
+        display: none;
+        /* Oculta a logo nas telas menores (responsivas) */
     }
 
 }
-#botao-salvar-senha{
+
+#botao-salvar-senha {
     cursor: pointer;
     background-color: #CD90FE;
     padding: 8px 5px;
@@ -378,7 +396,7 @@ select.formzao option:hover {
     border: none;
 }
 
-#botao-salvar-senha:hover{
+#botao-salvar-senha:hover {
     background-color: #a25fda;
     transition: background-color 0.3s ease;
 
@@ -387,6 +405,7 @@ select.formzao option:hover {
 .vparalogin {
     text-decoration: none;
 }
-.vparalogin:hover{
+
+.vparalogin:hover {
     color: #570e93;
 }

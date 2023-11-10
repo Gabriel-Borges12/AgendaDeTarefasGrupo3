@@ -44,15 +44,15 @@ if (!isset($_SESSION['usuario_id'])) {
       <div class="calendar">
         <div class="days"></div>
         <div class="goto">
-          <iframe src="adicionar_tarefa_calendario.php"frameborder="0"></iframe>
+          <iframe src="adicionar_tarefa_calendario.php" frameborder="0"></iframe>
           <div class="days"></div>
-          
+
         </div>
       </div>
-      </div>
-      <!-- </div> -->
     </div>
-    <script src="script.js"></script>
+    <!-- </div> -->
+  </div>
+  <script src="script.js"></script>
   </div>
   </div>
 

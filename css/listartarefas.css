@@ -66,24 +66,36 @@ button[type="submit"] {
 table {
     border-collapse: collapse;
     width: 100%;
-    margin-top: 20px; /* Espaçamento superior para a tabela */
-    margin-left: auto; /* Margem esquerda automática para centralizar a tabela */
-    margin-right: auto; /* Margem direita automática para centralizar a tabela */
-    border-spacing: 10px; /* Espaçamento entre as células da tabela */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    padding-left: 22px; /* Espaçamento no lado esquerdo */
-    padding-right: 22px; /* Espaçamento no lado direito */
+    margin-top: 20px;
+    /* Espaçamento superior para a tabela */
+    margin-left: auto;
+    /* Margem esquerda automática para centralizar a tabela */
+    margin-right: auto;
+    /* Margem direita automática para centralizar a tabela */
+    border-spacing: 10px;
+    /* Espaçamento entre as células da tabela */
+    border-radius: 10px;
+    /* Adiciona bordas arredondadas */
+    padding-left: 22px;
+    /* Espaçamento no lado esquerdo */
+    padding-right: 22px;
+    /* Espaçamento no lado direito */
 
 }
 
 /* CSS for the table container */
 .table-container {
-    width: 80%; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0px; /* Add space between the sides */
-    background-color: white; /* Add a background color if necessary */
-    border-radius: 10px; /* Optional: Add rounded corners to the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 80%;
+    /* Adjust the width as needed */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding: 0px;
+    /* Add space between the sides */
+    background-color: white;
+    /* Add a background color if necessary */
+    border-radius: 10px;
+    /* Optional: Add rounded corners to the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -118,6 +130,7 @@ select {
 select:hover {
     background-color: #cb69da;
 }
+
 /* .primeira-navbar, */
 .primeira-navbar,
 .segunda-navbar {
@@ -285,11 +298,13 @@ h4 {
     border-spacing: 10px; 
 } */
 
-td, th {
+td,
+th {
     padding: 10px 15px;
     border: 1px solid #000;
     text-align: center;
-    margin: 5px; /* Espaço entre as laterais das células */
+    margin: 5px;
+    /* Espaço entre as laterais das células */
 }
 
 td {
@@ -303,9 +318,9 @@ tr:nth-child(even) {
 
 /* Estilo para o botão */
 
-h1{
+h1 {
     text-align: center;
-    justify-content:center;
+    justify-content: center;
 }
 
 .btn-volta-container {
@@ -317,18 +332,23 @@ h1{
 
 .btn-volta {
     display: inline-block;
-    padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
+    padding: 10px 20px;
+    /* Ajuste o preenchimento conforme necessário */
     background-color: #B012CA;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
-    text-align: center; /* Centralize o texto dentro do botão */
+    text-align: center;
+    /* Centralize o texto dentro do botão */
     box-sizing: border-box;
-    border: 2px solid #fff; /* Borda branca */
-    width: auto; /* Permita que a largura do botão seja baseada no conteúdo */
+    border: 2px solid #fff;
+    /* Borda branca */
+    width: auto;
+    /* Permita que a largura do botão seja baseada no conteúdo */
 }
+
 .btn-volta {
     display: inline-block;
     padding: 10px 20px;
@@ -338,7 +358,8 @@ h1{
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
-    margin-top: 20px; /* Espaçamento superior para o botão */
+    margin-top: 20px;
+    /* Espaçamento superior para o botão */
 }
 
 /* Estilo quando o mouse passa por cima do botão */
@@ -429,7 +450,7 @@ h1{
         display: flex;
         justify-content: center;
     }
-    
+
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -455,14 +476,19 @@ h1{
 
 
 }
+
 /* Estilo para o contêiner da tabela */
 .table-container {
-    overflow-x: auto; /* Adiciona rolagem horizontal em telas menores */
-    max-width: 100%; /* Evita que a tabela ultrapasse a largura da tela */
-    margin: 0 auto; /* Centraliza o contêiner na tela */
+    overflow-x: auto;
+    /* Adiciona rolagem horizontal em telas menores */
+    max-width: 100%;
+    /* Evita que a tabela ultrapasse a largura da tela */
+    margin: 0 auto;
+    /* Centraliza o contêiner na tela */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px; /* Espaçamento ao redor da tabela */
+    padding: 10px;
+    /* Espaçamento ao redor da tabela */
 }
 
 /* Estilo padrão para a tabela */
@@ -476,7 +502,8 @@ table {
     padding-right: 22px;
 }
 
-td, th {
+td,
+th {
     padding: 10px 15px;
     border: 1px solid #000;
     text-align: center;
@@ -489,7 +516,8 @@ td, th {
         font-size: 0.8rem;
     }
 
-    td, th {
+    td,
+    th {
         padding: 5px 10px;
     }
 }
@@ -503,7 +531,7 @@ tr:nth-child(even) {
 
 @media (max-width: 480px) {
     table {
-        font-size: 0.6rem; /* Reduza ainda mais o tamanho da fonte */
+        font-size: 0.6rem;
+        /* Reduza ainda mais o tamanho da fonte */
     }
 }
-
