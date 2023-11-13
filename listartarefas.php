@@ -104,13 +104,8 @@ if (isset($_SESSION['funcionario_nome'])) {
                 <h4>Links Importantes</h4><br>
                 <ul class="linksfooter">
                 <li><a class="linksimportantes" href="footer/funcionalidades.php">Funcionalidades</a></li>
-                    <li><a class="linksimportantes" href="#">Termos de uso</a></li>
-                    <li><a class="linksimportantes" href="#">Dúvidas</a></li>
-                    <li><a class="linksimportantes" href="#">Planos</a></li>
-                    <li><a class="linksimportantes" href="#">Funcionalidades</a></li>
-                    <li><a class="download"><a id="download" href="img/Termos.pdf" target="_blank">Termos de uso</a></li>
+                <li><a class="download"><a id="download" href="img/Termos.pdf" target="_blank">Termos de uso</a></li>
                     <li><a class="linksimportantes" href="#">Blog</a></li>
-                </ul>
 
             </div>
             <div class="conteudo3">
