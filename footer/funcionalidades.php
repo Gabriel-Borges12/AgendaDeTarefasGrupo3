@@ -13,14 +13,15 @@
 <body>
 
   <header>
-    <h1>Explorando as Potencialidades do WEEK: Seu Novo Aliado na Organização Pessoal e Profissional</h1>
+  <h1>Explorando as Potencialidades do WEEK: Seu Novo Aliado na Organização Pessoal e Profissional</h1>
+  <a href="home_nova.php" class="nav-home">Home</a>
   </header>
 
   <main>
   <img src="WEEK.png" alt="Logo" class="logo">
 
     <section class="introduction">
-      <h2></h2>
+      <h2>Introdução</h2>
       <p>O tempo é um recurso valioso, e a gestão eficiente das tarefas diárias é essencial para o sucesso, tanto na vida pessoal quanto profissional. O WEEK, nosso novo site de agenda de tarefas, foi projetado para simplificar e aprimorar a maneira como você gerencia suas responsabilidades diárias. Vamos dar uma olhada nas principais funcionalidades que fazem do WEEK uma escolha excepcional para organização e produtividade.</p>
     </section>
 
