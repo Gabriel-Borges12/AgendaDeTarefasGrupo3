@@ -72,7 +72,7 @@
                             } else {
                                 senhaInput.type = "password";
                             }
-                        });     
+                        });    
                     </script>
                 </form>
             </div>
