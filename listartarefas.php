@@ -113,7 +113,7 @@ if (isset($_SESSION['funcionario_nome'])) {
                 <h4>Siga nossas redes sociais!</h4>
                 <div class="social-icons">
                     <!-- ícones encontrados no site icons8.com.br -->
-                    <a href="https://www.facebook.com/?locale=pt_BR" class="social-icon"><img
+                    <a href="https://www.facebook.com/senaisaopaulo/?locale=pt_BR" class="social-icon"><img
                             src="img/icons8-facebook-48.png" alt="Facebook"></a>
                     <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fweek_agendador" class="social-icon"><img
                             src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
@@ -121,7 +121,7 @@ if (isset($_SESSION['funcionario_nome'])) {
                             alt="Instagram"></a>
                     <br><br>
                     <h5>Dúvidas ou sugestões?</h5>
-                    <a href="#" class="linkemail">contact@weekcalendario</a><br>
+                    <a href="#" class="linkemail">weekagendador@gmail.com</a><br>
                 </div>
             </div>
         </div>
