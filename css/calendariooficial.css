@@ -201,9 +201,12 @@ body {
 
 }
 
-
-/* set after behind the main element */
 .calendar::before,
+.calendar::after {
+  content: "";
+}
+/* set after behind the main element */
+/* .calendar::before,
 .calendar::after {
   content: "";
   position: absolute;
@@ -220,7 +223,7 @@ body {
   height: 94%;
   left: calc(100% + 12px);
   background-color: #5a1465;
-}
+} */
 
 .calendar .month {
   width: 100%;
@@ -835,3 +838,209 @@ iframe {
   color: #fff;
   font-weight: bold;
 }
+
+
+/* Root styles */
+:root {
+  --primary-clr: #b38add;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+/* Navbar styles */
+.navbar {
+  overflow: hidden;
+  background-color: #9822AB;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
+}
+
+.logo {
+  width: 60px;
+  height: 55px;
+  margin-right: 10px;
+}
+
+.nome-empresa {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+
+/* Container styles */
+.container-geral {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+
+.container .calendar,
+.container .right {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Calendar styles */
+.calendar {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .calendar::before,
+.calendar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 12px;
+  height: 97%;
+  border-radius: 0 5px 5px 0;
+  background-color: #bd53ce;
+  transform: translateY(-50%);
+} */
+
+/* .calendar::before {
+  height: 94%;
+  left: calc(100% + 12px);
+  background-color: #5a1465;
+} */
+
+/* Rest of your calendar styles... */
+
+/* Right sidebar styles */
+.right {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .nome-empresa {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .container-geral {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .container .calendar,
+  .container .right {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .calendar .month {
+    height: 50px;
+  }
+
+  .calendar .weekdays {
+    height: 40px;
+  }
+
+  .calendar .days .day {
+    height: 30px;
+    font-size: 0.7rem;
+  }
+
+  .calendar .days .day.active,
+  .calendar .days .day.today {
+    font-size: 0.9rem;
+  }
+}
+/* Original CSS para o calendário */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+
+.calendar {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  overflow-x: auto; 
+}
+
+/* Adicionando regra para deslocar o calendário para o lado em telas maiores */
+@media screen and (min-width: 1200px) {
+  .container {
+    justify-content: flex-start;
+  }
+
+  .calendar {
+    margin-right: 30px; /* Ajuste conforme necessário */
+  }
+}
+
+/* Restante do seu CSS permanece o mesmo */
