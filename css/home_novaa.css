@@ -175,7 +175,6 @@ footer {
     margin-top: auto;
 }
 
-/* Estilos do conteúdo do rodapé */
 .conteudogeral {
     display: flex;
     max-width: 1200px;
@@ -183,8 +182,9 @@ footer {
     padding: 20px;
 }
 
-/* Estilos dos elementos do conteúdo do rodapé */
-.conteudo1,
+.conteudo1 p{
+    word-wrap: break-word;
+}
 .conteudo2,
 .conteudo3,
 .social-icons,
@@ -192,6 +192,7 @@ footer {
     flex: 1;
     margin: 10px;
     color: #fff;
+    word-wrap: break-word;
 }
 
 /* Estilos dos ícones sociais */
@@ -389,7 +390,6 @@ input[type="submit"] {
     margin-top: 20px; 
 }
 
-
 @media (max-width: 768px) {
     body {
         background-image: none;
@@ -440,14 +440,16 @@ input[type="submit"] {
         flex-direction: column;
 
     }
-
-    .conteudo1,
+    .conteudo1 p{
+        word-wrap: break-word;
+    }
     .conteudo2,
     .conteudo3,
-    .social-icons {
-        flex: none;
-        width: 100%;
-        text-align: center;
+    .social-icons,
+    .social-icon {
+        flex: 1;
+        margin: 10px;
+        color: #fff;
     }
 
     .linksfooter li {

@@ -19,7 +19,7 @@ if(!isset($_SESSION['usuario_id'])){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/listartarefas.css">
+  <link rel="stylesheet" href="./css/listartarefas.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />

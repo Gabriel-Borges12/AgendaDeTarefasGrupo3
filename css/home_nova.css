@@ -169,7 +169,9 @@ footer {
 }
 
 
-.conteudo1,
+.conteudo1 p{
+    word-wrap: break-word;
+}
 .conteudo2,
 .conteudo3,
 .social-icons,
@@ -177,6 +179,7 @@ footer {
     flex: 1;
     margin: 10px;
     color: #fff;
+   
 }
 
 .social-icons {
