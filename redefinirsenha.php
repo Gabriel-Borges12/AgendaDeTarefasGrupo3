@@ -7,22 +7,22 @@ include 'conexao.php';
 //     exit;
 // } else {
 
-    // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    //     $user = $_POST['user'];
-    //     $sql = "SELECT funcionario_senha FROM funcionario WHERE funcionario_nome = '$user'";
-    //     $sql_exec = $conn->query($sql) or die($conn->error);
+//     $user = $_POST['user'];
+//     $sql = "SELECT funcionario_senha FROM funcionario WHERE funcionario_nome = '$user'";
+//     $sql_exec = $conn->query($sql) or die($conn->error);
 
-    //     $snh = $sql_exec->fetch_assoc();
-    //     $_POST['n-senha'] == $_POST['c-senha'] ? $n_senha = password_hash($_POST['n-senha'], PASSWORD_DEFAULT) : header('Location: redefinirsenha.php');
+//     $snh = $sql_exec->fetch_assoc();
+//     $_POST['n-senha'] == $_POST['c-senha'] ? $n_senha = password_hash($_POST['n-senha'], PASSWORD_DEFAULT) : header('Location: redefinirsenha.php');
 
-    //     $sql = "UPDATE funcionario SET funcionario_senha = '$n_senha' WHERE funcionario_nome = '$user'";
-    //     $sql_exec = $conn->query($sql) or die($conn->error);
+//     $sql = "UPDATE funcionario SET funcionario_senha = '$n_senha' WHERE funcionario_nome = '$user'";
+//     $sql_exec = $conn->query($sql) or die($conn->error);
 
-    //     sleep(1);
-    //     header('Location: index.php');
-    // }
-    // $conn->close();
+//     sleep(1);
+//     header('Location: index.php');
+// }
+// $conn->close();
 // }
 ?>
 
@@ -56,11 +56,11 @@ include 'conexao.php';
             </div>
         </div>
         <div class="lado-dir">
-        <div class="logo-responsiva">
-    <img id="logologin" src="img/WEEK.png">
-</div>
+            <div class="logo-responsiva">
+                <img id="logologin" src="img/WEEK.png">
+            </div>
             <div class="container">
-                <form action="processar_redefinir.php"id="cadastro-form" method = "post">
+                <form action="processar_redefinir.php" id="cadastro-form" method="post">
                     <h1 id="logintitulo">Esqueceu sua senha?</h1>
                     <p>Para redefinir sua senha, digite o nome de</p>
                     <p> usuário que você usa para fazer login no </p>
@@ -82,10 +82,10 @@ include 'conexao.php';
                         const showPasswordIcon = document.getElementById("show-password");
 
                         showPasswordIcon.addEventListener("click", () => {
-                        if (senhaInput.type === "password") {
-                        senhaInput.type = "text";
-                        } else {
-                        senhaInput.type = "password";
+                            if (senhaInput.type === "password") {
+                                senhaInput.type = "text";
+                            } else {
+                                senhaInput.type = "password";
                             }
                         });
 

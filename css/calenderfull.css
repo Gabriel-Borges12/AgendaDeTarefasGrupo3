@@ -9,7 +9,8 @@
     font-family: 'Urbanist', sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -184,9 +185,11 @@ h4 {
 
 /* Media Queries */
 @media (max-width: 768px) {
+
     .primeira-navbar,
     .segunda-navbar {
-        padding: 10px 20px; /* Aumentar o padding horizontal para evitar cortes de texto */
+        padding: 10px 20px;
+        /* Aumentar o padding horizontal para evitar cortes de texto */
     }
 
     .logo {
@@ -200,7 +203,8 @@ h4 {
 
     .nav-home,
     .nav-calendario {
-        margin: 0 15px; /* Espaçamento ligeiramente maior */
+        margin: 0 15px;
+        /* Espaçamento ligeiramente maior */
         font-size: 1rem;
     }
 
@@ -232,4 +236,3 @@ h4 {
         margin: 5px 0;
     }
 }
-

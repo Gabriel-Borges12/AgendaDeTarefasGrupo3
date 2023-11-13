@@ -2,100 +2,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400&display=swap');
 
-  
-  :root {
-    --primary-clr: #b38add;
-  }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    /* transform: scale(0.99);  */
-    /* Reduzi o tamanho em 20% */
-  }
+:root {
+  --primary-clr: #b38add;
+}
 
-  /* nice scroll bar */
-  /* ::-webkit-scrollbar {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* transform: scale(0.99);  */
+  /* Reduzi o tamanho em 20% */
+}
+
+/* nice scroll bar */
+/* ::-webkit-scrollbar {
         width: 5px;
       } */
-  /* Estilos para a barra de navegação */
-  .nome-empresa{
-    color: white;
-  }
+/* Estilos para a barra de navegação */
+.nome-empresa {
+  color: white;
+}
 
-  .logo {
-    width: 80px;
-    height: 55px;
-    /* margin-right: 10px; */
-  }
-  .estrutura-logo {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-  }
+.logo {
+  width: 80px;
+  height: 55px;
+  /* margin-right: 10px; */
+}
 
-  .navbar {
-    overflow: hidden;
-    background-color: #9822AB;
-    width: 100%; 
-    position: fixed;
-    z-index: 999;
-    height: 100px;
-    top: 0px;
-    margin-bottom: 30px;
-    /* Cor de fundo da barra de navegação */
-    margin-bottom: 30px; /* 
+.estrutura-logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #9822AB;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  height: 100px;
+  top: 0px;
+  margin-bottom: 30px;
+  /* Cor de fundo da barra de navegação */
+  margin-bottom: 30px;
+  /* 
     
     /* Cor de fundo da barra de navegação */
-  }
-  /* restante do seu CSS */
-  .nav-links {
-    margin-left: auto;
-    margin-right: 20px;
-  }
+}
 
-  /* .links-nav {
+/* restante do seu CSS */
+.nav-links {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* .links-nav {
     color: #933ab9;
     text-decoration: none;
     padding: 14px 20px;
   } */
-  /* Increase the space between the logo and the links */
+/* Increase the space between the logo and the links */
 .links-nav {
   color: white;
   text-decoration: none;
   padding: 10px 30px;
-  margin-right: 0px; /* Adjust as needed for more spacing between logo and links */
+  margin-right: 0px;
+  /* Adjust as needed for more spacing between logo and links */
 }
 
 
 
 
-  /* Restante do seu CSS */
+/* Restante do seu CSS */
 
 
-  /* Estilos para os links na barra de navegação */
-  .navbar a {
-    color: white;
-    /* Set the desired color for the links */
-    text-decoration: none;
-    /* Remove the underline on the links */
-    justify-content: right;
-  }
-  
-  .navbar a:hover {
-    /* Remove the hover effect */
-    background-color: transparent;
-    color: white;
-  }
-  
+/* Estilos para os links na barra de navegação */
+.navbar a {
+  color: white;
+  /* Set the desired color for the links */
+  text-decoration: none;
+  /* Remove the underline on the links */
+  justify-content: right;
+}
 
-
+.navbar a:hover {
+  /* Remove the hover effect */
+  background-color: transparent;
+  color: white;
+}
 
 
 
-  /* ::-webkit-scrollbar-track {
+
+
+
+/* ::-webkit-scrollbar-track {
     background: #f5f5f5;
     border-radius: 50px;
   }
@@ -105,75 +109,78 @@
     border-radius: 50px;
   } */
 
-  .estrutura-logo {
-    display: flex;
-    align-items: center;
-  }
+.estrutura-logo {
+  display: flex;
+  align-items: center;
+}
 
-  .logo {
-    width: 60px;
-    height: 55px;
-    margin-right: 10px;
-  }
+.logo {
+  width: 60px;
+  height: 55px;
+  margin-right: 10px;
+}
 
-  .nome-empresa {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2.0rem;
-    font-weight: bold;
-  }
+.nome-empresa {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.0rem;
+  font-weight: bold;
+}
 
-  .primeira-navbar {
-    top: 0px;
-    height: 80px;
-    align-items: center;
-    padding: 0 20px;
-  }
+.primeira-navbar {
+  top: 0px;
+  height: 80px;
+  align-items: center;
+  padding: 0 20px;
+}
 
-  .primeira-navbar {
-    background-color: #9822AB;
-    color: #fff;
-  }
+.primeira-navbar {
+  background-color: #9822AB;
+  color: #fff;
+}
 
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-  }
-  .calendar {
-    position: relative;
-    width: 109%;
-    height: 1200px; /* Ajuste a altura conforme necessário */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-  }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
 
-  .container {
-    height: 100%;
-    padding: 5px;
-    color: #fff;
-    display: flex;
-    padding-top: 60px;
-    border-radius: 10px;
-    background-color: #a032b1;
-    width: 1400px;
-    margin: 200px auto 30px;
-  }
+.calendar {
+  position: relative;
+  width: 109%;
+  height: 1200px;
+  /* Ajuste a altura conforme necessário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
 
-  .container {
-    height: 100%;
-    padding: 5px;
-    color: #fff;
-    display: flex;
-    padding-top: 60px; 
-    border-radius: 10px;
-    background-color: #a032b1;
-    width: 1400px;
-    margin: 150px auto 30px; 
-  }
+.container {
+  height: 100%;
+  padding: 5px;
+  color: #fff;
+  display: flex;
+  padding-top: 60px;
+  border-radius: 10px;
+  background-color: #a032b1;
+  width: 1400px;
+  margin: 200px auto 30px;
+}
+
+.container {
+  height: 100%;
+  padding: 5px;
+  color: #fff;
+  display: flex;
+  padding-top: 60px;
+  border-radius: 10px;
+  background-color: #a032b1;
+  width: 1400px;
+  margin: 150px auto 30px;
+}
+
 /* 
   .left {
     width: 50%;
@@ -743,6 +750,9 @@
     }
   }
   @media screen and (max-width: 500px) {
+  } */
+
+/* @media screen and (max-width: 1500px) {
     .calendar .month {
       height: 75px;
     }
@@ -781,3 +791,49 @@
   .credits a:hover {
     text-decoration: underline;
   } */
+    .calendar {
+    
+      overflow-y: auto;
+      max-height: 500px; 
+    }
+     
+
+
+/*   
+      .credits {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #b38add;
+      }
+      .credits a {
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .credits a:hover {
+        text-decoration: underline;
+      }
+      */
+/* Estilos da tabela no calendário */
+.calendar table {
+  width: 100%;
+  /* border-collapse: collapse; */
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.calendar th {
+  background-color: var(--primary-clr);
+  color: #fff;
+  font-weight: bold;
+}

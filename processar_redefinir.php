@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->execute()) {
         //header("Location: javascript:alert(\"Email enviado com sucesso!\");location.href=\"index.php\";");
         echo '<script>alert("Registro atualizado com sucesso!");</script>';
-            echo '<script>
+        echo '<script>
                 setTimeout(function(){
                     window.location.href = "index.php";
                 }, 1); // Redireciona após 1 segundo

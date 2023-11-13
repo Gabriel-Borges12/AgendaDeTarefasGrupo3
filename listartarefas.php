@@ -1,31 +1,33 @@
-<?php 
+<?php
 session_start();
 include 'conexao.php';
 
-if(!isset($_SESSION['usuario_id'])){
+if (!isset($_SESSION['usuario_id'])) {
     header("Location: index.php");
     exit();
 }
- if (isset($_SESSION['funcionario_nome'])) {
-     $funcionario_nome = $_SESSION['funcionario_nome'];
+if (isset($_SESSION['funcionario_nome'])) {
+    $funcionario_nome = $_SESSION['funcionario_nome'];
 } else {
-     $funcionario_nome = "funcionario_nome"; // Ou qualquer valor padrão desejado
- }
+    $funcionario_nome = "funcionario_nome"; // Ou qualquer valor padrão desejado
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/listartarefas.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
-  <link rel="icon" href="./img/logo.png" width="500px">
-  <title>Home - Lista de Tarefas</title>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/listartarefas.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <link rel="icon" href="./img/logo.png" width="500px">
+    <title>Home - Lista de Tarefas</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
 </head>
+
 <body>
 
     <header class="primeira-navbar">
@@ -36,9 +38,11 @@ if(!isset($_SESSION['usuario_id'])){
             <a href="home_nova.php" class="nav-home">Home</a>
             <br>
         </div>
-        <span class="nav-usuario">Bem-vindo (a), <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <span class="nav-usuario">Bem-vindo (a),
+            <?php echo $_SESSION['funcionario_nome']; ?>
+        </span>
         <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
-        
+
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">
@@ -60,7 +64,7 @@ if(!isset($_SESSION['usuario_id'])){
         echo "<div class='table-container'>";
         echo "<table border='2'>";
         echo "<tr><th>Nome do funcionário</th><th>Nome da Tarefa</th><th>Data em que será realizada</th><th>Status</th><th>Funcionário que realizará</th><th>Ações</th></tr>";
-    
+
         while ($row = $resultado->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row['funcionario_nome'] . "</td>";
@@ -69,13 +73,13 @@ if(!isset($_SESSION['usuario_id'])){
             echo "<td>" . $row['status_tarefa'] . "</td>";
             echo "<td>" . $row['responsavel_tarefa'] . "</td>";
             echo "<td>";
-            if(isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'administrativo'){
+            if (isset($_SESSION['funcionario_cargo']) && $_SESSION['funcionario_cargo'] == 'administrativo') {
                 echo "<a href='editar.php?id=" . $row['id_tarefa'] . "'><span class='material-icons'>edit</span></a> | ";
                 echo "<a onclick='confirmDelete(" . $row['id_tarefa'] . ")'><span class='material-icons'>delete</span></a>";
             } else {
                 echo "";
             }
-            
+
 
             echo "</td>";
             echo "</tr>";
@@ -93,39 +97,43 @@ if(!isset($_SESSION['usuario_id'])){
     <br>
 
     <footer>
-    <div class="conteudogeral">
-        <div class="conteudo1">
-            <h4>Sobre nós</h4><br>
-            <p>Ajudamos as pessoas a organizarem suas vidas através</p>
-            <p>de um gerenciador de tarefas simples, prático e bonito.</p>
-            <p>Com a WEEK a organização se torna fácil!</p>
-        </div>
-        <div class="conteudo2">
-            <h4>Links Importantes</h4><br>
-            <ul class="linksfooter">
-                <li><a class="linksimportantes" href="#">Funcionalidades</a></li>
-                <li><a class="linksimportantes" href="#">Termos de uso</a></li>
-                <li><a class="linksimportantes" href="#">Dúvidas</a></li>
-                <li><a class="linksimportantes" href="#">Planos</a></li>
-                <li><a class="linksimportantes" href="#">Blog</a></li>
-            </ul>
+        <div class="conteudogeral">
+            <div class="conteudo1">
+                <h4>Sobre nós</h4><br>
+                <p>Ajudamos as pessoas a organizarem suas vidas através</p>
+                <p>de um gerenciador de tarefas simples, prático e bonito.</p>
+                <p>Com a WEEK a organização se torna fácil!</p>
+            </div>
+            <div class="conteudo2">
+                <h4>Links Importantes</h4><br>
+                <ul class="linksfooter">
+                    <li><a class="linksimportantes" href="#">Funcionalidades</a></li>
+                    <li><a class="linksimportantes" href="#">Termos de uso</a></li>
+                    <li><a class="linksimportantes" href="#">Dúvidas</a></li>
+                    <li><a class="linksimportantes" href="#">Planos</a></li>
+                    <li><a class="linksimportantes" href="#">Blog</a></li>
+                </ul>
 
-        </div>
-        <div class="conteudo3">
-            <h4>Siga nossas redes sociais!</h4>
-            <div class="social-icons">
-                <!-- ícones encontrados no site icons8.com.br -->
-                <a href="https://www.facebook.com/?locale=pt_BR" class="social-icon"><img src="img/icons8-facebook-48.png" alt="Facebook"></a>
-                  <a href="https://twitter.com/login?lang=pt" class="social-icon"><img src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com/" class="social-icon"><img src="img/icons8-instagram-50 (1).png" alt="Instagram"></a>
-                <br><br><h5>Dúvidas ou sugestões?</h5>
-                <a href="#" class="linkemail">contact@weekcalendario</a><br>
+            </div>
+            <div class="conteudo3">
+                <h4>Siga nossas redes sociais!</h4>
+                <div class="social-icons">
+                    <!-- ícones encontrados no site icons8.com.br -->
+                    <a href="https://www.facebook.com/?locale=pt_BR" class="social-icon"><img
+                            src="img/icons8-facebook-48.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/login?lang=pt" class="social-icon"><img
+                            src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/" class="social-icon"><img src="img/icons8-instagram-50 (1).png"
+                            alt="Instagram"></a>
+                    <br><br>
+                    <h5>Dúvidas ou sugestões?</h5>
+                    <a href="#" class="linkemail">contact@weekcalendario</a><br>
+                </div>
             </div>
         </div>
-    </div> 
- </footer>
+    </footer>
 
- <!-- <script>
+    <!-- <script>
 function confirmarExclusao() {
     Swal.fire({
         title: 'Tem certeza de que deseja excluir esta tarefa?',
@@ -173,4 +181,5 @@ function confirmarExclusao() {
         }
     </script>
 </body>
+
 </html>
