@@ -995,6 +995,11 @@ body {
   .calendar .weekdays {
     height: 40px;
   }
+<<<<<<< HEAD
+  
+
+  
+=======
 
   .calendar .days .day {
     height: 30px;
@@ -1045,3 +1050,4 @@ body {
 
 /* Restante do seu CSS permanece o mesmo */
 
+>>>>>>> 6005280b46b25f30e26a6b26c33c326eca729cbc
