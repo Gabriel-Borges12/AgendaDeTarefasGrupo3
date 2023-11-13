@@ -35,6 +35,9 @@ include 'conexao.php';
     <link rel="stylesheet" href="css/stylepadrao.css">
     <link rel="icon" href=" ./img/logo.png">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Redefinir senha</title>
 </head>
 
@@ -68,10 +71,10 @@ include 'conexao.php';
                     <br><br>
                     <img id="img-user" src="img/user.png">
                     <input type="email" name="email" class="formzao" placeholder="Seu email">
-                    <br> <br>
+                    <br><br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" name="new_password" placeholder="Nova senha" id="senha">
-                    <span class="lnr lnr-eye" id="show-password"></span>
+                    <input type="password" class="formzao" name="senha" placeholder="Senha" id="senha">
+                    <i class="fa-regular fa-eye" id="show-password"></i>
                     <br><br>
                     <input type="submit" value="Salvar nova senha" id="botao-salvar-senha">
                     <br><br>
@@ -87,8 +90,7 @@ include 'conexao.php';
                             } else {
                                 senhaInput.type = "password";
                             }
-                        });
-
+                        });     
                     </script>
                 </form>
             </div>

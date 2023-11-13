@@ -1029,7 +1029,7 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
-  overflow-x: auto; 
+  overflow-x: auto;
 }
 
 /* Adicionando regra para deslocar o calendário para o lado em telas maiores */
@@ -1044,3 +1044,4 @@ body {
 }
 
 /* Restante do seu CSS permanece o mesmo */
+

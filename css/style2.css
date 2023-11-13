@@ -49,23 +49,11 @@ input {
     color: #000;
 }
 
-/* ========================================================= */
-
-/* #show-password {
-    float: right;
-    margin-top: -55px;
-    position: relative;
-    z-index: 1;
-    cursor:pointer;
-} */
 #senha {
     padding-right: 30px;
     /* Crie espaço à direita para acomodar o ícone do olho */
     width: 80%;
 }
-
-/* 
-  */
 
 .p-viewer,
 .p-viewer2 {
@@ -74,10 +62,6 @@ input {
     position: relative;
     z-index: 1;
     cursor: pointer;
-}
-
-.fa-eye {
-    color: #000;
 }
 
 #botaologin {

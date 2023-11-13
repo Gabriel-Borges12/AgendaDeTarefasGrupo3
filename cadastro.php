@@ -36,6 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> -->
     <link rel="icon" href=" ./img/logo.png">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Cadastro Week</title>
 </head>
 
@@ -65,10 +68,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <br> <br>
                     <img id="img-email" src="img/e-mail.png">
                     <input type="text" class="formzao" placeholder="E-mail" name="email" required>
-                    <br> <br>
+                    <br><br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Senha" name="senha" id="senha" required>
-                    <span class="lnr lnr-eye" id="show-password"></span>
+                    <input type="password" class="formzao" name="senha" placeholder="Senha" id="senha">
+                    <i class="fa-regular fa-eye" id="show-password"></i>
                     <br><br>
                     <img id="img-cargo" src="img/cargo.png">
                     <select class="formzao" name="funcionario_cargo" id="funcionario_cargo" required autocomplete="off">
@@ -90,10 +93,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             } else {
                                 senhaInput.type = "password";
                             }
-                        });
-
+                        });     
                     </script>
-
                 </form>
             </div>
         </div>

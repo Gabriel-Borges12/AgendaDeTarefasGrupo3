@@ -47,13 +47,10 @@
 
                     <input type="text" class="formzao" name="user" placeholder="Nome do usuario" autocomplete="off"
                         id="usuario">
-                    <br> <br>
+                    <br><br>
                     <img id="img-senha" src="img/senha.png">
-
                     <input type="password" class="formzao" name="senha" placeholder="Senha" id="senha">
-                    <!-- Adicione o ícone do olho para mostrar/ocultar a senha -->
                     <i class="fa-regular fa-eye" id="show-password"></i>
-
 
                     <p id=""><a class="esqueceur" href="redefinirsenha.php">Esqueceu sua senha?</a></p>
                     <!-- <input type="button" value="" href="home.html"> -->
