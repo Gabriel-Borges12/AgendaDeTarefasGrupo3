@@ -11,7 +11,6 @@
 
 body {
     background-color: hsl(0, 0%, 100%);
-    background-image: url(img/calendario.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -314,7 +313,7 @@ h4 {
         font-size: 1rem;
     }
 
-    input{
+    input {
         width: 100% !important;
         font-size: 0.9rem;
     }
@@ -335,7 +334,7 @@ h4 {
         font-size: 0.9rem;
     }
 
-    input{
+    input {
         width: 100% !important;
         font-size: 0.8rem;
     }
@@ -361,17 +360,19 @@ input[type="submit"] {
     font-size: 1.7rem;
     font-weight: 500;
     cursor: pointer;
-    margin-top: 30px; /* Espaçamento superior para o botão de enviar */
+    margin-top: 30px;
+    /* Espaçamento superior para o botão de enviar */
 }
 
-#status_tarefa:hover{
+#status_tarefa:hover {
     background-color: #c436da;
 }
 
- /* Estilo para o botão "Salvar a tarefa" e "Lista de tarefas" */
- .btn, .botaotarefas {
+/* Estilo para o botão "Salvar a tarefa" e "Lista de tarefas" */
+.btn,
+.botaotarefas {
     display: inline-block;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     background-color: #B012CA;
     color: #fff;
     text-decoration: none;
@@ -381,13 +382,14 @@ input[type="submit"] {
 }
 
 
-.btn:hover, .botaotarefas:hover {
+.btn:hover,
+.botaotarefas:hover {
     background-color: #9822AB;
 }
 
 .button-container {
     text-align: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -458,4 +460,3 @@ input[type="submit"] {
         justify-content: center;
     }
 }
-

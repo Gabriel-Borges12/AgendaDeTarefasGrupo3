@@ -7,22 +7,22 @@ include 'conexao.php';
 //     exit;
 // } else {
 
-    // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    //     $user = $_POST['user'];
-    //     $sql = "SELECT funcionario_senha FROM funcionario WHERE funcionario_nome = '$user'";
-    //     $sql_exec = $conn->query($sql) or die($conn->error);
+//     $user = $_POST['user'];
+//     $sql = "SELECT funcionario_senha FROM funcionario WHERE funcionario_nome = '$user'";
+//     $sql_exec = $conn->query($sql) or die($conn->error);
 
-    //     $snh = $sql_exec->fetch_assoc();
-    //     $_POST['n-senha'] == $_POST['c-senha'] ? $n_senha = password_hash($_POST['n-senha'], PASSWORD_DEFAULT) : header('Location: redefinirsenha.php');
+//     $snh = $sql_exec->fetch_assoc();
+//     $_POST['n-senha'] == $_POST['c-senha'] ? $n_senha = password_hash($_POST['n-senha'], PASSWORD_DEFAULT) : header('Location: redefinirsenha.php');
 
-    //     $sql = "UPDATE funcionario SET funcionario_senha = '$n_senha' WHERE funcionario_nome = '$user'";
-    //     $sql_exec = $conn->query($sql) or die($conn->error);
+//     $sql = "UPDATE funcionario SET funcionario_senha = '$n_senha' WHERE funcionario_nome = '$user'";
+//     $sql_exec = $conn->query($sql) or die($conn->error);
 
-    //     sleep(1);
-    //     header('Location: index.php');
-    // }
-    // $conn->close();
+//     sleep(1);
+//     header('Location: index.php');
+// }
+// $conn->close();
 // }
 ?>
 
@@ -32,8 +32,12 @@ include 'conexao.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/stylepadrao.css">
     <link rel="icon" href=" ./img/logo.png">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Redefinir senha</title>
 </head>
 
@@ -55,8 +59,11 @@ include 'conexao.php';
             </div>
         </div>
         <div class="lado-dir">
+            <div class="logo-responsiva">
+                <img id="logologin" src="img/WEEK.png">
+            </div>
             <div class="container">
-                <form action="processar_redefinir.php"id="cadastro-form" method = "post">
+                <form action="processar_redefinir.php" id="cadastro-form" method="post">
                     <h1 id="logintitulo">Esqueceu sua senha?</h1>
                     <p>Para redefinir sua senha, digite o nome de</p>
                     <p> usuário que você usa para fazer login no </p>
@@ -64,13 +71,27 @@ include 'conexao.php';
                     <br><br>
                     <img id="img-user" src="img/user.png">
                     <input type="email" name="email" class="formzao" placeholder="Seu email">
-                    <br> <br>
+                    <br><br>
                     <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" name="new_password" placeholder="Nova senha">
+                    <input type="password" class="formzao" name="senha" placeholder="Senha" id="senha">
+                    <i class="fa-regular fa-eye" id="show-password"></i>
                     <br><br>
                     <input type="submit" value="Salvar nova senha" id="botao-salvar-senha">
                     <br><br>
                     <a class="vparalogin" href="index.php">Voltar ao login</a>
+
+                    <script>
+                        const senhaInput = document.getElementById("senha");
+                        const showPasswordIcon = document.getElementById("show-password");
+
+                        showPasswordIcon.addEventListener("click", () => {
+                            if (senhaInput.type === "password") {
+                                senhaInput.type = "text";
+                            } else {
+                                senhaInput.type = "password";
+                            }
+                        });     
+                    </script>
                 </form>
             </div>
         </div>

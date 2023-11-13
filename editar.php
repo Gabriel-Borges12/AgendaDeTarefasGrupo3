@@ -29,12 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $descricao_tarefa = $_POST['descricao_tarefa'];
     $data_tarefa = $_POST['data_tarefa'];
     $data_tarefa_formatada = date("Y-m-d", strtotime($data_tarefa));
-
+    $var_funcionario = $_POST['responsavel_tarefa'];
     $status_tarefa = $_POST['status_tarefa'];
 
-    $sql = "UPDATE tarefas SET descricao_tarefa = ?, data_tarefa = ?, status_tarefa = ? WHERE id_tarefa = ?";
+    $sql = "UPDATE tarefas SET responsavel_tarefa = ?, descricao_tarefa = ?, data_tarefa = ?, status_tarefa = ? WHERE id_tarefa = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssi", $descricao_tarefa, $data_tarefa_formatada, $status_tarefa, $id);
+    $stmt->bind_param("ssssi", $var_funcionario, $descricao_tarefa, $data_tarefa_formatada, $status_tarefa, $id);
 
 
     if ($stmt->execute()) {
@@ -45,11 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
 }
 
- if (isset($_SESSION['funcionario_nome'])) {
-     $funcionario_nome = $_SESSION['funcionario_nome'];
- } else {
-     $funcionario_nome = "funcionario_nome"; // Ou qualquer valor padrão desejado
- }
+if (isset($_SESSION['funcionario_nome'])) {
+    $funcionario_nome = $_SESSION['funcionario_nome'];
+} else {
+    $funcionario_nome = "funcionario_nome"; // Ou qualquer valor padrão desejado
+}
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +70,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <span class="nome-empresa">W E E K</span>
         </div>
         <a href="home_nova.php" class="nav-home">Home</a>
-        <span class="nav-usuario">Bem-vindo, <?php echo $_SESSION['funcionario_nome']; ?></span>
+        <span class="nav-usuario">Bem-vindo (a),
+            <?php echo $_SESSION['funcionario_nome']; ?>
+        </span>
     </header>
     <nav class="segunda-navbar">
         <a href="logout.php" class="nav-link seta-link">
@@ -99,6 +101,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <option value="concluída" <?php echo ($tarefas['status_tarefa'] == 'concluída') ? 'selected' : ''; ?>>
                         Concluída</option>
                 </select>
+                <label for="status_tarefa">Funcionário que realizará:</label>
+                <select name="responsavel_tarefa" id="responsavel_tarefa" required>
+                    <?php
+                    $var = "SELECT * FROM funcionario ";
+                    $result = $conn->query($var);
+
+                    if ($result->num_rows > 0) {
+                        while ($linha = $result->fetch_assoc()) {
+                            echo "<option value='" . $linha['funcionario_nome'] . "' required>" . $linha['funcionario_nome'] . "</option>";
+                        }
+                    }
+                    ?>
+                </select>
 
             </div>
             <button type="submit">Atualizar</button>
@@ -110,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <h4>Sobre nós</h4><br>
                 <p>Ajudamos as pessoas a organizarem suas vidas através</p>
                 <p>de um gerenciador de tarefas simples, prático e bonito.</p>
-                <p>Com o WEEK a organização se torna fácil!</p>
+                <p>Com a WEEK a organização se torna fácil!</p>
             </div>
             <div class="conteudo2">
                 <h4>Links Importantes</h4><br>

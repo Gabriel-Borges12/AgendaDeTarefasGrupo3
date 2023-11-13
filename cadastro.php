@@ -1,4 +1,4 @@
-<?php 
+<?php
 // echo "<script>alert('teste')</script>";
 include 'conexao.php';
 
@@ -9,14 +9,15 @@ include 'conexao.php';
 //     exit;
 // }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $_POST['usuario'];
     $email = $_POST['email'];
-    $senha = password_hash($_POST['senha'],PASSWORD_DEFAULT);
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $cargo = $_POST['funcionario_cargo'];
 
-    $conn->query("INSERT INTO funcionario (funcionario_nome,funcionario_email,funcionario_senha) VALUES ('$user', '$email', '$senha')");
+    $conn->query("INSERT INTO funcionario (funcionario_nome,funcionario_email,funcionario_senha, funcionario_cargo) VALUES ('$user', '$email', '$senha', '$cargo')");
 
-    header ("Location: index.php");
+    header("Location: index.php");
     exit();
 }
 ?>
@@ -27,13 +28,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/stylepadrao.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     Option 1: Include in HTML -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> -->
     <link rel="icon" href=" ./img/logo.png">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Cadastro Week</title>
 </head>
 
@@ -52,23 +57,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             </div>
         </div>
         <div class="lado-dir">
+            <div class="logo-responsiva">
+                <img id="logologin" src="img/WEEK.png">
+            </div>
             <div class="container">
                 <form id="cadastro-form" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
                     <h1 id="logintitulo">Cadastro</h1>
                     <img id="img-user" src="img/user.png">
-                    <input type="text" class="formzao" placeholder="Usuario" name="usuario" required>
+                    <input type="text" class="formzao" placeholder="Usuário" name="usuario" required>
                     <br> <br>
                     <img id="img-email" src="img/e-mail.png">
-                    <input type="text" class="formzao" placeholder="Email" name="email" required>
-                    <br> <br>
-                    <img id="img-senha" src="img/senha.png">
-                    <input type="password" class="formzao" placeholder="Senha" name="senha" required>
+                    <input type="text" class="formzao" placeholder="E-mail" name="email" required>
                     <br><br>
-
+                    <img id="img-senha" src="img/senha.png">
+                    <input type="password" class="formzao" name="senha" placeholder="Senha" id="senha">
+                    <i class="fa-regular fa-eye" id="show-password"></i>
+                    <br><br>
+                    <img id="img-cargo" src="img/cargo.png">
+                    <select class="formzao" name="funcionario_cargo" id="funcionario_cargo" required autocomplete="off">
+                        <option class="formzao" value="administrativo" required>Administração</option>
+                        <option class="formzao" value="funcionario" required>Funcionário</option>
+                    </select>
+                    <br><br>
 
                     <button type="submit" id="botaocadastro">Cadastrar</button>
                     <a class="vparalogin" href="index.php">Voltar ao login</a>
 
+                    <script>
+                        const senhaInput = document.getElementById("senha");
+                        const showPasswordIcon = document.getElementById("show-password");
+
+                        showPasswordIcon.addEventListener("click", () => {
+                            if (senhaInput.type === "password") {
+                                senhaInput.type = "text";
+                            } else {
+                                senhaInput.type = "password";
+                            }
+                        });     
+                    </script>
                 </form>
             </div>
         </div>

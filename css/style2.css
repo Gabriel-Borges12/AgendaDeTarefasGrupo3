@@ -26,6 +26,44 @@ input {
     color: white;
 }
 
+.fa-regular {
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+/* ====================================================== */
+
+
+.pwd {
+    position: relative;
+}
+
+.p-viewer {
+    z-index: 9999;
+    position: absolute;
+    top: 30%;
+    right: 10px;
+}
+
+.fa-eye {
+    color: #000;
+}
+
+#senha {
+    padding-right: 30px;
+    /* Crie espaço à direita para acomodar o ícone do olho */
+    width: 80%;
+}
+
+.p-viewer,
+.p-viewer2 {
+    float: right;
+    margin-top: -55px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
 #botaologin {
     cursor: pointer;
     background: #CD90FE;
@@ -40,12 +78,13 @@ input {
     padding: 10px;
     border: none;
 }
+
 #botaologin:hover {
     background-color: #a25fda;
     transition: background-color 0.3s ease;
 }
 
-#botaocadastro{
+#botaocadastro {
     cursor: pointer;
     background: #CD90FE;
     padding: 8px 5px;
@@ -58,7 +97,6 @@ input {
     margin-top: 4px;
     padding: 10px;
     border: none;
-
 }
 
 #botaocadastro:hover {
@@ -70,7 +108,7 @@ input {
     width: 180px;
 }
 
-#logologin1{
+#logologin1 {
     width: 180px;
 
 }
@@ -106,6 +144,14 @@ input {
     height: 25px;
     position: absolute;
     margin: 7px;
+}
+
+#img-cargo {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin: 7px;
+
 }
 
 #text {
@@ -191,9 +237,23 @@ input {
     justify-content: flex-end;
 }
 
+input[type="select"] {
+    background: #CD90FE;
+    padding: 8px 5px;
+    color: #fff;
+    border: 1px solid #3274e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: none;
+}
+
 /* Estilos para telas menores (celulares) */
 @media (min-width: 120px) and (max-width: 467px) {
-    .lado-esq{
+    .lado-esq {
         display: none;
 
     }
@@ -205,20 +265,24 @@ input {
     #logologin {
         align-items: center;
     }
-    #logoLoginDir{
+
+    #logoLoginDir {
         display: block;
         width: 180px;
     }
-    #tituloDir{
+
+    #tituloDir {
         display: block;
     }
-    .lado-dir{
+
+    .lado-dir {
         flex-direction: column;
     }
-    
+
 }
+
 @media (max-width: 468px) {
-    .lado-esq{
+    .lado-esq {
         display: none;
 
     }
@@ -227,58 +291,66 @@ input {
         background: #a25fda !important;
     }
 
-     #logologin {
+    #logologin {
         align-items: center;
-        }
-    #logoLoginDir{
+    }
+
+    #logoLoginDir {
         display: block;
         width: 180px;
     }
-    #tituloDir{
+
+    #tituloDir {
         display: block;
     }
-    .lado-dir{
+
+    .lado-dir {
         flex-direction: column;
     }
 }
 
 @media (min-width: 469px) and (max-width:945px) {
-    .lado-esq{
+    .lado-esq {
         display: none;
     }
 
     body {
         background: #a25fda !important;
     }
-    
-    }
-    #logoLoginDir{
-        display: block;
-        width: 180px;
-    }
-    #tituloDir{
-        display: block;
-    }
-    .lado-dir{
-        flex-direction: column;
-    }
 
+}
 
+#logoLoginDir {
+    display: block;
+    width: 180px;
+}
+
+#tituloDir {
+    display: block;
+}
+
+.lado-dir {
+    flex-direction: column;
+}
 
 @media (min-width: 945px) {
-    #logoLoginDir{
+    #logoLoginDir {
         display: none;
     }
-    #tituloDir{
+
+    #tituloDir {
         display: none;
     }
-    #logologin{
+
+    #logologin {
         align-items: center;
-        display: none; /* Oculta a logo nas telas menores (responsivas) */
+        /* Oculta a logo nas telas menores (responsivas) */
+        display: none;
     }
 
 }
-#botao-salvar-senha{
+
+#botao-salvar-senha {
     cursor: pointer;
     background-color: #CD90FE;
     padding: 8px 5px;
@@ -293,7 +365,7 @@ input {
     border: none;
 }
 
-#botao-salvar-senha:hover{
+#botao-salvar-senha:hover {
     background-color: #a25fda;
     transition: background-color 0.3s ease;
 
@@ -302,6 +374,7 @@ input {
 .vparalogin {
     text-decoration: none;
 }
-.vparalogin:hover{
+
+.vparalogin:hover {
     color: #570e93;
 }

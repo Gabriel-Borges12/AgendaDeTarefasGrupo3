@@ -26,9 +26,27 @@ input {
     color: white;
 }
 
+.fa-regular {
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.fa-eye {
+    color: #000;
+}
+
+#senha {
+    padding-right: 30px;
+    width: 80%;
+}
+
+.fa-eye {
+    color: #000;
+}
+
 #botaologin {
     cursor: pointer;
-    background: #8f06ff;
+    background: #CD90FE;
     padding: 8px 5px;
     color: #fff;
     border: 1px solid #3274e7;
@@ -40,12 +58,40 @@ input {
     padding: 10px;
     border: none;
 }
+
 #botaologin:hover {
     background-color: #a25fda;
+    transition: background-color 0.3s ease;
+}
+
+#botaocadastro {
+    cursor: pointer;
+    background: #CD90FE;
+    padding: 8px 5px;
+    color: #fff;
+    border: 1px solid #3274e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: none;
+
+}
+
+#botaocadastro:hover {
+    background-color: #a25fda;
+    transition: background-color 0.3s ease;
 }
 
 #logologin {
     width: 180px;
+}
+
+#logologin1 {
+    width: 180px;
+
 }
 
 #titulo {
@@ -80,6 +126,60 @@ input {
     position: absolute;
     margin: 7px;
 }
+
+/* #img-cargo {
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    margin: 7px;
+    text-align: center;
+
+} */
+
+input[type="select"] {
+    background: #CD90FE;
+    padding: 8px 5px;
+    color: #fff;
+    border: 1px solid #3274e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: none;
+}
+
+/* Estilo para a seta do select */
+select.formzao::-ms-expand {
+    display: none;
+}
+
+/* Estilo para o foco do select */
+select.formzao:focus {
+    border-color: #a25fda;
+}
+
+/* Estilo para as opções do select */
+select.formzao option {
+    background-color: #CD90FE;
+    color: white;
+}
+
+/* Estilo para o hover das opções do select */
+select.formzao option:hover {
+    background-color: #a25fda;
+}
+
+/* Estilo para a imagem do cargo */
+#img-cargo {
+    width: 25px;
+    height: 32px;
+    position: absolute;
+    margin: 10px;
+    margin-top: 4px;
+}
+
 
 #text {
     margin-right: 100px;
@@ -164,9 +264,44 @@ input {
     justify-content: flex-end;
 }
 
+/* Estilize o select para que fique no mesmo estilo que o input */
+select.formzao {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 6px solid #CD90FE;
+    border-radius: 20px;
+    background-color: #CD90FE;
+    color: rgb(119, 111, 111);
+}
+
+/* Estilo para a seta do select */
+select.formzao::-ms-expand {
+    display: none;
+}
+
+/* Estilo para o foco do select */
+select.formzao:focus {
+    border-color: #a25fda;
+}
+
+/* Estilo para as opções do select */
+select.formzao option {
+    background-color: #CD90FE;
+    color: rgb(130, 117, 117);
+}
+
+/* Estilo para o hover das opções do select */
+select.formzao option:hover {
+    background-color: #a25fda;
+}
+
+
+
+
 /* Estilos para telas menores (celulares) */
 @media (min-width: 120px) and (max-width: 467px) {
-    .lado-esq{
+    .lado-esq {
         display: none;
 
     }
@@ -178,19 +313,24 @@ input {
     #logologin {
         align-items: center;
     }
-    #logoLoginDir{
+
+    #logoLoginDir {
         display: block;
         width: 180px;
     }
-    #tituloDir{
+
+    #tituloDir {
         display: block;
     }
-    .lado-dir{
+
+    .lado-dir {
         flex-direction: column;
     }
+
 }
+
 @media (max-width: 468px) {
-    .lado-esq{
+    .lado-esq {
         display: none;
 
     }
@@ -202,53 +342,67 @@ input {
     #logologin {
         align-items: center;
     }
-    #logoLoginDir{
+
+    #logoLoginDir {
         display: block;
         width: 180px;
     }
-    #tituloDir{
+
+    #tituloDir {
         display: block;
     }
-    .lado-dir{
+
+    .lado-dir {
         flex-direction: column;
     }
 }
 
 @media (min-width: 469px) and (max-width:945px) {
-    .lado-esq{
+    .lado-esq {
         display: none;
     }
 
     body {
         background: #a25fda !important;
     }
-    #logologin {
-        align-items: center;
-    }
-    #logoLoginDir{
-        display: block;
-        width: 180px;
-    }
-    #tituloDir{
-        display: block;
-    }
-    .lado-dir{
-        flex-direction: column;
-    }
 
 }
+
+#logoLoginDir {
+    display: block;
+    width: 180px;
+}
+
+#tituloDir {
+    display: block;
+}
+
+.lado-dir {
+    flex-direction: column;
+}
+
+
 
 @media (min-width: 945px) {
-    #logoLoginDir{
+    #logoLoginDir {
         display: none;
     }
-    #tituloDir{
+
+    #tituloDir {
         display: none;
     }
+
+    #logologin {
+        align-items: center;
+        display: none;
+        /* Oculta a logo nas telas menores (responsivas) */
+    }
+
 }
-/* #botao-salvar-senha {
+
+#botao-salvar-senha {
     cursor: pointer;
-    background: #8f06ff;
+    background-color: #CD90FE;
     padding: 8px 5px;
     color: #fff;
     border: 1px solid #3274e7;
@@ -259,9 +413,18 @@ input {
     margin-top: 4px;
     padding: 10px;
     border: none;
-} */
+}
 
-#input[type="submit"]:hover {
-    background-color: #a25fda; /* Altere para a cor desejada ao passar o mouse */
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave de cor ao passar o mouse */
+#botao-salvar-senha:hover {
+    background-color: #a25fda;
+    transition: background-color 0.3s ease;
+
+}
+
+.vparalogin {
+    text-decoration: none;
+}
+
+.vparalogin:hover {
+    color: #570e93;
 }

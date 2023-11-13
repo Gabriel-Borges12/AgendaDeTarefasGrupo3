@@ -17,9 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $senha_bd = $linha['funcionario_senha'];
 
         if (password_verify($senha, $senha_bd)) {
-            $_SESSION['funcionario_nome']=$linha['funcionario_nome'];
+            $_SESSION['funcionario_nome'] = $linha['funcionario_nome'];
             $_SESSION['usuario_logado'] = true;
             $_SESSION['usuario_id'] = $linha['funcionario_id'];
+            $_SESSION['nome_usuario'] = $linha['funcionario_nome'];
+            $_SESSION['funcionario_cargo'] = $linha['funcionario_cargo'];
             header('Location: home_nova.php');
             exit();
         }

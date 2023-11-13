@@ -96,6 +96,7 @@ select {
 select:hover {
     background-color: #cb69da;
 }
+
 .primeira-navbar,
 .segunda-navbar {
     height: 80px;
@@ -248,12 +249,14 @@ h4 {
 .linksimportantes:hover {
     color: darkgray;
 }
-h1{
+
+h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.4rem;
 }
+
 .content {
     /* Styles for the form container */
     background-color: #ffffff;
@@ -337,8 +340,10 @@ select {
     border-radius: 5px;
     outline: none;
     font-size: 1rem;
-    display: block; /* Make them block-level elements */
-    margin: 5px auto; /* Center-align the elements */
+    display: block;
+    /* Make them block-level elements */
+    margin: 5px auto;
+    /* Center-align the elements */
 }
 
 select:hover {
@@ -357,9 +362,12 @@ button[type="submit"] {
     font-size: 1.2rem;
     font-weight: 500;
     cursor: pointer;
-    display: block; /* Make it a block-level element */
-    margin: 10px auto; /* Center-align the button */
+    display: block;
+    /* Make it a block-level element */
+    margin: 10px auto;
+    /* Center-align the button */
 }
+
 @media (max-width: 768px) {
     body {
         background-image: none;
@@ -456,45 +464,56 @@ button[type="submit"] {
 
 
 }
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .content {
-        width: 90%; /* Reduza a largura do conteúdo */
-        margin: 0 auto; /* Centralize o conteúdo na tela */
+        width: 90%;
+        /* Reduza a largura do conteúdo */
+        margin: 0 auto;
+        /* Centralize o conteúdo na tela */
     }
 
     form {
-        padding: 10px; /* Adicione um espaço interno ao formulário */
+        padding: 10px;
+        /* Adicione um espaço interno ao formulário */
     }
 
     label,
     input,
     select {
-        width: 100%; /* Faça os elementos ocuparem toda a largura disponível */
+        width: 100%;
+        /* Faça os elementos ocuparem toda a largura disponível */
     }
 
     button[type="submit"] {
-        width: 100%; /* Faça o botão ocupar toda a largura disponível */
-        margin-top: 10px; /* Adicione um espaço superior para o botão */
+        width: 100%;
+        /* Faça o botão ocupar toda a largura disponível */
+        margin-top: 10px;
+        /* Adicione um espaço superior para o botão */
     }
 
     /* Estilos específicos para o Galaxy Fold */
     @media (max-width: 280px) {
         form {
-            padding: 5px; /* Reduza o espaço interno do formulário ainda mais */
+            padding: 5px;
+            /* Reduza o espaço interno do formulário ainda mais */
         }
 
         label {
-            font-size: 0.8rem; /* Reduza o tamanho da fonte das etiquetas */
+            font-size: 0.8rem;
+            /* Reduza o tamanho da fonte das etiquetas */
         }
 
         input,
         select {
-            font-size: 0.8rem; /* Reduza o tamanho da fonte dos campos de entrada */
+            font-size: 0.8rem;
+            /* Reduza o tamanho da fonte dos campos de entrada */
         }
 
         button[type="submit"] {
-            font-size: 1rem; /* Ajuste o tamanho da fonte do botão */
+            font-size: 1rem;
+            /* Ajuste o tamanho da fonte do botão */
         }
     }
 }
