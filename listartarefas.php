@@ -103,7 +103,7 @@ if (isset($_SESSION['funcionario_nome'])) {
             <div class="conteudo2">
                 <h4>Links Importantes</h4><br>
                 <ul class="linksfooter">
-                <li><a class="linksimportantes" href="footer/funcionalidades.php">Funcionalidades</a></li>
+                <li><a class="linksimportantes" href="funcionalidades.php">Funcionalidades</a></li>
                 <li><a class="download"><a id="download" href="img/Termos.pdf" target="_blank">Termos de uso</a></li>
                     <li><a class="linksimportantes" href="#">Blog</a></li>
 

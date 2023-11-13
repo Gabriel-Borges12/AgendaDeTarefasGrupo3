@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="funcionalidades.css">
+  <link rel="stylesheet" href="css/funcionalidades.css">
   <link rel="icon" href=" ../img/logo.png">
   <title>Funcionalidades WEEK</title>
 </head>
@@ -18,7 +18,7 @@
   </header>
 
   <main>
-  <img src="WEEK.png" alt="Logo" class="logo">
+  <img src="img/WEEK.png" alt="Logo" class="logo">
 
     <section class="introduction">
       <h2>Introdução</h2>
@@ -34,7 +34,7 @@
     <section class="task-list">
       <h2>Lista de Tarefas Intuitiva e Eficiente</h2>
       <p>A funcionalidade central do WEEK é a sua lista de tarefas intuitiva. Com uma interface limpa e amigável, os usuários podem adicionar, editar e excluir tarefas com facilidade. Além disso, a capacidade de categorizar tarefas, definir prioridades e atribuir prazos oferece um controle total sobre o seu fluxo de trabalho. Seja para tarefas diárias ou projetos de longo prazo, o WEEK adapta-se à sua rotina.</p>
-      <img src="listadetarefasimg.png" alt="Calendário">
+      <img src="img/listadetarefasimg.png" alt="Calendário">
       <h3>Na lista de tarefas, você pode:</h3>
       <ul>
         <li>Filtrar por Categoria: Visualize tarefas específicas filtrando por categorias predefinidas.</li>
@@ -47,7 +47,7 @@
     <section class="calendar">
       <h2>Calendário: Visualização Temporal</h2>
       <p>O Calendário é uma poderosa ferramenta dentro do WEEK, proporcionando uma visão temporal de suas tarefas. Integrando-se perfeitamente com a página inicial e a lista de tarefas, o calendário oferece uma perspectiva única sobre como seu tempo está sendo alocado.</p>
-      <img src="calendario.png" alt="Calendário">
+      <img src="img/calendario.png" alt="Calendário">
       <h3>No calendário, você pode:</h3>
       <ul>
         <li>Ver Tarefas Diárias, Semanais e Mensais: Mude entre as visualizações para planejar de acordo com suas necessidades.</li>
@@ -60,7 +60,7 @@
       <h2>Calendário Integrado para Visualização Clara e Abrangente</h2>
       <p>O calendário integrado é uma ferramenta poderosa para a visualização abrangente das suas atividades. Com a capacidade de vincular tarefas diretamente ao calendário, você pode planejar seu tempo de forma estratégica. As visualizações semanais e mensais permitem que você identifique facilmente os períodos mais ocupados e programe suas atividades de acordo.</p>
       <p>Em um mundo onde o tempo é valioso e as tarefas são inúmeras, o WEEK se destaca como um aliado confiável, simplificando a complexidade do gerenciamento de tarefas diárias. Experimente hoje e descubra como a organização pode ser fácil e eficiente com o WEEK.</p>
-      <img src="calendario.png" alt="Calendário">
+      <img src="img/calendario.png" alt="Calendário">
     </section>
 
     <section class="seguranca">
