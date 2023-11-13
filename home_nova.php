@@ -123,10 +123,15 @@ if (isset($_SESSION['funcionario_nome'])) {
             <div class="conteudo2">
                 <h4>Links Importantes</h4><br>
                 <ul class="linksfooter">
+<<<<<<< HEAD
                     <li><a class="linksimportantes" href="footer/funcionalidades.php">Funcionalidades</a></li>
                     <li><a class="linksimportantes" href="#">Termos de uso</a></li>
                     <li><a class="linksimportantes" href="#">Dúvidas</a></li>
                     <li><a class="linksimportantes" href="#">Planos</a></li>
+=======
+                    <li><a class="linksimportantes" href="#">Funcionalidades</a></li>
+                    <li><a class="download"><a id="download" href="img/Termos.pdf" target="_blank">Termos de uso</a></li>
+>>>>>>> 5e80b7dcdcda07d89af169d0370726786fa4b285
                     <li><a class="linksimportantes" href="#">Blog</a></li>
                 </ul>
 
@@ -135,15 +140,15 @@ if (isset($_SESSION['funcionario_nome'])) {
                 <h4>Siga nossas redes sociais!</h4>
                 <div class="social-icons">
                     <!-- ícones encontrados no site icons8.com.br -->
-                    <a href="https://www.facebook.com/?locale=pt_BR" class="social-icon"><img
+                    <a href="https://www.facebook.com/senaisaopaulo/?locale=pt_BR" class="social-icon"><img
                             src="img/icons8-facebook-48.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/login?lang=pt" class="social-icon"><img
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fweek_agendador" class="social-icon"><img
                             src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/" class="social-icon"><img src="img/icons8-instagram-50 (1).png"
+                    <a href="https://instagram.com/week_agendador?igshid=M3poZjhhYWV6dDU2" class="social-icon"><img src="img/icons8-instagram-50 (1).png"
                             alt="Instagram"></a>
                     <br><br>
                     <h5>Dúvidas ou sugestões?</h5>
-                    <a href="#" class="linkemail">contact@weekcalendario</a><br>
+                    <a href="#" class="linkemail">weekagendador@gmail.com</a><br>
                 </div>
             </div>
         </div>

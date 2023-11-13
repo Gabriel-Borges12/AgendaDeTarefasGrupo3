@@ -996,6 +996,8 @@ body {
     height: 40px;
   }
 
+
+
   .calendar .days .day {
     height: 30px;
     font-size: 0.7rem;
@@ -1044,4 +1046,5 @@ body {
 }
 
 /* Restante do seu CSS permanece o mesmo */
+
 
