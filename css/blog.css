@@ -1,0 +1,130 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: justify;
+  }
+  
+  header {
+    background-color: #9822AB;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .home-button {
+    color: #fff;
+    text-decoration: none;
+    background-color: #741084;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .logo {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+  }
+
+  header {
+    background-color: #9822AB;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .logo {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  
+  ul,
+  ol {
+    list-style-type: none;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center; /* Centralizar os títulos */
+  }
+  
+  /* Ajustes no footer */
+  body {
+    margin-bottom: 60px; /* Espaço no final da página para o footer não sobrepor o conteúdo */
+  }
+  
+  footer {
+    background-color: #9822AB;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Centralizar link na conclusão */
+  .conclusao {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .conclusao a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .conclusao a:hover {
+    color: #ddd;
+  }
+  
+  /* Centralizar a imagem na seção de introdução */
+  .introduction img {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+  }
+
+    /* Centralizar a imagem na seção de introdução */
+    .home img {
+        display: block;
+        margin: 0 auto;
+        width: 600px;
+      }
+  
+    .task-list img {
+        display: block;
+        margin: 0 auto;
+        width: 600px;
+      }
+
+      .calendar img {
+        display: block;
+        margin: 0 auto;
+        width: 600px;
+      }
+  
