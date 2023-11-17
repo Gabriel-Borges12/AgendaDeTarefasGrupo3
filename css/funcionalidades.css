@@ -89,3 +89,9 @@ footer {
 }
 
 /* Restante do seu CSS permanece inalterado */
+
+.button-home{
+  text-align: center;
+  background-color:  blueviolet;
+
+}
