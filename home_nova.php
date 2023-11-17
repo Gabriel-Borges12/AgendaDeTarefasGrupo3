@@ -125,7 +125,7 @@ if (isset($_SESSION['funcionario_nome'])) {
                 <ul class="linksfooter">
                     <li><a class="linksimportantes" href="funcionalidades.php">Funcionalidades</a></li>
                     <li><a class="linksimportantes" id="linksimportantes" href="img/Termos.pdf" target="_blank">Termos de uso</a></li>
-                    <li><a class="linksimportantes" href="#">Blog</a></li>
+                    <li><a class="linksimportantes" href="blog.php">Blog</a></li>
 
             </div>
             <div class="conteudo3">
