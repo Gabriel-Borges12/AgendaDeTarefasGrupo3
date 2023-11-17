@@ -127,14 +127,14 @@ input {
     margin: 7px;
 }
 
-/* #img-cargo {
+#img-cargo {
     width: 25px;
     height: 15px;
     position: absolute;
     margin: 7px;
     text-align: center;
 
-} */
+} 
 
 input[type="select"] {
     background: #CD90FE;
@@ -427,4 +427,8 @@ select.formzao option:hover {
 
 .vparalogin:hover {
     color: #570e93;
+}
+
+label[for="funcionario_cargo"] {
+    margin-left: 10px; /* Adjust the value as needed */
 }

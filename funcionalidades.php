@@ -13,7 +13,7 @@
 <body>
 
   <header>
-  <h1><button href="home_nova.php" class="button-home">Home</button>Explorando as Potencialidades do WEEK: Seu Novo Aliado na Organização Pessoal e Profissional</h1>
+  <h1><button href="home_nova.php" class="home-button">Home</button>Explorando as Potencialidades do WEEK: Seu Novo Aliado na Organização Pessoal e Profissional</h1>
   <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
   </header>
 
