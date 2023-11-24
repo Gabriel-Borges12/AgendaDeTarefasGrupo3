@@ -13,7 +13,8 @@
 <body>
 
   <header>
-  <h1><button href="home_nova.php" class="home-button">Home</button>Explorando as Potencialidades do WEEK: Seu Novo Aliado na Organização Pessoal e Profissional</h1>
+  <a href="home_nova.php" class="home-button">Home</a>
+  <h1>Blog: Explorando o Aplicativo WEEK - Seu Gerenciador de Tarefas Pessoais</h1>
   <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
   </header>
 
