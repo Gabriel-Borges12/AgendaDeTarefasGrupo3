@@ -13,9 +13,8 @@
 <body>
 
   <header>
-  <a href="home_nova.php" class="home-button">Home</a>
-  <h1>Blog: Explorando o Aplicativo WEEK - Seu Gerenciador de Tarefas Pessoais</h1>
-  <!-- <a href="home_nova.php" class="nav-home">Home</a> -->
+    <a href="home_nova.php" class="home-button">Home</a>
+    <h1>Funcionalidades: Explorando o Aplicativo WEEK - Seu Gerenciador de Tarefas Pessoais</h1>
   </header>
 
   <main>
