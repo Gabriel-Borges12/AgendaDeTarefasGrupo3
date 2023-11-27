@@ -20,7 +20,6 @@ if (isset($_GET['id'])) {
             title: 'Exclusão realizada com sucesso!',
             text: 'A tarefa foi excluída.',
             icon: 'success',
-            confirmButtonColor: '#3085d6'
         });
         </script>";
         header("Location:listartarefas.php");
@@ -30,7 +29,6 @@ if (isset($_GET['id'])) {
             title: 'Erro ao excluir tarefa',
             text: 'Ocorreu um erro ao tentar excluir a tarefa.',
             icon: 'error',
-            confirmButtonColor: '#d33'
         });
         </script>";
     }

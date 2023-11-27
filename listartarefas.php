@@ -16,12 +16,12 @@ if (isset($_SESSION['funcionario_nome'])) {
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <link rel="stylesheet" href="./css/listartarefas.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="icon" href=" ./img/logo.png" widht="500px">
-  <title>Home - Lista de Tarefas</title>
+<link rel="stylesheet" href="./css/listartarefas.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="icon" href=" ./img/logo.png" widht="500px">
+<title>Home - Lista de Tarefas</title>
 </head>
 
 <body>
@@ -103,8 +103,9 @@ if (isset($_SESSION['funcionario_nome'])) {
             <div class="conteudo2">
                 <h4>Links Importantes</h4><br>
                 <ul class="linksfooter">
-                <li><a class="linksimportantes" href="funcionalidades.php">Funcionalidades</a></li>
-                <li><a class="linksimportantes" id="linksimportantes" href="img/Termos.pdf" target="_blank">Termos de uso</a></li>
+                    <li><a class="linksimportantes" href="funcionalidades.php">Funcionalidades</a></li>
+                    <li><a class="linksimportantes" id="linksimportantes" href="img/Termos.pdf" target="_blank">Termos
+                            de uso</a></li>
                     <li><a class="linksimportantes" href="#">Blog</a></li>
 
             </div>
@@ -114,10 +115,10 @@ if (isset($_SESSION['funcionario_nome'])) {
                     <!-- ícones encontrados no site icons8.com.br -->
                     <a href="https://www.facebook.com/senaisaopaulo/?locale=pt_BR" class="social-icon"><img
                             src="img/icons8-facebook-48.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fweek_agendador" class="social-icon"><img
-                            src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/week_agendador/?igshid=M3poZjhhYWV6dDU2" class="social-icon"><img src="img/icons8-instagram-50 (1).png"
-                            alt="Instagram"></a>
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fweek_agendador"
+                        class="social-icon"><img src="img/icons8-twitter-48 (1).png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/week_agendador/?igshid=M3poZjhhYWV6dDU2" class="social-icon"><img
+                            src="img/icons8-instagram-50 (1).png" alt="Instagram"></a>
                     <br><br>
                     <h5>Dúvidas ou sugestões?</h5>
                     <a href="#" class="linkemail">weekagendador@gmail.com</a><br>
@@ -154,7 +155,7 @@ function confirmarExclusao() {
     </script> -->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function confirmDelete(id) {
             Swal.fire({
