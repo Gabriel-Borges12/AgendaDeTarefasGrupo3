@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/funcionalidades.css">
   <link rel="icon" href=" ../img/logo.png">
   <title>Blog WEEK</title>
 </head>
@@ -13,13 +13,13 @@
 <body>
 
 <header>
-    <img src="img/WEEK.png" alt="Logo do Blog" class="logo">
     <a href="home_nova.php" class="home-button">Home</a>
     <h1>Blog: Explorando o Aplicativo WEEK - Seu Gerenciador de Tarefas Pessoais</h1>
   </header>
 
 
   <main>
+    <img src="img/WEEK.png" alt="Logo do Blog" class="logo"> 
     <section class="introduction">
     <img src="img/imagem-capa.png" alt=" Introdução" class= "images">
       <h2>Introdução:</h2>
@@ -43,7 +43,7 @@
     <section class="task-list">
       <h2>Lista de Tarefas: Visualize e Gerencie</h2>
       <p>A página de lista de tarefas do WEEK é uma extensão da sua página inicial, exibindo de forma clara e concisa todas as informações inseridas. Organizadas de acordo com suas preferências, as tarefas são apresentadas de maneira a facilitar o acompanhamento do seu progresso.</p>
-      <img src="img/lista-de-tarefas.png" alt="Lista de Tarefas">
+      <img src="img/lista-de-tarefas.png" alt="Lista de Tarefas"class="images">
       <h3>Na lista de tarefas, você pode:</h3>
       <ul>
         <li>Filtrar por Categoria: Visualize tarefas específicas filtrando por categorias predefinidas.</li>
@@ -56,7 +56,7 @@
     <section class="calendar">
       <h2>Calendário: Visualização Temporal</h2>
       <p>O Calendário é uma poderosa ferramenta dentro do WEEK, proporcionando uma visão temporal de suas tarefas. Integrando-se perfeitamente com a página inicial e a lista de tarefas, o calendário oferece uma perspectiva única sobre como seu tempo está sendo alocado.</p>
-      <img src="img/calendar.png" alt="Calendário">
+      <img src="img/calendar.png" alt="Calendário" class="images">
       <h3>No calendário, você pode:</h3>
       <ul>
         <li>Ver Tarefas Diárias, Semanais e Mensais: Mude entre as visualizações para planejar de acordo com suas necessidades.</li>
