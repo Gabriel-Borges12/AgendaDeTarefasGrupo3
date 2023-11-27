@@ -73,7 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="password" class="formzao" name="senha" placeholder="Senha" id="senha">
                     <i class="fa-regular fa-eye" id="show-password"></i>
                     <br><br>
-                    <img id="img-cargo" src="img/cargo.png">
                     <select class="formzao" name="funcionario_cargo" id="funcionario_cargo" required autocomplete="off">
                         <option class="formzao" value="administrativo" required>Administração</option>
                         <option class="formzao" value="funcionario" required>Funcionário</option>
