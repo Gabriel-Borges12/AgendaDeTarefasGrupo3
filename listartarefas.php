@@ -31,7 +31,7 @@ if (isset($_SESSION['funcionario_nome'])) {
             <br>
             <img src="img/logo.png" alt="Logo" class="logo">
             <span class="nome-empresa">W E E K</span>
-            <a href="home_nova.php" class="nav-home">Home</a>
+            <a href="home_nova.php" class="nav-home">Página Inicial</a>
             <br>
         </div>
         <span class="nav-usuario">Bem-vindo (a),
@@ -104,7 +104,7 @@ if (isset($_SESSION['funcionario_nome'])) {
                 <h4>Links Importantes</h4><br>
                 <ul class="linksfooter">
                 <li><a class="linksimportantes" href="funcionalidades.php">Funcionalidades</a></li>
-                <li><a class="download"><a id="download" href="img/Termos.pdf" target="_blank">Termos de uso</a></li>
+                <li><a class="linksimportantes" id="linksimportantes" href="img/Termos.pdf" target="_blank">Termos de uso</a></li>
                     <li><a class="linksimportantes" href="#">Blog</a></li>
 
             </div>
