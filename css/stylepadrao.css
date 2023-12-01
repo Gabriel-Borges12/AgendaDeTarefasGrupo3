@@ -130,6 +130,10 @@ input {
 
 } 
 
+input{
+    color: white;
+}
+
 input[type="select"] {
     background: #CD90FE;
     padding: 8px 5px;

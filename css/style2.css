@@ -26,6 +26,10 @@ input {
     color: white;
 }
 
+input::placeholder {
+    color: white; /* Change placeholder text color to white */
+}
+
 .fa-regular {
     margin-left: -30px;
     cursor: pointer;
