@@ -23,12 +23,34 @@ input {
     border: 6px solid #CD90FE;
     border-radius: 5px;
     background-color: #CD90FE;
-    color: white;
+}
+
+/* Adicione estas linhas para definir a cor do texto como branco */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="text"],
+input[type="password"] {
+    color: white !important;
 }
 
 .fa-regular {
     margin-left: -30px;
     cursor: pointer;
+}
+
+/* ====================================================== */
+
+
+.pwd {
+    position: relative;
+}
+
+.p-viewer {
+    z-index: 9999;
+    position: absolute;
+    top: 30%;
+    right: 10px;
 }
 
 .fa-eye {
@@ -37,11 +59,17 @@ input {
 
 #senha {
     padding-right: 30px;
+    /* Crie espaço à direita para acomodar o ícone do olho */
     width: 80%;
 }
 
-.fa-eye {
-    color: #000;
+.p-viewer,
+.p-viewer2 {
+    float: right;
+    margin-top: -55px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
 }
 
 #botaologin {
@@ -77,7 +105,6 @@ input {
     margin-top: 4px;
     padding: 10px;
     border: none;
-
 }
 
 #botaocadastro:hover {
@@ -120,15 +147,18 @@ input {
     margin: 7px;
 }
 
-
-#img-cargo {
+#img-csenha {
     width: 25px;
-    height: 15px;
+    height: 25px;
     position: absolute;
     margin: 7px;
     text-align: center;
 
 } 
+
+input{
+    color: white;
+}
 
 input[type="select"] {
     background: #CD90FE;
@@ -144,37 +174,13 @@ input[type="select"] {
     border: none;
 }
 
-/* Estilo para a seta do select */
-select.formzao::-ms-expand {
-    display: none;
-}
-
-/* Estilo para o foco do select */
-select.formzao:focus {
-    border-color: #a25fda;
-}
-
-/* Estilo para as opções do select */
-select.formzao option {
-    background-color: #CD90FE;
-    color: white;
-}
-
-/* Estilo para o hover das opções do select */
-select.formzao option:hover {
-    background-color: #a25fda;
-}
-
-/* Estilo para a imagem do cargo */
 #img-cargo {
     width: 25px;
-    height: 32px;
+    height: 25px;
     position: absolute;
-    margin: 10px;
-    margin-top: 4px;
-    margin-right: 15px
-}
+    margin: 7px;
 
+}
 
 #text {
     margin-right: 100px;
@@ -228,6 +234,7 @@ select.formzao option:hover {
 .formzao {
     width: 300px;
     border-radius: 20px;
+
 }
 
 .lado-esq {
@@ -259,6 +266,20 @@ select.formzao option:hover {
     justify-content: flex-end;
 }
 
+input[type="select"] {
+    background: #CD90FE;
+    padding: 8px 5px;
+    color: #fff;
+    border: 1px solid #3274e7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;
+    border: none;
+}
+
 /* Estilize o select para que fique no mesmo estilo que o input */
 select.formzao {
     width: 100%;
@@ -267,7 +288,7 @@ select.formzao {
     border: 6px solid #CD90FE;
     border-radius: 20px;
     background-color: #CD90FE;
-    color: rgb(119, 111, 111);
+    color: rgb(255, 255, 255);
 }
 
 /* Estilo para a seta do select */
@@ -283,16 +304,13 @@ select.formzao:focus {
 /* Estilo para as opções do select */
 select.formzao option {
     background-color: #CD90FE;
-    color: rgb(130, 117, 117);
+    color: rgb(255, 255, 255);
 }
 
 /* Estilo para o hover das opções do select */
 select.formzao option:hover {
     background-color: #a25fda;
 }
-
-
-
 
 /* Estilos para telas menores (celulares) */
 @media (min-width: 120px) and (max-width: 467px) {
@@ -376,8 +394,6 @@ select.formzao option:hover {
     flex-direction: column;
 }
 
-
-
 @media (min-width: 945px) {
     #logoLoginDir {
         display: none;
@@ -389,8 +405,8 @@ select.formzao option:hover {
 
     #logologin {
         align-items: center;
-        display: none;
         /* Oculta a logo nas telas menores (responsivas) */
+        display: none;
     }
 
 }
@@ -422,8 +438,4 @@ select.formzao option:hover {
 
 .vparalogin:hover {
     color: #570e93;
-}
-
-label[for="funcionario_cargo"] {
-    margin-left: 10px; /* Adjust the value as needed */
 }
