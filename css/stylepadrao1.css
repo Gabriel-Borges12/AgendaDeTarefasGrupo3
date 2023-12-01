@@ -23,7 +23,15 @@ input {
     border: 6px solid #CD90FE;
     border-radius: 5px;
     background-color: #CD90FE;
-    color: white;
+}
+
+/* Adicione estas linhas para definir a cor do texto como branco */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="text"],
+input[type="password"] {
+    color: white !important;
 }
 
 .fa-regular {
@@ -206,6 +214,7 @@ input {
 .formzao {
     width: 300px;
     border-radius: 20px;
+
 }
 
 .lado-esq {
@@ -249,6 +258,38 @@ input[type="select"] {
     margin-top: 4px;
     padding: 10px;
     border: none;
+}
+
+/* Estilize o select para que fique no mesmo estilo que o input */
+select.formzao {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 6px solid #CD90FE;
+    border-radius: 20px;
+    background-color: #CD90FE;
+    color: rgb(255, 255, 255);
+}
+
+/* Estilo para a seta do select */
+select.formzao::-ms-expand {
+    display: none;
+}
+
+/* Estilo para o foco do select */
+select.formzao:focus {
+    border-color: #a25fda;
+}
+
+/* Estilo para as opções do select */
+select.formzao option {
+    background-color: #CD90FE;
+    color: rgb(255, 255, 255);
+}
+
+/* Estilo para o hover das opções do select */
+select.formzao option:hover {
+    background-color: #a25fda;
 }
 
 /* Estilos para telas menores (celulares) */
